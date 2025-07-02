@@ -32,8 +32,8 @@
     --card-foreground: 0 0% 88%;
     --popover: 0 0% 11%;
     --popover-foreground: 0 0% 88%;
-    --primary: 180 25% 25%; /* Forest Green (#2F4F4F) */
-    --primary-foreground: 0 0% 98%;
+    --primary: 37 25% 65%; /* Soft Gold/Beige (#BFAB8F) */
+    --primary-foreground: 0 0% 9%; /* Dark Gray for contrast on gold bg */
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
