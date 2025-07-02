@@ -4,19 +4,19 @@
 
 @layer base {
   :root {
-    --background: 39 77% 95%;
-    --foreground: 0 0% 20%;
-    --card: 39 77% 100%;
+    --background: 43 71% 95%; /* Creamy/Sandy Beige (#FDF5E6) */
+    --foreground: 0 0% 20%; /* Dark Gray (#333333) */
+    --card: 43 71% 98%;
     --card-foreground: 0 0% 20%;
-    --popover: 39 77% 95%;
+    --popover: 43 71% 98%;
     --popover-foreground: 0 0% 20%;
-    --primary: 180 25% 25%;
-    --primary-foreground: 39 77% 95%;
-    --secondary: 0 0% 96.1%;
+    --primary: 180 25% 25%; /* Forest Green (#2F4F4F) */
+    --primary-foreground: 43 71% 95%;
+    --secondary: 43 71% 90%;
     --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 40%;
-    --accent: 37 25% 65%;
+    --muted: 43 71% 90%;
+    --muted-foreground: 0 0% 40%; /* Medium Gray (#666666) */
+    --accent: 37 25% 65%; /* Soft Gold/Beige (#BFAB8F) */
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -26,19 +26,19 @@
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 11%;
-    --foreground: 0 0% 88%;
+    --background: 0 0% 11%; /* Very Dark Gray (#1C1C1C) */
+    --foreground: 0 0% 88%; /* Light Gray (#E0E0E0) */
     --card: 0 0% 14%;
     --card-foreground: 0 0% 88%;
     --popover: 0 0% 11%;
     --popover-foreground: 0 0% 88%;
-    --primary: 37 25% 65%;
-    --primary-foreground: 0 0% 11%;
+    --primary: 180 25% 25%; /* Forest Green (#2F4F4F) */
+    --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 69%;
-    --accent: 37 25% 65%;
+    --muted-foreground: 0 0% 69%; /* Medium-Light Gray (#B0B0B0) */
+    --accent: 37 25% 65%; /* Soft Gold/Beige (#BFAB8F) */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;

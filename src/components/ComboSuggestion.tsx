@@ -6,12 +6,14 @@ import { suggestCombos, SuggestCombosInput, SuggestCombosOutput } from '@/ai/flo
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { useToast } from '@/hooks/use-toast';
+import { useI18n } from '@/lib/i18n';
 
 interface ComboSuggestionProps {
   menuItems: SuggestCombosInput['menuItems'];
 }
 
 function ComboCard({ combo }: { combo: SuggestCombosOutput[0] }) {
+  const { t } = useI18n();
   return (
     <Card className="w-full overflow-hidden border-2 bg-card/50 backdrop-blur-sm border-primary/50 shadow-lg shadow-primary/10">
       <CardHeader>
@@ -24,7 +26,7 @@ function ComboCard({ combo }: { combo: SuggestCombosOutput[0] }) {
         <CardDescription className="text-sm">{combo.description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-sm font-semibold text-foreground mb-2">Incluye:</p>
+        <p className="text-sm font-semibold text-foreground mb-2">{t('comboSuggestion.includes')}</p>
         <ul className="list-disc list-inside text-muted-foreground">
           {combo.items.map((item, index) => (
             <li key={index}>{item}</li>
@@ -36,6 +38,7 @@ function ComboCard({ combo }: { combo: SuggestCombosOutput[0] }) {
 }
 
 export function ComboSuggestion({ menuItems }: ComboSuggestionProps) {
+  const { t } = useI18n();
   const [loading, setLoading] = useState(false);
   const [combos, setCombos] = useState<SuggestCombosOutput>([]);
   const { toast } = useToast();
@@ -50,8 +53,8 @@ export function ComboSuggestion({ menuItems }: ComboSuggestionProps) {
       console.error('Error suggesting combos:', error);
       toast({
         variant: 'destructive',
-        title: 'Error',
-        description: 'No se pudieron generar las sugerencias. Por favor, inténtelo de nuevo.',
+        title: t('comboSuggestion.errorTitle'),
+        description: t('comboSuggestion.errorDescription'),
       });
     }
     setLoading(false);
@@ -60,9 +63,9 @@ export function ComboSuggestion({ menuItems }: ComboSuggestionProps) {
   return (
     <div className="w-full">
       <div className="text-center mb-8">
-        <h3 className="font-headline text-3xl">Paquetes & Combos</h3>
+        <h3 className="font-headline text-3xl">{t('comboSuggestion.title')}</h3>
         <p className="text-muted-foreground mt-2">
-          Descubre nuestras combinaciones especiales, creadas para una experiencia memorable.
+          {t('comboSuggestion.description')}
         </p>
         <Button onClick={handleSuggestCombos} disabled={loading} className="mt-4">
           {loading ? (
@@ -70,7 +73,7 @@ export function ComboSuggestion({ menuItems }: ComboSuggestionProps) {
           ) : (
             <Wand2 className="mr-2 h-4 w-4" />
           )}
-          {loading ? 'Generando...' : 'Sugerir Combos con IA'}
+          {loading ? t('comboSuggestion.buttonLoading') : t('comboSuggestion.button')}
         </Button>
       </div>
 
