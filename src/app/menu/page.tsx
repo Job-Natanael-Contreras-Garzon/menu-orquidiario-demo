@@ -10,6 +10,7 @@ import { ProductCard } from '@/components/ProductCard';
 import { ComboSuggestion } from '@/components/ComboSuggestion';
 import type { SuggestCombosInput } from '@/ai/flows/suggest-combos';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const categories = ['BEVERAGES', 'PASTRIES', 'SALTY SNACKS', 'SPECIAL ORDERS', 'COMBOS'];
 
@@ -26,6 +27,7 @@ const subCategoriesByCategory: { [key: string]: string[] } = {
     PASTRIES: ['PASTRIES'],
     'SALTY SNACKS': ['SALTY SNACKS'],
     'SPECIAL ORDERS': ['SPECIAL ORDERS'],
+    COMBOS: [],
 };
 
 const subCategoryNames: { [key: string]: string } = {
@@ -43,6 +45,7 @@ const subCategoryNames: { [key: string]: string } = {
 
 export default function MenuPage() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState('BEVERAGES');
 
   const filteredData = useMemo(() => {
     if (!searchTerm) return menuData;
@@ -84,15 +87,34 @@ export default function MenuPage() {
       </div>
       
       <main className="flex-grow container mx-auto p-4 md:p-8">
-        <Tabs defaultValue="BEVERAGES" className="w-full">
+        <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
           <div className="sticky top-0 z-20 bg-background/80 backdrop-blur-md py-4 mb-4">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-              <TabsList className="grid grid-cols-3 sm:grid-cols-5 w-full max-w-2xl">
-                {categories.map((cat) => (
-                  <TabsTrigger key={cat} value={cat}>{categoryNames[cat]}</TabsTrigger>
-                ))}
-              </TabsList>
-              <div className="w-full md:w-auto md:flex-1 md:max-w-xs">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              
+              <div className="w-full md:w-auto md:flex-grow">
+                {/* Mobile Select */}
+                <div className="md:hidden w-full">
+                  <Select value={activeCategory} onValuechange={setActiveCategory}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Seleccionar categoría" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {categories.map((cat) => (
+                        <SelectItem key={cat} value={cat}>{categoryNames[cat]}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Desktop Tabs */}
+                <TabsList className="hidden md:grid w-full grid-cols-5">
+                  {categories.map((cat) => (
+                    <TabsTrigger key={cat} value={cat}>{categoryNames[cat]}</TabsTrigger>
+                  ))}
+                </TabsList>
+              </div>
+              
+              <div className="w-full md:w-auto md:max-w-xs">
                 <Input
                   placeholder="Buscar en el menú..."
                   value={searchTerm}
@@ -103,7 +125,7 @@ export default function MenuPage() {
             </div>
           </div>
           
-          {categories.slice(0, 4).map((category) => (
+          {categories.map((category) => (
             <TabsContent key={category} value={category}>
                 {category === 'SPECIAL ORDERS' && (
                     <Card className="mb-8 border-primary/50 bg-card/80">
@@ -117,24 +139,25 @@ export default function MenuPage() {
                         </CardContent>
                     </Card>
                 )}
-                {subCategoriesByCategory[category].map(subCategory => {
-                    const items = filteredData.filter(item => item.subCategory === subCategory);
-                    if (items.length === 0) return null;
-                    return (
-                        <div key={subCategory} className="mb-12">
-                            <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{subCategoryNames[subCategory]}</h2>
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-                                {items.map((item) => <ProductCard key={item.id} item={item} />)}
-                            </div>
-                        </div>
-                    )
-                })}
+
+                {category === 'COMBOS' ? (
+                  <ComboSuggestion menuItems={aiMenuItems} />
+                ) : (
+                  subCategoriesByCategory[category]?.map(subCategory => {
+                      const items = filteredData.filter(item => item.subCategory === subCategory);
+                      if (items.length === 0) return null;
+                      return (
+                          <div key={subCategory} className="mb-12">
+                              <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{subCategoryNames[subCategory]}</h2>
+                              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                                  {items.map((item) => <ProductCard key={item.id} item={item} />)}
+                              </div>
+                          </div>
+                      )
+                  })
+                )}
             </TabsContent>
           ))}
-
-          <TabsContent value="COMBOS">
-            <ComboSuggestion menuItems={aiMenuItems} />
-          </TabsContent>
 
         </Tabs>
       </main>
