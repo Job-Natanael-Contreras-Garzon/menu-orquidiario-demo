@@ -9,22 +9,23 @@ import { menuData } from '@/lib/menu-data';
 import { ProductCard } from '@/components/ProductCard';
 import { ComboSuggestion } from '@/components/ComboSuggestion';
 import type { SuggestCombosInput } from '@/ai/flows/suggest-combos';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const categories = ['BEVERAGES', 'PASTRIES', 'SALTY SNACKS', 'SPECIAL ORDERS', 'COMBOS'];
 
 const categoryNames: { [key: string]: string } = {
   BEVERAGES: 'Bebidas',
   PASTRIES: 'Repostería',
-  SALTY_SNACKS: 'Salados',
-  SPECIAL_ORDERS: 'Pedidos Especiales',
+  'SALTY SNACKS': 'Salados',
+  'SPECIAL ORDERS': 'Pedidos Especiales',
   COMBOS: 'Combos IA',
 };
 
 const subCategoriesByCategory: { [key: string]: string[] } = {
     BEVERAGES: ['COFFEE', 'SIGNATURE DRINKS', 'JUICES, WATERS & SODAS', 'INFUSIONS', 'DRINKS & COCKTAILS', 'EXTRAS'],
     PASTRIES: ['PASTRIES'],
-    SALTY_SNACKS: ['SALTY SNACKS'],
-    SPECIAL_ORDERS: ['SPECIAL ORDERS'],
+    'SALTY SNACKS': ['SALTY SNACKS'],
+    'SPECIAL ORDERS': ['SPECIAL ORDERS'],
 };
 
 const subCategoryNames: { [key: string]: string } = {
@@ -104,7 +105,7 @@ export default function MenuPage() {
           
           {categories.slice(0, 4).map((category) => (
             <TabsContent key={category} value={category}>
-                {category === 'SPECIAL_ORDERS' && (
+                {category === 'SPECIAL ORDERS' && (
                     <Card className="mb-8 border-primary/50 bg-card/80">
                         <CardHeader>
                             <CardTitle className="font-headline text-primary">Condiciones para Pedidos Especiales</CardTitle>
