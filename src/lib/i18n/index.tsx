@@ -40,14 +40,12 @@ const getTranslation = (data: any, key: string): string | undefined => {
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('es');
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     const savedLocale = localStorage.getItem('locale') as Locale;
     if (savedLocale && translations[savedLocale]) {
       setLocaleState(savedLocale);
     }
-    setIsMounted(true);
   }, []);
 
   const setLocale = (newLocale: Locale) => {
@@ -70,11 +68,6 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
     return translated;
   }, [locale]);
-
-  // Render children only after the initial locale has been determined
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <I18nContext.Provider value={{ locale, setLocale, t }}>
