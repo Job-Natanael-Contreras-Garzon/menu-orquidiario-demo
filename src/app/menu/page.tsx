@@ -94,7 +94,7 @@ export default function MenuPage() {
               <div className="w-full md:w-auto md:flex-grow">
                 {/* Mobile Select */}
                 <div className="md:hidden w-full">
-                  <Select value={activeCategory} onValuechange={setActiveCategory}>
+                  <Select value={activeCategory} onValueChange={setActiveCategory}>
                     <SelectTrigger className="w-full">
                       <SelectValue placeholder="Seleccionar categoría" />
                     </SelectTrigger>
