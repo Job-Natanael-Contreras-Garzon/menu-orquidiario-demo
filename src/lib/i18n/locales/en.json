@@ -19,6 +19,8 @@
     "subtitle": "A curated selection of flavors to accompany your moments.",
     "searchPlaceholder": "Search the menu...",
     "selectCategory": "Select category",
+    "clearSearch": "Clear search",
+    "noResults": "No products found for your search.",
     "specialOrdersConditions": {
       "title": "Conditions for Special Orders",
       "line1": "• Orders are taken from Tuesday to Sunday from 9 AM to 9 PM.",

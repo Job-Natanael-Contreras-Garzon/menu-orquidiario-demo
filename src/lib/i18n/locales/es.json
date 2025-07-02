@@ -19,6 +19,8 @@
     "subtitle": "Una selección curada de sabores para acompañar tus momentos.",
     "searchPlaceholder": "Buscar en el menú...",
     "selectCategory": "Seleccionar categoría",
+    "clearSearch": "Limpiar búsqueda",
+    "noResults": "No se encontraron productos para su búsqueda.",
     "specialOrdersConditions": {
       "title": "Condiciones para Pedidos Especiales",
       "line1": "• Los pedidos se toman de martes a domingo de 9 AM a 9 PM.",

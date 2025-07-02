@@ -12,6 +12,11 @@ import type { SuggestCombosInput } from '@/ai/flows/suggest-combos';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useI18n } from '@/lib/i18n';
+import { useDebounce } from '@/hooks/use-debounce';
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import enTranslations from '@/lib/i18n/locales/en.json';
+import esTranslations from '@/lib/i18n/locales/es.json';
 
 const subCategoriesByCategory: { [key: string]: string[] } = {
     BEVERAGES: ['COFFEE', 'SIGNATURE_DRINKS', 'JUICES_WATERS_SODAS', 'INFUSIONS', 'DRINKS_COCKTAILS', 'EXTRAS'],
@@ -21,9 +26,24 @@ const subCategoriesByCategory: { [key: string]: string[] } = {
     COMBOS: [],
 };
 
+// Helper to access nested properties using a dot-separated string
+const getTranslation = (data: any, key: string): string => {
+    if (!key) return '';
+    const keys = key.split('.');
+    let result = data;
+    for (const k of keys) {
+      result = result?.[k];
+      if (result === undefined) {
+        return '';
+      }
+    }
+    return String(result);
+}
+
 export default function MenuPage() {
   const { t } = useI18n();
   const [searchTerm, setSearchTerm] = useState('');
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const [activeCategory, setActiveCategory] = useState('BEVERAGES');
 
   const categories = useMemo(() => ['BEVERAGES', 'PASTRIES', 'SALTY_SNACKS', 'SPECIAL_ORDERS', 'COMBOS'], []);
@@ -49,14 +69,23 @@ export default function MenuPage() {
   }), [t]);
   
   const filteredData = useMemo(() => {
-    const lowercasedSearchTerm = searchTerm.toLowerCase();
+    const lowercasedSearchTerm = debouncedSearchTerm.toLowerCase().trim();
     if (!lowercasedSearchTerm) return menuData;
-    return menuData.filter(
-      (item) =>
-        t(item.name).toLowerCase().includes(lowercasedSearchTerm) ||
-        t(item.description).toLowerCase().includes(lowercasedSearchTerm)
-    );
-  }, [searchTerm, t]);
+
+    return menuData.filter((item) => {
+        const nameEn = getTranslation(enTranslations, item.name).toLowerCase();
+        const descriptionEn = getTranslation(enTranslations, item.description).toLowerCase();
+        const nameEs = getTranslation(esTranslations, item.name).toLowerCase();
+        const descriptionEs = getTranslation(esTranslations, item.description).toLowerCase();
+
+        return (
+            nameEn.includes(lowercasedSearchTerm) ||
+            descriptionEn.includes(lowercasedSearchTerm) ||
+            nameEs.includes(lowercasedSearchTerm) ||
+            descriptionEs.includes(lowercasedSearchTerm)
+        );
+    });
+  }, [debouncedSearchTerm]);
 
   const aiMenuItems = useMemo(() => {
     return menuData
@@ -67,7 +96,7 @@ export default function MenuPage() {
         description: t(item.description),
         price: item.price,
       })) as SuggestCombosInput['menuItems'];
-  }, [t, translatedSubCategoryNames]);
+  }, [t]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -114,50 +143,74 @@ export default function MenuPage() {
                 </TabsList>
               </div>
               
-              <div className="w-full md:w-auto md:max-w-xs">
+              <div className="relative w-full md:w-auto md:max-w-xs">
                 <Input
                   placeholder={t('menuPage.searchPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full"
+                  className="w-full pr-10"
                 />
+                 {searchTerm && (
+                    <Button
+                        aria-label={t('menuPage.clearSearch')}
+                        variant="ghost"
+                        size="icon"
+                        className="absolute right-1 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full text-muted-foreground hover:text-foreground"
+                        onClick={() => setSearchTerm('')}
+                    >
+                        <X className="h-4 w-4" />
+                    </Button>
+                )}
               </div>
             </div>
           </div>
           
-          {categories.map((category) => (
-            <TabsContent key={category} value={category}>
-                {category === 'SPECIAL_ORDERS' && (
-                    <Card className="mb-8 border-primary/50 bg-card/80">
-                        <CardHeader>
-                            <CardTitle className="font-headline text-primary">{t('menuPage.specialOrdersConditions.title')}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="text-muted-foreground space-y-2">
-                            <p>{t('menuPage.specialOrdersConditions.line1')}</p>
-                            <p>{t('menuPage.specialOrdersConditions.line2')}</p>
-                            <p>{t('menuPage.specialOrdersConditions.line3')}</p>
-                        </CardContent>
-                    </Card>
-                )}
+          {categories.map((category) => {
+            const subCategories = subCategoriesByCategory[category];
+            const hasContent = category === 'COMBOS' || subCategories?.some(subCategory => 
+                filteredData.some(item => item.subCategory === subCategory)
+            );
 
-                {category === 'COMBOS' ? (
-                  <ComboSuggestion menuItems={aiMenuItems} />
-                ) : (
-                  subCategoriesByCategory[category]?.map(subCategory => {
-                      const items = filteredData.filter(item => item.subCategory === subCategory);
-                      if (items.length === 0) return null;
-                      return (
-                          <div key={subCategory} className="mb-12">
-                              <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{translatedSubCategoryNames[subCategory as keyof typeof translatedSubCategoryNames]}</h2>
-                              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-                                  {items.map((item) => <ProductCard key={item.id} item={item} />)}
-                              </div>
-                          </div>
-                      )
-                  })
-                )}
-            </TabsContent>
-          ))}
+            return (
+              <TabsContent key={category} value={category}>
+                  {category === 'SPECIAL_ORDERS' && (
+                      <Card className="mb-8 border-primary/50 bg-card/80">
+                          <CardHeader>
+                              <CardTitle className="font-headline text-primary">{t('menuPage.specialOrdersConditions.title')}</CardTitle>
+                          </CardHeader>
+                          <CardContent className="text-muted-foreground space-y-2">
+                              <p>{t('menuPage.specialOrdersConditions.line1')}</p>
+                              <p>{t('menuPage.specialOrdersConditions.line2')}</p>
+                              <p>{t('menuPage.specialOrdersConditions.line3')}</p>
+                          </CardContent>
+                      </Card>
+                  )}
+
+                  {category === 'COMBOS' ? (
+                    <ComboSuggestion menuItems={aiMenuItems} />
+                  ) : (
+                    subCategories?.map(subCategory => {
+                        const items = filteredData.filter(item => item.subCategory === subCategory);
+                        if (items.length === 0) return null;
+                        return (
+                            <div key={subCategory} className="mb-12">
+                                <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{translatedSubCategoryNames[subCategory as keyof typeof translatedSubCategoryNames]}</h2>
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                                    {items.map((item) => <ProductCard key={item.id} item={item} />)}
+                                </div>
+                            </div>
+                        )
+                    })
+                  )}
+
+                  {debouncedSearchTerm && category !== 'COMBOS' && !hasContent && (
+                       <div className="text-center py-12 text-muted-foreground">
+                         <p>{t('menuPage.noResults')}</p>
+                       </div>
+                  )}
+              </TabsContent>
+            );
+          })}
 
         </Tabs>
       </main>
