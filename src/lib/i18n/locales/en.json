@@ -32,7 +32,7 @@
       "PASTRIES": "Pastries",
       "SALTY_SNACKS": "Salty Snacks",
       "SPECIAL_ORDERS": "Special Orders",
-      "COMBOS": "AI Combos"
+      "ALL": "All"
     },
     "subCategories": {
       "COFFEE": "Specialty Coffee",

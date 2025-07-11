@@ -7,8 +7,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { menuData } from '@/lib/menu-data';
 import { ProductCard } from '@/components/ProductCard';
-import { ComboSuggestion } from '@/components/ComboSuggestion';
-import type { SuggestCombosInput } from '@/ai/flows/suggest-combos';
+// Se eliminan las importaciones de ComboSuggestion y SuggestCombosInput que ya no se utilizan.
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useI18n } from '@/lib/i18n';
@@ -18,13 +17,7 @@ import { Button } from '@/components/ui/button';
 import enTranslations from '@/lib/i18n/locales/en.json';
 import esTranslations from '@/lib/i18n/locales/es.json';
 
-const subCategoriesByCategory: { [key: string]: string[] } = {
-    BEVERAGES: ['COFFEE', 'SIGNATURE_DRINKS', 'JUICES_WATERS_SODAS', 'INFUSIONS', 'DRINKS_COCKTAILS', 'EXTRAS'],
-    PASTRIES: ['PASTRIES'],
-    SALTY_SNACKS: ['SALTY_SNACKS'],
-    SPECIAL_ORDERS: ['SPECIAL_ORDERS'],
-    COMBOS: [],
-};
+// La constante subCategoriesByCategory ya no es necesaria y se ha eliminado.
 
 // Helper to access nested properties using a dot-separated string
 const getTranslation = (data: any, key: string): string => {
@@ -44,16 +37,19 @@ export default function MenuPage() {
   const { t } = useI18n();
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
-  const [activeCategory, setActiveCategory] = useState('BEVERAGES');
+  // Se establece 'ALL' como la categoría activa por defecto.
+  const [activeCategory, setActiveCategory] = useState('ALL');
 
-  const categories = useMemo(() => ['BEVERAGES', 'PASTRIES', 'SALTY_SNACKS', 'SPECIAL_ORDERS', 'COMBOS'], []);
+  // Se define la lista de categorías de productos.
+  // Se añade 'ALL' para mostrar todos los productos y se elimina 'COMBOS'.
+  const categories = useMemo(() => ['ALL', 'BEVERAGES', 'PASTRIES', 'SALTY_SNACKS', 'SPECIAL_ORDERS'], []);
 
   const translatedCategoryNames = useMemo(() => ({
     BEVERAGES: t('menuPage.categories.BEVERAGES'),
+    ALL: t('menuPage.categories.ALL'), // Añade la traducción para 'ALL'
     PASTRIES: t('menuPage.categories.PASTRIES'),
     SALTY_SNACKS: t('menuPage.categories.SALTY_SNACKS'),
     SPECIAL_ORDERS: t('menuPage.categories.SPECIAL_ORDERS'),
-    COMBOS: t('menuPage.categories.COMBOS'),
   }), [t]);
 
   const translatedSubCategoryNames = useMemo(() => ({
@@ -68,35 +64,44 @@ export default function MenuPage() {
     SPECIAL_ORDERS: t('menuPage.subCategories.SPECIAL_ORDERS'),
   }), [t]);
   
-  const filteredData = useMemo(() => {
+  const filteredProducts = useMemo(() => {
     const lowercasedSearchTerm = debouncedSearchTerm.toLowerCase().trim();
-    if (!lowercasedSearchTerm) return menuData;
+    // menuData es una lista plana de productos, por lo que la asignamos directamente.
+    let products = menuData;
 
-    return menuData.filter((item) => {
-        const nameEn = getTranslation(enTranslations, item.name).toLowerCase();
-        const descriptionEn = getTranslation(enTranslations, item.description).toLowerCase();
-        const nameEs = getTranslation(esTranslations, item.name).toLowerCase();
-        const descriptionEs = getTranslation(esTranslations, item.description).toLowerCase();
+    if (lowercasedSearchTerm) {
+      products = products.filter(product => {
+        const nameEn = getTranslation(enTranslations, product.name).toLowerCase();
+        const descriptionEn = getTranslation(enTranslations, product.description).toLowerCase();
+        const nameEs = getTranslation(esTranslations, product.name).toLowerCase();
+        const descriptionEs = getTranslation(esTranslations, product.description).toLowerCase();
+        return nameEn.includes(lowercasedSearchTerm) ||
+               descriptionEn.includes(lowercasedSearchTerm) ||
+               nameEs.includes(lowercasedSearchTerm) ||
+               descriptionEs.includes(lowercasedSearchTerm);
+      });
+    }
 
-        return (
-            nameEn.includes(lowercasedSearchTerm) ||
-            descriptionEn.includes(lowercasedSearchTerm) ||
-            nameEs.includes(lowercasedSearchTerm) ||
-            descriptionEs.includes(lowercasedSearchTerm)
-        );
-    });
-  }, [debouncedSearchTerm]);
+    if (activeCategory !== 'ALL') {
+      return products.filter(p => p.category === activeCategory);
+    }
 
-  const aiMenuItems = useMemo(() => {
-    return menuData
-      .filter(item => item.category === 'BEVERAGES' || item.category === 'PASTRIES' || item.category === 'SALTY_SNACKS')
-      .map(item => ({
-        name: t(item.name),
-        category: t(`menuPage.subCategories.${item.subCategory}`),
-        description: t(item.description),
-        price: item.price,
-      })) as SuggestCombosInput['menuItems'];
-  }, [t]);
+    return products;
+  }, [activeCategory, debouncedSearchTerm, t]);
+
+  const groupedProducts = useMemo(() => {
+    if (!filteredProducts) return {};
+    return filteredProducts.reduce((acc, product) => {
+      const subCategoryName = translatedSubCategoryNames[product.subCategory as keyof typeof translatedSubCategoryNames] || product.subCategory;
+      if (!acc[subCategoryName]) {
+        acc[subCategoryName] = [];
+      }
+      acc[subCategoryName].push(product);
+      return acc;
+    }, {} as Record<string, typeof filteredProducts>);
+  }, [filteredProducts, translatedSubCategoryNames]);
+
+
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -165,52 +170,30 @@ export default function MenuPage() {
             </div>
           </div>
           
-          {categories.map((category) => {
-            const subCategories = subCategoriesByCategory[category];
-            const hasContent = category === 'COMBOS' || subCategories?.some(subCategory => 
-                filteredData.some(item => item.subCategory === subCategory)
-            );
-
-            return (
-              <TabsContent key={category} value={category}>
-                  {category === 'SPECIAL_ORDERS' && (
-                      <Card className="mb-8 border-primary/50 bg-card/80">
-                          <CardHeader>
-                              <CardTitle className="font-headline text-primary">{t('menuPage.specialOrdersConditions.title')}</CardTitle>
-                          </CardHeader>
-                          <CardContent className="text-muted-foreground space-y-2">
-                              <p>{t('menuPage.specialOrdersConditions.line1')}</p>
-                              <p>{t('menuPage.specialOrdersConditions.line2')}</p>
-                              <p>{t('menuPage.specialOrdersConditions.line3')}</p>
-                          </CardContent>
-                      </Card>
-                  )}
-
-                  {category === 'COMBOS' ? (
-                    <ComboSuggestion menuItems={aiMenuItems} />
-                  ) : (
-                    subCategories?.map(subCategory => {
-                        const items = filteredData.filter(item => item.subCategory === subCategory);
-                        if (items.length === 0) return null;
-                        return (
-                            <div key={subCategory} className="mb-12">
-                                <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{translatedSubCategoryNames[subCategory as keyof typeof translatedSubCategoryNames]}</h2>
-                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-                                    {items.map((item) => <ProductCard key={item.id} item={item} />)}
-                                </div>
-                            </div>
-                        )
-                    })
-                  )}
-
-                  {debouncedSearchTerm && category !== 'COMBOS' && !hasContent && (
-                       <div className="text-center py-12 text-muted-foreground">
-                         <p>{t('menuPage.noResults')}</p>
-                       </div>
-                  )}
-              </TabsContent>
-            );
-          })}
+          {categories.map((category) => (
+            <TabsContent key={category} value={category}>
+              {Object.entries(groupedProducts)
+                .filter(([subCategory, items]) => {
+                  // Si la pestaña es 'ALL', muestra todos los grupos.
+                  if (category === 'ALL') return true;
+                  // Si no, muestra solo los grupos de esa categoría.
+                  return Array.isArray(items) && items.length > 0 && items[0].category === category;
+                })
+                .map(([subCategory, items]) => (
+                  <div key={subCategory} className="mb-12">
+                    <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{subCategory}</h2>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                      {Array.isArray(items) && items.map((item: any) => <ProductCard key={item.id} item={item} />)}
+                    </div>
+                  </div>
+              ))}
+            </TabsContent>
+          ))}
+          {filteredProducts.length === 0 && debouncedSearchTerm && (
+            <div className="text-center py-12 text-muted-foreground">
+              <p>{t('menuPage.noResults')}</p>
+            </div>
+          )}
 
         </Tabs>
       </main>
