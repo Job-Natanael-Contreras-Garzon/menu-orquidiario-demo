@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { menuData } from '@/lib/menu-data';
 import { ProductCard } from '@/components/ProductCard';
+import { ScrollToTopButton } from '@/components/ScrollToTopButton';
 // Se eliminan las importaciones de ComboSuggestion y SuggestCombosInput que ya no se utilizan.
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -198,6 +199,7 @@ export default function MenuPage() {
         </Tabs>
       </main>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
