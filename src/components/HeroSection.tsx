@@ -7,6 +7,7 @@ import { Header } from './home/Header';
 import { HeroMainSection } from './home/HeroMainSection';
 import { SideCarousels } from './home/SideCarousels';
 import { PresentationSection } from './home/PresentationSection';
+import { IngredientesSection } from './home/IngredientesSection';
 import { PanoramicSection } from './home/PanoramicSection';
 import { MenuPreviewSection } from './home/MenuPreviewSection';
 
@@ -124,6 +125,7 @@ export function HeroSection() {
       <PresentationSection />
       <PanoramicSection />
       <MenuPreviewSection />
+      <IngredientesSection />
     </>
   );
 }

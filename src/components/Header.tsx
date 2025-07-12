@@ -16,7 +16,7 @@ export function Header() {
   const closeSheet = () => setIsSheetOpen(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-20 p-4">
+    <header className="absolute top-0 left-0 right-0 z-20 p-4 bg-navbar-bg">
       <div className="container mx-auto px-4 md:px-6 py-3 md:py-4">
         <div className="flex items-center justify-center text-white relative">
           
@@ -56,7 +56,7 @@ export function Header() {
                   <span className="sr-only">Open Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="flex flex-col p-4">
+              <SheetContent side="left" className="flex flex-col p-4 bg-navbar-bg text-white">
                 <SheetHeader className="text-left mb-4">
                   <SheetTitle>
                     <Link href="/" className="flex items-center gap-2">
@@ -67,13 +67,13 @@ export function Header() {
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="grid gap-2">
-                  <Button variant="ghost" asChild className="justify-start text-base" onClick={closeSheet}>
+                  <Button variant="ghost" asChild className="justify-start text-base text-white hover:bg-white/10 hover:text-white" onClick={closeSheet}>
                     <Link href="/">
                       <Home className="mr-2 h-5 w-5" />
                       {t('header.home')}
                     </Link>
                   </Button>
-                  <Button variant="ghost" asChild className="justify-start text-base" onClick={closeSheet}>
+                  <Button variant="ghost" asChild className="justify-start text-base text-white hover:bg-white/10 hover:text-white" onClick={closeSheet}>
                     <Link href="/menu">
                       <MenuSquare className="mr-2 h-5 w-5" />
                       {t('header.menu')}

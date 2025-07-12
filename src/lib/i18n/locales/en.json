@@ -43,6 +43,12 @@
       "title": "PRESENTATION",
       "description": "Welcome to The Orchidarium Café, an oasis of flavor in the heart of the city. Our passion is to offer an exquisite selection of artisanal beverages, homemade pastries, and delicious savory bites that will make your visit an unforgettable experience. With carefully selected ingredients and a cozy atmosphere, we strive to create special moments for our visitors, whether for a revitalizing breakfast, a relaxing afternoon snack, or a meeting with friends."
     },
+    "ingredientes": {
+      "title": "INGREDIENTS",
+      "subtitle": "EXQUISITE, MEMORABLE DISHES.",
+      "description": "Exquisite delicacies imbued with a unique heritage. Our cuisine blends the ephemeral gifts from our farm in Cabrera de Mar, where seasonal ingredients flourish, with the richness provided by the Mediterranean Sea, alongside the excellence from local farms. Each creation stands as a symphony that venerates, magnifies, and ennobles the nuances of the most authentic flavors from nature.",
+      "imageAlt": "Fresh ingredients being prepared"
+    },
     "panoramic": {
       "marqueeTitle": "ORCHIDARIUM",
       "subtitle": "SINGULAR SPACE",

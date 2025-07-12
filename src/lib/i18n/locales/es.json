@@ -43,6 +43,12 @@
       "title": "PRESENTACIÓN",
       "description": "Bienvenidos a El Orquideario Café, un oasis de sabor en el corazón de la ciudad. Nuestra pasión es ofrecer una selección exquisita de bebidas artesanales, repostería hecha con amor y deliciosos bocados salados que harán de su visita una experiencia inolvidable. Con ingredientes cuidadosamente seleccionados y un ambiente acogedor, nos esforzamos por crear momentos especiales para nuestros visitantes, ya sea para un desayuno revitalizante, una merienda relajante o una reunión con amigos."
     },
+    "ingredientes": {
+      "title": "INGREDIENTES",
+      "subtitle": "EXQUISITOS, PLATOS MEMORABLES.",
+      "description": "Exquisitos manjares imbuidos de una herencia única. Nuestra cocina fusiona los dones efímeros de nuestra finca en Cabrera de Mar, donde florecen ingredientes de estación con la riqueza que otorga el Mar Mediterráneo, junto a la excelencia de granjas locales. Cada creación se erige en una sinfonía que venera, magnifica y ennoblecer los matices de los sabores más auténticos de la naturaleza.",
+      "imageAlt": "Ingredientes frescos preparándose"
+    },
     "panoramic": {
       "marqueeTitle": "ORQUIDEARIO",
       "subtitle": "ESPACIO SINGULAR",

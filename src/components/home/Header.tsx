@@ -21,7 +21,7 @@ export function Header({ scrolled }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 z-50 overflow-hidden">
       {/* Background fill animation */}
       <div 
-        className={`absolute inset-0 bg-gradient-to-b from-amber-900/95 to-amber-800/95 backdrop-blur-md shadow-lg transition-all duration-700 ease-out ${
+        className={`absolute inset-0 bg-navbar-bg backdrop-blur-md shadow-lg transition-all duration-700 ease-out ${
           scrolled ? 'transform translate-y-0' : 'transform -translate-y-full'
         }`}
       />

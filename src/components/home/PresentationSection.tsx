@@ -8,8 +8,18 @@ export function PresentationSection() {
   const { setTheme, theme } = useTheme();
   
   return (
-    <section id="presentation-section" className="relative w-full py-16 md:py-24 lg:py-32 bg-background text-foreground transition-colors duration-300">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24">
+    <section id="presentation-section" className="relative w-full py-16 md:py-24 lg:py-32 text-foreground transition-colors duration-300">
+      {/* Imagen de fondo con overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/images/background/bg2.jpg"
+          alt="Fondo de presentación" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/90 dark:bg-background/99"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
         {/* Theme toggle for easy access within this section */}
         <div className="absolute right-6 md:right-12 top-6 md:top-10">
           <Button 
@@ -44,7 +54,7 @@ export function PresentationSection() {
         </div>
 
         {/* Decorative element - Subtle pattern or accent */}
-        <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 dark:from-primary/10 dark:via-primary/20 dark:to-primary/10 transition-colors duration-300"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 dark:from-primary/10 dark:via-primary/20 dark:to-primary/10 transition-colors duration-300"></div> */}
       </div>
     </section>
   );

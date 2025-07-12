@@ -10,6 +10,7 @@
     --card-foreground: 0 0% 20%;
     --popover: 43 71% 98%;
     --popover-foreground: 0 0% 20%;
+    --navbar-bg: 40 100% 9%; /* Dark Brown (#2e2307) */
     --primary: 180 25% 25%; /* Forest Green (#2F4F4F) */
     --primary-foreground: 43 71% 95%;
     --secondary: 43 71% 90%;
@@ -32,6 +33,7 @@
     --card-foreground: 0 0% 88%;
     --popover: 0 0% 11%;
     --popover-foreground: 0 0% 88%;
+    --navbar-bg: 40 100% 9%; /* Dark Brown (#2e2307) */
     --primary: 37 25% 65%; /* Soft Gold/Beige (#BFAB8F) */
     --primary-foreground: 0 0% 9%; /* Dark Gray for contrast on gold bg */
     --secondary: 0 0% 14.9%;
