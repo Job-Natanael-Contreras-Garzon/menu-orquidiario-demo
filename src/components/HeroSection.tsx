@@ -19,27 +19,28 @@ export function HeroSection() {
   const { t, locale, setLocale } = useI18n();
   const { setTheme, theme } = useTheme();
   
-  // Imágenes para los carruseles laterales
+  // Imágenes para los carruseles laterales (bebidas)
   const leftCarouselImages = [
-    '/images/carousel/left/dish1.jpg',
-    '/images/carousel/left/dish2.jpg',
-    '/images/carousel/left/dish3.jpg',
-    '/images/carousel/left/dish4.jpg',
-    '/images/carousel/left/dish5.jpg',
-    '/images/carousel/left/dish6.jpg',
-    '/images/carousel/left/dish7.jpg',
-    '/images/carousel/left/dish8.jpg'
+    '/images/carousel/left/drink1.jpg',
+    '/images/carousel/left/drink2.jpg',
+    '/images/carousel/left/drink3.jpg',
+    '/images/carousel/left/drink4.jpg',
+    '/images/carousel/left/drink5.jpg',
+    '/images/carousel/left/drink6.jpg',
+    '/images/carousel/left/drink7.jpg',
+    '/images/carousel/left/drink8.jpg'
   ];
 
+  // Imágenes para los carruseles laterales (repostería y salados)
   const rightCarouselImages = [
-    '/images/carousel/right/dish1.jpg',
-    '/images/carousel/right/dish2.jpg',
-    '/images/carousel/right/dish3.jpg',
-    '/images/carousel/right/dish4.jpg',
-    '/images/carousel/right/dish5.jpg',
-    '/images/carousel/right/dish6.jpg',
-    '/images/carousel/right/dish7.jpg',
-    '/images/carousel/right/dish8.jpg'
+    '/images/carousel/right/food1.jpg',
+    '/images/carousel/right/food2.jpg',
+    '/images/carousel/right/food3.jpg',
+    '/images/carousel/right/food4.jpg',
+    '/images/carousel/right/food5.jpg',
+    '/images/carousel/right/food6.jpg',
+    '/images/carousel/right/food7.jpg',
+    '/images/carousel/right/food8.jpg'
   ];
   
   // Imágenes de fondo para alternar
@@ -50,12 +51,12 @@ export function HeroSection() {
     '/images/background/bg4.jpg',
   ];
 
-  // Imágenes para la galería rotativa
+  // Imágenes para la galería rotativa (combos especiales)
   const galleryImages = [
-    '/images/gallery/gallery1.jpg',
-    '/images/gallery/gallery2.jpg',
-    '/images/gallery/gallery3.jpg',
-    '/images/gallery/gallery4.jpg',
+    '/images/gallery/combo1.jpg',
+    '/images/gallery/combo2.jpg',
+    '/images/gallery/combo3.jpg',
+    '/images/gallery/combo4.jpg',
   ];
 
   // Efecto para detectar el scroll

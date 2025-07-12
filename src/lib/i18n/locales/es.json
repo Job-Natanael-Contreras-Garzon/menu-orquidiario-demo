@@ -13,35 +13,35 @@
     "viewMenu": "Ver Menú",
     "hero": {
       "mainTitle": {
-        "line1": "UN VIAJE",
-        "line2": "GASTRONÓMICO",
-        "line3": "ÚNICO"
+        "line1": "SABORES",
+        "line2": "IRRESISTIBLES",
+        "line3": "CADA DÍA"
       },
       "leftCarousel": {
-        "item1": "AGUACATE",
-        "item2": "ALCACHOFAS",
-        "item3": "DEL PRAT",
-        "item4": "ATÚN ROJO",
-        "item5": "SUPREMA",
-        "item6": "CALABAZAS",
-        "item7": "VIEIRAS",
-        "item8": "BOGAVANTE"
+        "item1": "EXPRESSO",
+        "item2": "CAPUCHINO",
+        "item3": "LATTE",
+        "item4": "SMOOTHIE",
+        "item5": "JUGO NATURAL",
+        "item6": "TÉ HELADO",
+        "item7": "CHOCOLATE",
+        "item8": "MATCHA LATTE"
       },
       "rightCarousel": {
-        "item1": "BOGAVANTE",
-        "item2": "SALMÓN",
-        "item3": "TOMATE CHERRY",
-        "item4": "VERDE HUERTO",
-        "item5": "MASA PASTA",
-        "item6": "QUEBRADA",
-        "item7": "PULPO",
-        "item8": "MARISCOS"
+        "item1": "CROISSANT",
+        "item2": "MACARONS",
+        "item3": "MUFFINS",
+        "item4": "SANDWICH",
+        "item5": "BAGEL",
+        "item6": "PASTELES",
+        "item7": "TORTA",
+        "item8": "PANINI"
       },
       "scrollIndicator": "Desplazar hacia abajo"
     },
     "presentation": {
       "title": "PRESENTACIÓN",
-      "description": "Bienvenidos a El Orquideario, un destino culinario que deleitará sus sentidos. Somos un enclave gastronómico excepcional en la pintoresca costa del litoral barcelonés, donde la comida se convierte en una experiencia que va más allá del paladar. Cada aspecto, desde la estética hasta la textura y el aroma, ha sido meticulosamente atendido para sumergirlo en la esencia más pura de la gastronomía mediterránea."
+      "description": "Bienvenidos a El Orquideario Café, un oasis de sabor en el corazón de la ciudad. Nuestra pasión es ofrecer una selección exquisita de bebidas artesanales, repostería hecha con amor y deliciosos bocados salados que harán de su visita una experiencia inolvidable. Con ingredientes cuidadosamente seleccionados y un ambiente acogedor, nos esforzamos por crear momentos especiales para nuestros visitantes, ya sea para un desayuno revitalizante, una merienda relajante o una reunión con amigos."
     },
     "panoramic": {
       "marqueeTitle": "ORQUIDEARIO",

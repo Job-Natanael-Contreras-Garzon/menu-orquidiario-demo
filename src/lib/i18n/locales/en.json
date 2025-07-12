@@ -13,35 +13,35 @@
     "viewMenu": "View Menu",
     "hero": {
       "mainTitle": {
-        "line1": "A CULINARY",
-        "line2": "JOURNEY",
-        "line3": "LIKE NO OTHER"
+        "line1": "IRRESISTIBLE",
+        "line2": "FLAVORS",
+        "line3": "EVERY DAY"
       },
       "leftCarousel": {
-        "item1": "AVOCADO",
-        "item2": "ARTICHOKES",
-        "item3": "DEL PRAT",
-        "item4": "RED TUNA",
-        "item5": "SUPREME",
-        "item6": "PUMPKINS",
-        "item7": "SCALLOPS",
-        "item8": "LOBSTER"
+        "item1": "ESPRESSO",
+        "item2": "CAPPUCCINO",
+        "item3": "LATTE",
+        "item4": "SMOOTHIE",
+        "item5": "FRESH JUICE",
+        "item6": "ICED TEA",
+        "item7": "HOT CHOCOLATE",
+        "item8": "MATCHA LATTE"
       },
       "rightCarousel": {
-        "item1": "LOBSTER",
-        "item2": "SALMON",
-        "item3": "CHERRY TOMATO",
-        "item4": "GREEN GARDEN",
-        "item5": "PASTA DOUGH",
-        "item6": "BROKEN",
-        "item7": "OCTOPUS",
-        "item8": "SEAFOOD"
+        "item1": "CROISSANT",
+        "item2": "MACARONS",
+        "item3": "MUFFINS",
+        "item4": "SANDWICH",
+        "item5": "BAGEL",
+        "item6": "PASTRIES",
+        "item7": "CAKE",
+        "item8": "PANINI"
       },
       "scrollIndicator": "Scroll down"
     },
     "presentation": {
       "title": "PRESENTATION",
-      "description": "Welcome to The Orchidarium, a culinary destination that will delight your senses. We are an exceptional gastronomic enclave on the picturesque Barcelona coast, where food becomes an experience that goes beyond the palate. Every aspect, from aesthetics to texture and aroma, has been meticulously attended to immerse you in the purest essence of Mediterranean gastronomy."
+      "description": "Welcome to The Orchidarium Café, an oasis of flavor in the heart of the city. Our passion is to offer an exquisite selection of artisanal beverages, homemade pastries, and delicious savory bites that will make your visit an unforgettable experience. With carefully selected ingredients and a cozy atmosphere, we strive to create special moments for our visitors, whether for a revitalizing breakfast, a relaxing afternoon snack, or a meeting with friends."
     },
     "panoramic": {
       "marqueeTitle": "ORCHIDARIUM",
