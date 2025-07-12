@@ -59,86 +59,411 @@
       "withIceCream": "Con helado"
   },
   "menuData": {
-    "COF-01": { "name": "Ristretto Doble", "description": "" },
-    "COF-02": { "name": "Espresso Doble", "description": "" },
-    "COF-03": { "name": "Americano", "description": "" },
-    "COF-04": { "name": "Cortado", "description": "" },
-    "COF-05": { "name": "Macchiato", "description": "" },
-    "COF-06": { "name": "Flat White", "description": "" },
-    "COF-07": { "name": "Cappuccino", "description": "" },
-    "COF-08": { "name": "Latte", "description": "" },
-    "COF-09": { "name": "Mocca Latte", "description": "" },
-    "COF-10": { "name": "Sultan", "description": "" },
-    "COF-11": { "name": "Frappe", "description": "" },
-    "COF-12": { "name": "Berry Cold Brew", "description": "" },
-    "COF-13": { "name": "Espresso Tonic", "description": "" },
-    "SIG-01": { "name": "Golden Milk", "description": "" },
-    "SIG-02": { "name": "Iced Tea", "description": "" },
-    "SIG-03": { "name": "Blue Crush", "description": "" },
-    "SIG-04": { "name": "Hibiscus Lemonade", "description": "" },
-    "SIG-05": { "name": "Matcha Banana", "description": "" },
-    "SIG-06": { "name": "Red Berry Soda", "description": "" },
-    "JUI-01": { "name": "Jugo de Piña", "description": "Jugo natural" },
-    "JUI-02": { "name": "Jugo de Coco", "description": "Jugo natural" },
-    "JUI-03": { "name": "Jugo de Mango", "description": "Jugo natural" },
-    "JUI-04": { "name": "Jugo de Guineo", "description": "Jugo natural" },
-    "JUI-05": { "name": "Jugo de Frutilla", "description": "Jugo natural" },
-    "JUI-06": { "name": "Jugo de Durazno", "description": "Jugo natural" },
-    "JUI-07": { "name": "Jugo de Maracuyá", "description": "Jugo natural" },
-    "JUI-08": { "name": "Jugo de Achachairu", "description": "Jugo natural" },
-    "WAT-01": { "name": "Agua sin gas", "description": "" },
-    "WAT-02": { "name": "Agua con gas", "description": "" },
-    "SOD-01": { "name": "Gaseosas", "description": "Sprite, Sprite Zero, Coca-Cola, Coca-Cola Zero" },
-    "INF-01": { "name": "Chocolate Sunshine", "description": "Infusión con notas a naranja y sensación achocolatada con un toque de canela." },
-    "INF-02": { "name": "Cha Cha Chai", "description": "Hojas de té negro de Sri Lanka, con rooibos y un toque de canela tostada." },
-    "INF-03": { "name": "Pineapple Blues", "description": "Flores del sur de Asia infusionadas con té negro, canela tostada y piña." },
-    "INF-04": { "name": "Dolce Vita", "description": "Té de hierbas ligero y refrescante de menta con regaliz y anís." },
-    "INF-05": { "name": "Jazmin", "description": "Mezcla de té verde de corte imperial japonés con delicados pétalos de jazmín." },
-    "DRK-01": { "name": "Mimosa", "description": "" },
-    "DRK-02": { "name": "Sangrani", "description": "" },
-    "DRK-03": { "name": "Piña Colada", "description": "" },
-    "DRK-04": { "name": "Mango Margarita", "description": "" },
-    "DRK-05": { "name": "Gin Tonic", "description": "" },
-    "DRK-06": { "name": "Frozen Sangria", "description": "" },
-    "DRK-07": { "name": "Aperol Spritz", "description": "" },
-    "DRK-08": { "name": "Whiskey Sour de Achachairu", "description": "" },
-    "DRK-09": { "name": "Uyuni Lager", "description": "Cerveza" },
-    "DRK-10": { "name": "Uyuni Salt", "description": "Cerveza" },
-    "EXT-01": { "name": "Extra Leche", "description": "" },
-    "EXT-02": { "name": "Extra Crema", "description": "" },
-    "EXT-03": { "name": "Leche Vegetal", "description": "" },
-    "EXT-04": { "name": "Saborizantes", "description": "Caramelo, Vainilla" },
-    "PAS-01": { "name": "Torta Apple Crumble", "description": "Bizcocho especiado con manzanas tiernas cubiertas de canela, envuelto en una colorida corteza dorada y crujiente con caramelo salado." },
-    "PAS-02": { "name": "Torta Red Velvet", "description": "Mini bizcocho de terciopelo rojo, relleno de dulce frosting de queso crema y bayas rojas frescas." },
-    "PAS-03": { "name": "Torta de Zanahoria", "description": "Bizcocho especiado de zanahoria con canela y nuez moscada, capas de dulce frosting de queso crema, queso caramelizado y nueces caramelizadas." },
-    "PAS-04": { "name": "Torta de Chocolate", "description": "Bizcocho de chocolate suave y esponjoso, relleno de mermelada de fresa casera, cubierto con crema de chocolate suave y aterciopelada y ganache de chocolate. Una fiesta para el paladar." },
-    "PAS-05": { "name": "Cheesecake", "description": "Cheesecake tradicional americano, base de galleta graham y cremoso relleno de queso crema horneado, servido con una reducción de bayas rojas (opcional)." },
-    "PAS-06": { "name": "Brownie", "description": "Amor a primera mordida, una textura clásica ultra húmeda perfecta para todos los amantes del chocolate." },
-    "PAS-07": { "name": "Postre Tiramisú", "description": "Relleno de tiramisú con dos capas de bizcochos de soletilla empapados en sirope de café con vino tinto y cacao en polvo." },
-    "PAS-08": { "name": "Crème Brûlée", "description": "Crema pastelera consistente con frutos rojos, aromatizada con licor y vainilla; cubierta con un caramelo crujiente." },
-    "PAS-09": { "name": "Yogurt Bowl", "description": "Yogur griego y frutas de temporada servidos con miel silvestre y una guarnición casera." },
-    "PAS-10": { "name": "Queque de Naranja", "description": "Bizcocho dulce con sabor a naranja y vainilla, cubierto con una capa de buttercream de naranja." },
-    "SAL-01": { "name": "Bruschetta Capri", "description": "Pan de masa madre a la parrilla en aceite de oliva sobre una cama de pesto casero, tomate deshidratado, queso mozzarella fresco y jamón serrano con un toque de glaseado balsámico." },
-    "SAL-02": { "name": "Croissant BLT", "description": "Croissant con salsa alioli, tocino crujiente sobre una cama de lechuga y rodajas de tomate." },
-    "SAL-03": { "name": "Croissant Hawaiano", "description": "Pasta de queso crema y ricotta, piña caramelizada y lonchas de lomo." },
-    "SAL-04": { "name": "Croissant Jamón & Huevo", "description": "Omelette sobre una cama de lechuga romana acompañado de lonchas de lomo ahumado, tomates cherry y una reducción balsámica." },
-    "SAL-05": { "name": "Bruschetta Caprese", "description": "Pan de masa madre crujiente, queso mozzarella fresco, pesto de albahaca y tomates deshidratados." },
-    "SAL-06": { "name": "Bruschetta de Atún", "description": "Pan de masa madre con aceite de oliva, queso crema aromatizado con cilantro, acompañado de atún, aguacate, rodajas de pepino fresco y tomates cherry confitados." },
-    "SAL-07": { "name": "French Toast", "description": "Tostadas de pan brioche, acompañadas de mantequilla de maní casera y servidas con yogur griego y reducción de frutos rojos." },
-    "SAL-08": { "name": "Sandwich de Lomito", "description": "Pan ciabatta tostado con lomo de res marinado, cebolla caramelizada al whisky, champiñones salteados y queso provolone ahumado, servido con salsa de jalapeño." },
-    "SAL-09": { "name": "Croque Madame", "description": "Sándwich de pernil y queso mozzarella gratinado en pan brioche, acompañado de rúcula fresca, salsa provolone y huevo poché." },
-    "SAL-10": { "name": "Crostini de Pernil", "description": "Tostada de pan de masa madre. Guacamole, pernil ahumado y huevos poché, acompañado de mix de verdes, albahaca morada, verdes ricos, tomates cherry con cebolla encurtida." },
-    "SAL-11": { "name": "Berry Tostada", "description": "Tostada de pan de masa madre. Queso burrata y lascas de tocino sobre una cama de rúcula, acompañado de fresas, tomates cherry y buenas hierbas." },
-    "SAL-12": { "name": "Classic Pancakes", "description": "Panqueques clásicos decadentes y esponjosos con crema batida, frutas de temporada y miel silvestre (contiene coco)." },
-    "SAL-13": { "name": "Desayuno Americano", "description": "Desayuno completo con huevos al gusto, tocino, panqueques y tostadas, acompañado de un café americano o capuchino y un jugo (a elección: Piña, Coco, Mango)." },
-    "SAL-14": { "name": "Omelette Confit", "description": "Omelette con mantequilla ácida aromatizada con vino blanco, tostada de masa madre, queso mozzarella, mix de verdes del día y un confit de tomates cherry en finas especias, acompañado de un café americano o capuchino." },
-    "SAL-15": { "name": "La Portobello", "description": "Tostada de pan de masa madre. Deliciosa opción veggie con queso ricotta fresco y aguacate, espinacas y champiñones salteados acompañados de tomates cherry." },
-    "SAL-16": { "name": "Holy Guac", "description": "Tostada de pan de masa madre. Huevos revueltos con crema agria, sobre una cama de guacamole, tocino crujiente y tomates cherry con perejil." },
-    "SPO-01": { "name": "Queque Entero 8p", "description": "Bizcocho esponjoso con sabor a naranja o limón, con un ligero glaseado de azúcar. También disponible en vainilla y chocolate en un colorido remolino." },
-    "SPO-02": { "name": "Torta Red Velvet (Entera)", "description": "Nuestro clásico de la cocina americana. Bizcocho de terciopelo rojo desnudo, tres capas de dulce frosting de queso crema y bayas rojas frescas." },
-    "SPO-03": { "name": "Torta de Zanahoria (Entera)", "description": "Bizcocho de zanahoria húmedo, suave y esponjoso; aromatizado con canela y un toque de nuez moscada. Dos capas de dulce frosting de queso crema, nueces confitadas, caramelo salado y zanahorias deshidratadas." },
-    "SPO-04": { "name": "Cheesecake Helado 10p", "description": "" },
-    "SPO-05": { "name": "NY Cheesecake 10p", "description": "Cheesecake tradicional americano, base de galleta graham y cremoso relleno de queso crema horneado, acompañado de una reducción de bayas rojas (opcional)." },
-    "SPO-06": { "name": "Torta de Chocolate 10p", "description": "Bizcocho de chocolate húmedo y suave, relleno de mermelada de fresa casera. Cubierto con crema de chocolate suave y aterciopelada y ganache de chocolate. Una fiesta para el paladar." }
+    "COF-01": {
+      "name": "Ristretto Doble",
+      "description": "",
+      "ingredients": ["ristretto", "cafe", "azucar", "leche", "agua"]
+    },
+    "COF-02": {
+      "name": "Espresso Doble",
+      "description": "",
+      "ingredients": ["ristretto", "cafe", "azucar", "leche", "agua"]
+    },
+    "COF-03": {
+      "name": "Americano",
+      "description": "",
+      "ingredients": ["cafe", "agua"]
+    },
+    "COF-04": {
+      "name": "Cortado",
+      "description": "",
+      "ingredients": ["cafe", "leche"]
+    },
+    "COF-05": {
+      "name": "Macchiato",
+      "description": "",
+      "ingredients": ["cafe", "leche", "espuma de leche"]
+    },
+    "COF-06": {
+      "name": "Flat White",
+      "description": "",
+      "ingredients": ["cafe", "leche"]
+    },
+    "COF-07": {
+      "name": "Cappuccino",
+      "description": "",
+      "ingredients": ["cafe", "leche", "espuma de leche"]
+    },
+    "COF-08": {
+      "name": "Latte",
+      "description": "",
+      "ingredients": ["cafe", "leche"]
+    },
+    "COF-09": {
+      "name": "Mocca Latte",
+      "description": "",
+      "ingredients": ["cafe", "leche", "chocolate"]
+    },
+    "COF-10": {
+      "name": "Sultan",
+      "description": "",
+      "ingredients": ["cafe", "leche", "especias"]
+    },
+    "COF-11": {
+      "name": "Frappe",
+      "description": "",
+      "ingredients": ["cafe", "leche", "hielo", "azucar"]
+    },
+    "COF-12": {
+      "name": "Berry Cold Brew",
+      "description": "",
+      "ingredients": ["cafe frio", "bayas", "agua"]
+    },
+    "COF-13": {
+      "name": "Espresso Tonic",
+      "description": "",
+      "ingredients": ["espresso", "agua tónica"]
+    },
+    "SIG-01": {
+      "name": "Golden Milk",
+      "description": "",
+      "ingredients": ["leche", "cúrcuma", "especias"]
+    },
+    "SIG-02": {
+      "name": "Iced Tea",
+      "description": "",
+      "ingredients": ["té", "agua", "hielo"]
+    },
+    "SIG-03": {
+      "name": "Blue Crush",
+      "description": "",
+      "ingredients": ["té verde", "arándanos", "limón", "agua"]
+    },
+    "SIG-04": {
+      "name": "Hibiscus Lemonade",
+      "description": "",
+      "ingredients": ["hibiscus", "limón", "agua", "azucar"]
+    },
+    "SIG-05": {
+      "name": "Matcha Banana",
+      "description": "",
+      "ingredients": ["matcha", "banana", "leche"]
+    },
+    "SIG-06": {
+      "name": "Red Berry Soda",
+      "description": "",
+      "ingredients": ["bayas", "agua con gas", "azucar"]
+    },
+    "JUI-01": {
+      "name": "Jugo de Piña",
+      "description": "Jugo natural",
+      "ingredients": ["piña"]
+    },
+    "JUI-02": {
+      "name": "Jugo de Coco",
+      "description": "Jugo natural",
+      "ingredients": ["coco"]
+    },
+    "JUI-03": {
+      "name": "Jugo de Mango",
+      "description": "Jugo natural",
+      "ingredients": ["mango"]
+    },
+    "JUI-04": {
+      "name": "Jugo de Guineo",
+      "description": "Jugo natural",
+      "ingredients": ["guineo"]
+    },
+    "JUI-05": {
+      "name": "Jugo de Frutilla",
+      "description": "Jugo natural",
+      "ingredients": ["frutilla"]
+    },
+    "JUI-06": {
+      "name": "Jugo de Durazno",
+      "description": "Jugo natural",
+      "ingredients": ["durazno"]
+    },
+    "JUI-07": {
+      "name": "Jugo de Maracuyá",
+      "description": "Jugo natural",
+      "ingredients": ["maracuyá"]
+    },
+    "JUI-08": {
+      "name": "Jugo de Achachairu",
+      "description": "Jugo natural",
+      "ingredients": ["achachairu"]
+    },
+    "WAT-01": {
+      "name": "Agua sin gas",
+      "description": "",
+      "ingredients": ["agua"]
+    },
+    "WAT-02": {
+      "name": "Agua con gas",
+      "description": "",
+      "ingredients": ["agua", "gas"]
+    },
+    "SOD-01": {
+      "name": "Gaseosas",
+      "description": "Sprite, Sprite Zero, Coca-Cola, Coca-Cola Zero",
+      "ingredients": ["Sprite", "Sprite Zero", "Coca-Cola", "Coca-Cola Zero"]
+    },
+    "INF-01": {
+      "name": "Chocolate Sunshine",
+      "description": "Infusión con notas a naranja y sensación achocolatada con un toque de canela.",
+      "ingredients": ["té", "naranja", "canela", "cacao"]
+    },
+    "INF-02": {
+      "name": "Cha Cha Chai",
+      "description": "Hojas de té negro de Sri Lanka, con rooibos y un toque de canela tostada.",
+      "ingredients": ["té negro", "rooibos", "canela"]
+    },
+    "INF-03": {
+      "name": "Pineapple Blues",
+      "description": "Flores del sur de Asia infusionadas con té negro, canela tostada y piña.",
+      "ingredients": ["té negro", "canela", "piña"]
+    },
+    "INF-04": {
+      "name": "Dolce Vita",
+      "description": "Té de hierbas ligero y refrescante de menta con regaliz y anís.",
+      "ingredients": ["menta", "regaliz", "anís"]
+    },
+    "INF-05": {
+      "name": "Jazmin",
+      "description": "Mezcla de té verde de corte imperial japonés con delicados pétalos de jazmín.",
+      "ingredients": ["té verde", "jazmín"]
+    },
+    "DRK-01": {
+      "name": "Mimosa",
+      "description": "",
+      "ingredients": ["champagne", "jugo de naranja"]
+    },
+    "DRK-02": {
+      "name": "Sangrani",
+      "description": "",
+      "ingredients": ["vino tinto", "frutas", "licor"]
+    },
+    "DRK-03": {
+      "name": "Piña Colada",
+      "description": "",
+      "ingredients": ["ron", "crema de coco", "jugo de piña"]
+    },
+    "DRK-04": {
+      "name": "Mango Margarita",
+      "description": "",
+      "ingredients": ["tequila", "mango", "jugo de lima", "triple sec"]
+    },
+    "DRK-05": {
+      "name": "Gin Tonic",
+      "description": "",
+      "ingredients": ["gin", "agua tónica"]
+    },
+    "DRK-06": {
+      "name": "Frozen Sangria",
+      "description": "",
+      "ingredients": ["vino tinto", "frutas", "hielo"]
+    },
+    "DRK-07": {
+      "name": "Aperol Spritz",
+      "description": "",
+      "ingredients": ["Aperol", "prosecco", "agua con gas"]
+    },
+    "DRK-08": {
+      "name": "Whiskey Sour de Achachairu",
+      "description": "",
+      "ingredients": ["whiskey", "achachairu", "jugo de limon", "azucar"]
+    },
+    "DRK-09": {
+      "name": "Uyuni Lager",
+      "description": "Cerveza",
+      "ingredients": ["agua", "lúpulo", "malta", "levadura"]
+    },
+    "DRK-10": {
+      "name": "Uyuni Salt",
+      "description": "Cerveza",
+      "ingredients": ["agua", "lúpulo", "malta", "levadura", "sal"]
+    },
+    "EXT-01": {
+      "name": "Extra Leche",
+      "description": "",
+      "ingredients": ["leche"]
+    },
+    "EXT-02": {
+      "name": "Extra Crema",
+      "description": "",
+      "ingredients": ["crema"]
+    },
+    "EXT-03": {
+      "name": "Leche Vegetal",
+      "description": "",
+      "ingredients": ["leche vegetal"]
+    },
+    "EXT-04": {
+      "name": "Saborizantes",
+      "description": "Caramelo, Vainilla",
+      "ingredients": ["caramelo", "vainilla"]
+    },
+    "PAS-01": {
+      "name": "Torta Apple Crumble",
+      "description": "Bizcocho especiado con manzanas tiernas cubiertas de canela, envuelto en una colorida corteza dorada y crujiente con caramelo salado.",
+      "ingredients": ["harina", "manzana", "azúcar", "canela", "mantequilla"]
+    },
+    "PAS-02": {
+      "name": "Torta Red Velvet",
+      "description": "Mini bizcocho de terciopelo rojo, relleno de dulce frosting de queso crema y bayas rojas frescas.",
+      "ingredients": ["harina", "azúcar", "cocoa", "queso crema", "bayas"]
+    },
+    "PAS-03": {
+      "name": "Torta de Zanahoria",
+      "description": "Bizcocho especiado de zanahoria con canela y nuez moscada, capas de dulce frosting de queso crema, queso caramelizado y nueces caramelizadas.",
+      "ingredients": ["harina", "zanahoria", "azúcar", "canela", "nueces"]
+    },
+    "PAS-04": {
+      "name": "Torta de Chocolate",
+      "description": "Bizcocho de chocolate suave y esponjoso, relleno de mermelada de fresa casera, cubierto con crema de chocolate suave y aterciopelada y ganache de chocolate. Una fiesta para el paladar.",
+      "ingredients": ["harina", "chocolate", "azúcar", "mantequilla", "huevos"]
+    },
+    "PAS-05": {
+      "name": "Cheesecake",
+      "description": "Cheesecake tradicional americano, base de galleta graham y cremoso relleno de queso crema horneado, servido con una reducción de bayas rojas (opcional).",
+      "ingredients": ["queso crema", "galletas", "azúcar", "mantequilla"]
+    },
+    "PAS-06": {
+      "name": "Brownie",
+      "description": "Amor a primera mordida, una textura clásica ultra húmeda perfecta para todos los amantes del chocolate.",
+      "ingredients": ["chocolate", "mantequilla", "azúcar", "huevos", "harina"]
+    },
+    "PAS-07": {
+      "name": "Postre Tiramisú",
+      "description": "Relleno de tiramisú con dos capas de bizcochos de soletilla empapados en sirope de café con vino tinto y cacao en polvo.",
+      "ingredients": ["bizcochos de soletilla", "café", "mascarpone", "huevo", "azúcar", "cacao"]
+    },
+    "PAS-08": {
+      "name": "Crème Brûlée",
+      "description": "Crema pastelera consistente con frutos rojos, aromatizada con licor y vainilla; cubierta con un caramelo crujiente.",
+      "ingredients": ["nata", "huevo", "azúcar", "vainilla"]
+    },
+    "PAS-09": {
+      "name": "Yogurt Bowl",
+      "description": "Yogur griego y frutas de temporada servidos con miel silvestre y una guarnición casera.",
+      "ingredients": ["yogur griego", "frutas", "miel"]
+    },
+    "PAS-10": {
+      "name": "Queque de Naranja",
+      "description": "Bizcocho dulce con sabor a naranja y vainilla, cubierto con una capa de buttercream de naranja.",
+      "ingredients": ["harina", "naranja", "azúcar", "huevos", "mantequilla"]
+    },
+    "SAL-01": {
+      "name": "Bruschetta Capri",
+      "description": "Pan de masa madre a la parrilla en aceite de oliva sobre una cama de pesto casero, tomate deshidratado, queso mozzarella fresco y jamón serrano con un toque de glaseado balsámico.",
+      "ingredients": ["pan", "aceite de oliva", "pesto", "tomate deshidratado", "mozzarella", "jamón serrano", "balsámico"]
+    },
+    "SAL-02": {
+      "name": "Croissant BLT",
+      "description": "Croissant con salsa alioli, tocino crujiente sobre una cama de lechuga y rodajas de tomate.",
+      "ingredients": ["croissant", "alioli", "tocino", "lechuga", "tomate"]
+    },
+    "SAL-03": {
+      "name": "Croissant Hawaiano",
+      "description": "Pasta de queso crema y ricotta, piña caramelizada y lonchas de lomo.",
+      "ingredients": ["croissant", "queso crema", "piña", "lomo"]
+    },
+    "SAL-04": {
+      "name": "Croissant Jamón & Huevo",
+      "description": "Omelette sobre una cama de lechuga romana acompañado de lonchas de lomo ahumado, tomates cherry y una reducción balsámica.",
+      "ingredients": ["croissant", "huevo", "lechuga", "lomo", "tomates cherry", "balsámico"]
+    },
+    "SAL-05": {
+      "name": "Bruschetta Caprese",
+      "description": "Pan de masa madre crujiente, queso mozzarella fresco, pesto de albahaca y tomates deshidratados.",
+      "ingredients": ["pan", "mozzarella", "pesto", "tomate deshidratado"]
+    },
+    "SAL-06": {
+      "name": "Bruschetta de Atún",
+      "description": "Pan de masa madre con aceite de oliva, queso crema aromatizado con cilantro, acompañado de atún, aguacate, rodajas de pepino fresco y tomates cherry confitados.",
+      "ingredients": ["pan", "aceite de oliva", "queso crema", "cilantro", "atún", "aguacate", "pepino", "tomates cherry"]
+    },
+    "SAL-07": {
+      "name": "French Toast",
+      "description": "Tostadas de pan brioche, acompañadas de mantequilla de maní casera y servidas con yogur griego y reducción de frutos rojos.",
+      "ingredients": ["pan brioche", "mantequilla de maní", "yogur griego", "frutos rojos"]
+    },
+    "SAL-08": {
+      "name": "Sandwich de Lomito",
+      "description": "Pan ciabatta tostado con lomo de res marinado, cebolla caramelizada al whisky, champiñones salteados y queso provolone ahumado, servido con salsa de jalapeño.",
+      "ingredients": ["ciabatta", "lomito", "cebolla", "champiñones", "provolone", "jalapeño"]
+    },
+    "SAL-09": {
+      "name": "Croque Madame",
+      "description": "Sándwich de pernil y queso mozzarella gratinado en pan brioche, acompañado de rúcula fresca, salsa provolone y huevo poché.",
+      "ingredients": ["pan brioche", "pernil", "mozzarella", "rúcula", "salsa provolone", "huevo"]
+    },
+    "SAL-10": {
+      "name": "Crostini de Pernil",
+      "description": "Tostada de pan de masa madre. Guacamole, pernil ahumado y huevos poché, acompañado de mix de verdes, albahaca morada, verdes ricos, tomates cherry con cebolla encurtida.",
+      "ingredients": ["pan", "guacamole", "pernil", "huevo", "mix de verdes", "tomates cherry", "cebolla"]
+    },
+    "SAL-11": {
+      "name": "Berry Tostada",
+      "description": "Tostada de pan de masa madre. Queso burrata y lascas de tocino sobre una cama de rúcula, acompañado de fresas, tomates cherry y buenas hierbas.",
+      "ingredients": ["pan", "burrata", "tocino", "rúcula", "fresas", "hierbas"]
+    },
+    "SAL-12": {
+      "name": "Classic Pancakes",
+      "description": "Panqueques clásicos decadentes y esponjosos con crema batida, frutas de temporada y miel silvestre (contiene coco).",
+      "ingredients": ["harina", "leche", "huevo", "miel", "frutas", "coco"]
+    },
+    "SAL-13": {
+      "name": "Desayuno Americano",
+      "description": "Desayuno completo con huevos al gusto, tocino, panqueques y tostadas, acompañado de un café americano o capuchino y un jugo (a elección: Piña, Coco, Mango).",
+      "ingredients": ["huevo", "tocino", "panqueques", "tostadas", "café", "jugo"]
+    },
+    "SAL-14": {
+      "name": "Omelette Confit",
+      "description": "Omelette con mantequilla ácida aromatizada con vino blanco, tostada de masa madre, queso mozzarella, mix de verdes del día y un confit de tomates cherry en finas especias, acompañado de un café americano o capuchino.",
+      "ingredients": ["huevo", "mantequilla", "vino blanco", "pan", "mozzarella", "tomates cherry", "café"]
+    },
+    "SAL-15": {
+      "name": "La Portobello",
+      "description": "Tostada de pan de masa madre. Deliciosa opción veggie con queso ricotta fresco y aguacate, espinacas y champiñones salteados acompañados de tomates cherry.",
+      "ingredients": ["pan", "ricotta", "aguacate", "espinacas", "champiñones", "tomates cherry"]
+    },
+    "SAL-16": {
+      "name": "Holy Guac",
+      "description": "Tostada de pan de masa madre. Huevos revueltos con crema agria, sobre una cama de guacamole, tocino crujiente y tomates cherry con perejil.",
+      "ingredients": ["pan", "aguacate", "huevo", "crema agria", "tocino", "tomates cherry"]
+    },
+    "SPO-01": {
+      "name": "Queque Entero 8p",
+      "description": "Bizcocho esponjoso con sabor a naranja o limón, con un ligero glaseado de azúcar. También disponible en vainilla y chocolate en un colorido remolino.",
+      "ingredients": ["harina", "huevo", "leche", "azúcar", "glaseado"]
+    },
+    "SPO-02": {
+      "name": "Torta Red Velvet (Entera)",
+      "description": "Nuestro clásico de la cocina americana. Bizcocho de terciopelo rojo desnudo, tres capas de dulce frosting de queso crema y bayas rojas frescas.",
+      "ingredients": ["harina", "azúcar", "cocoa", "queso crema", "bayas"]
+    },
+    "SPO-03": {
+      "name": "Torta de Zanahoria (Entera)",
+      "description": "Bizcocho de zanahoria húmedo, suave y esponjoso; aromatizado con canela y un toque de nuez moscada. Dos capas de dulce frosting de queso crema, nueces confitadas, caramelo salado y zanahorias deshidratadas.",
+      "ingredients": ["harina", "zanahoria", "azúcar", "canela", "nueces"]
+    },
+    "SPO-04": {
+      "name": "Cheesecake Helado 10p",
+      "description": "",
+      "ingredients": ["queso crema", "galletas", "azúcar", "nata"]
+    },
+    "SPO-05": {
+      "name": "NY Cheesecake 10p",
+      "description": "Cheesecake tradicional americano, base de galleta graham y cremoso relleno de queso crema horneado, acompañado de una reducción de bayas rojas (opcional).",
+      "ingredients": ["queso crema", "galletas", "azúcar"]
+    },
+    "SPO-06": {
+      "name": "Torta de Chocolate 10p",
+      "description": "Bizcocho de chocolate húmedo y suave, relleno de mermelada de fresa casera. Cubierto con crema de chocolate suave y aterciopelada y ganache de chocolate. Una fiesta para el paladar.",
+      "ingredients": ["harina", "chocolate", "azúcar", "mantequilla", "huevos"]
+    }
   }
+
 }

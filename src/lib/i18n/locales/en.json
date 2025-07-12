@@ -58,87 +58,411 @@
   "productCard": {
       "withIceCream": "With ice cream"
   },
-  "menuData": {
-    "COF-01": { "name": "Double Ristretto", "description": "" },
-    "COF-02": { "name": "Double Espresso", "description": "" },
-    "COF-03": { "name": "Americano", "description": "" },
-    "COF-04": { "name": "Cortado", "description": "" },
-    "COF-05": { "name": "Macchiato", "description": "" },
-    "COF-06": { "name": "Flat White", "description": "" },
-    "COF-07": { "name": "Cappuccino", "description": "" },
-    "COF-08": { "name": "Latte", "description": "" },
-    "COF-09": { "name": "Mocca Latte", "description": "" },
-    "COF-10": { "name": "Sultan", "description": "" },
-    "COF-11": { "name": "Frappe", "description": "" },
-    "COF-12": { "name": "Berry Cold Brew", "description": "" },
-    "COF-13": { "name": "Espresso Tonic", "description": "" },
-    "SIG-01": { "name": "Golden Milk", "description": "" },
-    "SIG-02": { "name": "Iced Tea", "description": "" },
-    "SIG-03": { "name": "Blue Crush", "description": "" },
-    "SIG-04": { "name": "Hibiscus Lemonade", "description": "" },
-    "SIG-05": { "name": "Matcha Banana", "description": "" },
-    "SIG-06": { "name": "Red Berry Soda", "description": "" },
-    "JUI-01": { "name": "Pineapple Juice", "description": "Natural juice" },
-    "JUI-02": { "name": "Coconut Juice", "description": "Natural juice" },
-    "JUI-03": { "name": "Mango Juice", "description": "Natural juice" },
-    "JUI-04": { "name": "Banana Juice", "description": "Natural juice" },
-    "JUI-05": { "name": "Strawberry Juice", "description": "Natural juice" },
-    "JUI-06": { "name": "Peach Juice", "description": "Natural juice" },
-    "JUI-07": { "name": "Passion Fruit Juice", "description": "Natural juice" },
-    "JUI-08": { "name": "Achachairu Juice", "description": "Natural juice" },
-    "WAT-01": { "name": "Still Water", "description": "" },
-    "WAT-02": { "name": "Sparkling Water", "description": "" },
-    "SOD-01": { "name": "Sodas", "description": "Sprite, Sprite Zero, Coca-Cola, Coca-Cola Zero" },
-    "INF-01": { "name": "Chocolate Sunshine", "description": "Infusion with orange notes and a chocolatey sensation with a hint of cinnamon." },
-    "INF-02": { "name": "Cha Cha Chai", "description": "Black tea leaves from Sri Lanka, with rooibos and a touch of toasted cinnamon." },
-    "INF-03": { "name": "Pineapple Blues", "description": "South Asian flowers infused with black tea, toasted cinnamon, and pineapple." },
-    "INF-04": { "name": "Dolce Vita", "description": "Light and refreshing herbal tea of mint with licorice and anise." },
-    "INF-05": { "name": "Jasmine", "description": "Blend of Japanese imperial cut green tea with delicate jasmine petals." },
-    "DRK-01": { "name": "Mimosa", "description": "" },
-    "DRK-02": { "name": "Sangrani", "description": "" },
-    "DRK-03": { "name": "Piña Colada", "description": "" },
-    "DRK-04": { "name": "Mango Margarita", "description": "" },
-    "DRK-05": { "name": "Gin Tonic", "description": "" },
-    "DRK-06": { "name": "Frozen Sangria", "description": "" },
-    "DRK-07": { "name": "Aperol Spritz", "description": "" },
-    "DRK-08": { "name": "Achachairu Whiskey Sour", "description": "" },
-    "DRK-09": { "name": "Uyuni Lager", "description": "Beer" },
-    "DRK-10": { "name": "Uyuni Salt", "description": "Beer" },
-    "EXT-01": { "name": "Extra Milk", "description": "" },
-    "EXT-02": { "name": "Extra Cream", "description": "" },
-    "EXT-03": { "name": "Plant-based Milk", "description": "" },
-    "EXT-04": { "name": "Flavorings", "description": "Caramel, Vanilla" },
-    "PAS-01": { "name": "Apple Crumble Cake", "description": "Spiced cake with tender cinnamon-covered apples, wrapped in a colorful golden, crispy crust with salted caramel." },
-    "PAS-02": { "name": "Red Velvet Cake", "description": "Mini red velvet sponge cake, filled with sweet cream cheese frosting and fresh red berries." },
-    "PAS-03": { "name": "Carrot Cake", "description": "Spiced carrot cake with cinnamon and nutmeg, layers of sweet cream cheese frosting, caramelized cheese, and candied nuts." },
-    "PAS-04": { "name": "Chocolate Cake", "description": "Soft and fluffy chocolate sponge cake, filled with homemade strawberry jam, covered with smooth and velvety chocolate cream and chocolate ganache. A feast for the palate." },
-    "PAS-05": { "name": "Cheesecake", "description": "Traditional American cheesecake, graham cracker crust and creamy baked cream cheese filling, served with a red berry reduction (optional)." },
-    "PAS-06": { "name": "Brownie", "description": "Love at first bite, a classic ultra-moist texture perfect for all chocolate lovers." },
-    "PAS-07": { "name": "Tiramisu Dessert", "description": "Tiramisu filling with two layers of ladyfingers soaked in coffee syrup with red wine and cocoa powder." },
-    "PAS-08": { "name": "Crème Brûlée", "description": "Thick custard with red fruits, flavored with liqueur and vanilla; covered with a crispy caramel." },
-    "PAS-09": { "name": "Yogurt Bowl", "description": "Greek yogurt and seasonal fruits served with wild honey and a homemade garnish." },
-    "PAS-10": { "name": "Orange Pound Cake", "description": "Sweet cake with orange and vanilla flavor, covered with a layer of orange buttercream." },
-    "SAL-01": { "name": "Bruschetta Capri", "description": "Grilled sourdough bread in olive oil on a bed of homemade pesto, sun-dried tomato, fresh mozzarella cheese, and serrano ham with a touch of balsamic glaze." },
-    "SAL-02": { "name": "BLT Croissant", "description": "Croissant with aioli sauce, crispy bacon on a bed of lettuce and tomato slices." },
-    "SAL-03": { "name": "Hawaiian Croissant", "description": "Cream cheese and ricotta paste, caramelized pineapple, and loin slices." },
-    "SAL-04": { "name": "Ham & Egg Croissant", "description": "Omelette on a bed of romaine lettuce accompanied by smoked loin slices, cherry tomatoes, and a balsamic reduction." },
-    "SAL-05": { "name": "Caprese Bruschetta", "description": "Crispy sourdough bread, fresh mozzarella cheese, basil pesto, and sun-dried tomatoes." },
-    "SAL-06": { "name": "Tuna Bruschetta", "description": "Sourdough bread with olive oil, cilantro-flavored cream cheese, accompanied by tuna, avocado, fresh cucumber slices, and candied cherry tomatoes." },
-    "SAL-07": { "name": "French Toast", "description": "Brioche bread toasts, accompanied by homemade peanut butter and served with Greek yogurt and red berry reduction." },
-    "SAL-08": { "name": "Steak Sandwich", "description": "Toasted ciabatta bread with marinated beef loin, whiskey-caramelized onion, sautéed mushrooms, and smoked provolone cheese, served with jalapeño sauce." },
-    "SAL-09": { "name": "Croque Madame", "description": "Pork leg and mozzarella cheese sandwich au gratin on brioche bread, accompanied by fresh arugula, provolone sauce, and a poached egg." },
-    "SAL-10": { "name": "Pork Leg Crostini", "description": "Sourdough toast. Guacamole, smoked pork leg, and poached eggs, accompanied by mixed greens, purple basil, rich greens, cherry tomatoes with pickled onion." },
-    "SAL-11": { "name": "Berry Toast", "description": "Sourdough toast. Burrata cheese and bacon slices on a bed of arugula, accompanied by strawberries, cherry tomatoes, and fine herbs." },
-    "SAL-12": { "name": "Classic Pancakes", "description": "Decadent and fluffy classic pancakes with whipped cream, seasonal fruits, and wild honey (contains coconut)." },
-    "SAL-13": { "name": "American Breakfast", "description": "Complete breakfast with eggs your way, bacon, pancakes, and toast, accompanied by an Americano or cappuccino and a juice (choice of: Pineapple, Coconut, Mango)." },
-    "SAL-14": { "name": "Omelette Confit", "description": "Omelette with sour butter flavored with white wine, sourdough toast, mozzarella cheese, mixed greens of the day, and a confit of cherry tomatoes in fine spices, accompanied by an Americano or cappuccino." },
-    "SAL-15": { "name": "The Portobello", "description": "Sourdough toast. Delicious veggie option with fresh ricotta cheese and avocado, sautéed spinach and mushrooms accompanied by cherry tomatoes." },
-    "SAL-16": { "name": "Holy Guac", "description": "Sourdough toast. Scrambled eggs with sour cream, on a bed of guacamole, crispy bacon, and cherry tomatoes with parsley." },
-    "SPO-01": { "name": "Whole Pound Cake 8p", "description": "Spongy cake with orange or lemon flavor, with a light sugar glaze. Also available in vanilla and chocolate in a colorful swirl." },
-    "SPO-02": { "name": "Red Velvet Cake (Whole)", "description": "Our classic from American cuisine. Naked red velvet sponge cake, three layers of sweet cream cheese frosting, and fresh red berries." },
-    "SPO-03": { "name": "Carrot Cake (Whole)", "description": "Moist, soft, and fluffy carrot cake; flavored with cinnamon and a hint of nutmeg. Two layers of sweet cream cheese frosting, candied nuts, salted caramel, and dehydrated carrots." },
-    "SPO-04": { "name": "Frozen Cheesecake 10p", "description": "" },
-    "SPO-05": { "name": "NY Cheesecake 10p", "description": "Traditional American cheesecake, graham cracker crust and creamy baked cream cheese filling, accompanied by a red berry reduction (optional)." },
-    "SPO-06": { "name": "Chocolate Cake 10p", "description": "Moist and soft chocolate sponge cake, filled with homemade strawberry jam. Covered with smooth and velvety chocolate cream and chocolate ganache. A feast for the palate." }
+ "menuData": {
+    "COF-01": {
+      "name": "Double Ristretto",
+      "description": "",
+      "ingredients": ["ristretto", "coffee", "sugar", "milk", "water"]
+    },
+    "COF-02": {
+      "name": "Double Espresso",
+      "description": "",
+      "ingredients": ["ristretto", "coffee", "sugar", "milk", "water"]
+    },
+    "COF-03": {
+      "name": "Americano",
+      "description": "",
+      "ingredients": ["coffee", "water"]
+    },
+    "COF-04": {
+      "name": "Cortado",
+      "description": "",
+      "ingredients": ["coffee", "milk"]
+    },
+    "COF-05": {
+      "name": "Macchiato",
+      "description": "",
+      "ingredients": ["coffee", "milk", "milk foam"]
+    },
+    "COF-06": {
+      "name": "Flat White",
+      "description": "",
+      "ingredients": ["coffee", "milk"]
+    },
+    "COF-07": {
+      "name": "Cappuccino",
+      "description": "",
+      "ingredients": ["coffee", "milk", "milk foam"]
+    },
+    "COF-08": {
+      "name": "Latte",
+      "description": "",
+      "ingredients": ["coffee", "milk"]
+    },
+    "COF-09": {
+      "name": "Mocca Latte",
+      "description": "",
+      "ingredients": ["coffee", "milk", "chocolate"]
+    },
+    "COF-10": {
+      "name": "Sultan",
+      "description": "",
+      "ingredients": ["coffee", "milk", "spices"]
+    },
+    "COF-11": {
+      "name": "Frappe",
+      "description": "",
+      "ingredients": ["coffee", "milk", "ice", "sugar"]
+    },
+    "COF-12": {
+      "name": "Berry Cold Brew",
+      "description": "",
+      "ingredients": ["cold brew coffee", "berries", "water"]
+    },
+    "COF-13": {
+      "name": "Espresso Tonic",
+      "description": "",
+      "ingredients": ["espresso", "tonic water"]
+    },
+    "SIG-01": {
+      "name": "Golden Milk",
+      "description": "",
+      "ingredients": ["milk", "turmeric", "spices"]
+    },
+    "SIG-02": {
+      "name": "Iced Tea",
+      "description": "",
+      "ingredients": ["tea", "water", "ice"]
+    },
+    "SIG-03": {
+      "name": "Blue Crush",
+      "description": "",
+      "ingredients": ["green tea", "blueberries", "lemon", "water"]
+    },
+    "SIG-04": {
+      "name": "Hibiscus Lemonade",
+      "description": "",
+      "ingredients": ["hibiscus", "lemon", "water", "sugar"]
+    },
+    "SIG-05": {
+      "name": "Matcha Banana",
+      "description": "",
+      "ingredients": ["matcha", "banana", "milk"]
+    },
+    "SIG-06": {
+      "name": "Red Berry Soda",
+      "description": "",
+      "ingredients": ["berries", "sparkling water", "sugar"]
+    },
+    "JUI-01": {
+      "name": "Pineapple Juice",
+      "description": "Natural juice",
+      "ingredients": ["pineapple"]
+    },
+    "JUI-02": {
+      "name": "Coconut Juice",
+      "description": "Natural juice",
+      "ingredients": ["coconut"]
+    },
+    "JUI-03": {
+      "name": "Mango Juice",
+      "description": "Natural juice",
+      "ingredients": ["mango"]
+    },
+    "JUI-04": {
+      "name": "Banana Juice",
+      "description": "Natural juice",
+      "ingredients": ["banana"]
+    },
+    "JUI-05": {
+      "name": "Strawberry Juice",
+      "description": "Natural juice",
+      "ingredients": ["strawberry"]
+    },
+    "JUI-06": {
+      "name": "Peach Juice",
+      "description": "Natural juice",
+      "ingredients": ["peach"]
+    },
+    "JUI-07": {
+      "name": "Passion Fruit Juice",
+      "description": "Natural juice",
+      "ingredients": ["passion fruit"]
+    },
+    "JUI-08": {
+      "name": "Achachairu Juice",
+      "description": "Natural juice",
+      "ingredients": ["achachairu"]
+    },
+    "WAT-01": {
+      "name": "Still Water",
+      "description": "",
+      "ingredients": ["water"]
+    },
+    "WAT-02": {
+      "name": "Sparkling Water",
+      "description": "",
+      "ingredients": ["water", "carbonation"]
+    },
+    "SOD-01": {
+      "name": "Sodas",
+      "description": "Sprite, Sprite Zero, Coca-Cola, Coca-Cola Zero",
+      "ingredients": ["Sprite", "Sprite Zero", "Coca-Cola", "Coca-Cola Zero"]
+    },
+    "INF-01": {
+      "name": "Chocolate Sunshine",
+      "description": "Infusion with orange notes and a chocolatey sensation with a hint of cinnamon.",
+      "ingredients": ["tea", "orange", "cinnamon", "cocoa"]
+    },
+    "INF-02": {
+      "name": "Cha Cha Chai",
+      "description": "Black tea leaves from Sri Lanka, with rooibos and a touch of toasted cinnamon.",
+      "ingredients": ["black tea", "rooibos", "cinnamon"]
+    },
+    "INF-03": {
+      "name": "Pineapple Blues",
+      "description": "South Asian flowers infused with black tea, toasted cinnamon, and pineapple.",
+      "ingredients": ["black tea", "cinnamon", "pineapple"]
+    },
+    "INF-04": {
+      "name": "Dolce Vita",
+      "description": "Light and refreshing herbal tea of mint with licorice and anise.",
+      "ingredients": ["mint", "licorice", "anise"]
+    },
+    "INF-05": {
+      "name": "Jasmine",
+      "description": "Blend of Japanese imperial cut green tea with delicate jasmine petals.",
+      "ingredients": ["green tea", "jasmine"]
+    },
+    "DRK-01": {
+      "name": "Mimosa",
+      "description": "",
+      "ingredients": ["champagne", "orange juice"]
+    },
+    "DRK-02": {
+      "name": "Sangrani",
+      "description": "",
+      "ingredients": ["red wine", "fruits", "liqueur"]
+    },
+    "DRK-03": {
+      "name": "Piña Colada",
+      "description": "",
+      "ingredients": ["rum", "coconut cream", "pineapple juice"]
+    },
+    "DRK-04": {
+      "name": "Mango Margarita",
+      "description": "",
+      "ingredients": ["tequila", "mango", "lime juice", "triple sec"]
+    },
+    "DRK-05": {
+      "name": "Gin Tonic",
+      "description": "",
+      "ingredients": ["gin", "tonic water"]
+    },
+    "DRK-06": {
+      "name": "Frozen Sangria",
+      "description": "",
+      "ingredients": ["red wine", "fruits", "ice"]
+    },
+    "DRK-07": {
+      "name": "Aperol Spritz",
+      "description": "",
+      "ingredients": ["Aperol", "prosecco", "sparkling water"]
+    },
+    "DRK-08": {
+      "name": "Achachairu Whiskey Sour",
+      "description": "",
+      "ingredients": ["whiskey", "achachairu", "lemon juice", "sugar"]
+    },
+    "DRK-09": {
+      "name": "Uyuni Lager",
+      "description": "Beer",
+      "ingredients": ["water", "hops", "malt", "yeast"]
+    },
+    "DRK-10": {
+      "name": "Uyuni Salt",
+      "description": "Beer",
+      "ingredients": ["water", "hops", "malt", "yeast", "salt"]
+    },
+    "EXT-01": {
+      "name": "Extra Milk",
+      "description": "",
+      "ingredients": ["milk"]
+    },
+    "EXT-02": {
+      "name": "Extra Cream",
+      "description": "",
+      "ingredients": ["cream"]
+    },
+    "EXT-03": {
+      "name": "Plant-based Milk",
+      "description": "",
+      "ingredients": ["plant-based milk"]
+    },
+    "EXT-04": {
+      "name": "Flavorings",
+      "description": "Caramel, Vanilla",
+      "ingredients": ["caramel", "vanilla"]
+    },
+    "PAS-01": {
+      "name": "Apple Crumble Cake",
+      "description": "Spiced cake with tender cinnamon-covered apples, wrapped in a colorful golden, crispy crust with salted caramel.",
+      "ingredients": ["flour", "apple", "sugar", "cinnamon", "butter"]
+    },
+    "PAS-02": {
+      "name": "Red Velvet Cake",
+      "description": "Mini red velvet sponge cake, filled with sweet cream cheese frosting and fresh red berries.",
+      "ingredients": ["flour", "sugar", "cocoa", "cream cheese", "berries"]
+    },
+    "PAS-03": {
+      "name": "Carrot Cake",
+      "description": "Spiced carrot cake with cinnamon and nutmeg, layers of sweet cream cheese frosting, caramelized cheese, and candied nuts.",
+      "ingredients": ["flour", "carrot", "sugar", "cinnamon", "nuts"]
+    },
+    "PAS-04": {
+      "name": "Chocolate Cake",
+      "description": "Soft and fluffy chocolate sponge cake, filled with homemade strawberry jam, covered with smooth and velvety chocolate cream and chocolate ganache. A feast for the palate.",
+      "ingredients": ["flour", "chocolate", "sugar", "butter", "eggs"]
+    },
+    "PAS-05": {
+      "name": "Cheesecake",
+      "description": "Traditional American cheesecake, graham cracker crust and creamy baked cream cheese filling, served with a red berry reduction (optional).",
+      "ingredients": ["cream cheese", "graham crackers", "sugar", "butter"]
+    },
+    "PAS-06": {
+      "name": "Brownie",
+      "description": "Love at first bite, a classic ultra-moist texture perfect for all chocolate lovers.",
+      "ingredients": ["chocolate", "butter", "sugar", "eggs", "flour"]
+    },
+    "PAS-07": {
+      "name": "Tiramisu Dessert",
+      "description": "Tiramisu filling with two layers of ladyfingers soaked in coffee syrup with red wine and cocoa powder.",
+      "ingredients": ["ladyfingers", "coffee", "mascarpone", "egg", "sugar", "cocoa"]
+    },
+    "PAS-08": {
+      "name": "Crème Brûlée",
+      "description": "Thick custard with red fruits, flavored with liqueur and vanilla; covered with a crispy caramel.",
+      "ingredients": ["cream", "egg", "sugar", "vanilla"]
+    },
+    "PAS-09": {
+      "name": "Yogurt Bowl",
+      "description": "Greek yogurt and seasonal fruits served with wild honey and a homemade garnish.",
+      "ingredients": ["greek yogurt", "fruits", "honey"]
+    },
+    "PAS-10": {
+      "name": "Orange Pound Cake",
+      "description": "Sweet cake with orange and vanilla flavor, covered with a layer of orange buttercream.",
+      "ingredients": ["flour", "orange", "sugar", "eggs", "butter"]
+    },
+    "SAL-01": {
+      "name": "Bruschetta Capri",
+      "description": "Grilled sourdough bread in olive oil on a bed of homemade pesto, sun-dried tomato, fresh mozzarella cheese, and serrano ham with a touch of balsamic glaze.",
+      "ingredients": ["bread", "olive oil", "pesto", "sun-dried tomato", "mozzarella", "serrano ham", "balsamic glaze"]
+    },
+    "SAL-02": {
+      "name": "BLT Croissant",
+      "description": "Croissant with aioli sauce, crispy bacon on a bed of lettuce and tomato slices.",
+      "ingredients": ["croissant", "aioli", "bacon", "lettuce", "tomato"]
+    },
+    "SAL-03": {
+      "name": "Hawaiian Croissant",
+      "description": "Cream cheese and ricotta paste, caramelized pineapple, and loin slices.",
+      "ingredients": ["croissant", "cream cheese", "pineapple", "loin"]
+    },
+    "SAL-04": {
+      "name": "Ham & Egg Croissant",
+      "description": "Omelette on a bed of romaine lettuce accompanied by smoked loin slices, cherry tomatoes, and a balsamic reduction.",
+      "ingredients": ["croissant", "egg", "lettuce", "loin", "cherry tomatoes", "balsamic reduction"]
+    },
+    "SAL-05": {
+      "name": "Caprese Bruschetta",
+      "description": "Crispy sourdough bread, fresh mozzarella cheese, basil pesto, and sun-dried tomatoes.",
+      "ingredients": ["bread", "mozzarella", "pesto", "sun-dried tomato"]
+    },
+    "SAL-06": {
+      "name": "Tuna Bruschetta",
+      "description": "Sourdough bread with olive oil, cilantro-flavored cream cheese, accompanied by tuna, avocado, fresh cucumber slices, and candied cherry tomatoes.",
+      "ingredients": ["bread", "olive oil", "cream cheese", "cilantro", "tuna", "avocado", "cucumber", "cherry tomatoes"]
+    },
+    "SAL-07": {
+      "name": "French Toast",
+      "description": "Brioche bread toasts, accompanied by homemade peanut butter and served with Greek yogurt and red berry reduction.",
+      "ingredients": ["brioche", "peanut butter", "greek yogurt", "berries"]
+    },
+    "SAL-08": {
+      "name": "Steak Sandwich",
+      "description": "Toasted ciabatta bread with marinated beef loin, whiskey-caramelized onion, sautéed mushrooms, and smoked provolone cheese, served with jalapeño sauce.",
+      "ingredients": ["ciabatta", "beef loin", "onion", "mushrooms", "provolone", "jalapeño"]
+    },
+    "SAL-09": {
+      "name": "Croque Madame",
+      "description": "Pork leg and mozzarella cheese sandwich au gratin on brioche bread, accompanied by fresh arugula, provolone sauce, and a poached egg.",
+      "ingredients": ["brioche", "pork leg", "mozzarella", "arugula", "provolone sauce", "egg"]
+    },
+    "SAL-10": {
+      "name": "Pork Leg Crostini",
+      "description": "Sourdough toast. Guacamole, smoked pork leg, and poached eggs, accompanied by mixed greens, purple basil, rich greens, cherry tomatoes with pickled onion.",
+      "ingredients": ["bread", "guacamole", "pork leg", "egg", "mixed greens", "cherry tomatoes", "onion"]
+    },
+    "SAL-11": {
+      "name": "Berry Toast",
+      "description": "Sourdough toast. Burrata cheese and bacon slices on a bed of arugula, accompanied by strawberries, cherry tomatoes, and fine herbs.",
+      "ingredients": ["bread", "burrata", "bacon", "arugula", "strawberries", "herbs"]
+    },
+    "SAL-12": {
+      "name": "Classic Pancakes",
+      "description": "Decadent and fluffy classic pancakes with whipped cream, seasonal fruits, and wild honey (contains coconut).",
+      "ingredients": ["flour", "milk", "egg", "honey", "fruits", "coconut"]
+    },
+    "SAL-13": {
+      "name": "American Breakfast",
+      "description": "Complete breakfast with eggs your way, bacon, pancakes, and toast, accompanied by an Americano or cappuccino and a juice (choice of: Pineapple, Coconut, Mango).",
+      "ingredients": ["egg", "bacon", "pancakes", "toast", "coffee", "juice"]
+    },
+    "SAL-14": {
+      "name": "Omelette Confit",
+      "description": "Omelette with sour butter flavored with white wine, sourdough toast, mozzarella cheese, mixed greens of the day, and a confit of cherry tomatoes in fine spices, accompanied by an Americano or cappuccino.",
+      "ingredients": ["egg", "butter", "white wine", "bread", "mozzarella", "cherry tomatoes", "coffee"]
+    },
+    "SAL-15": {
+      "name": "The Portobello",
+      "description": "Sourdough toast. Delicious veggie option with fresh ricotta cheese and avocado, sautéed spinach and mushrooms accompanied by cherry tomatoes.",
+      "ingredients": ["bread", "ricotta", "avocado", "spinach", "mushrooms", "cherry tomatoes"]
+    },
+    "SAL-16": {
+      "name": "Holy Guac",
+      "description": "Sourdough toast. Scrambled eggs with sour cream, on a bed of guacamole, crispy bacon, and cherry tomatoes with parsley.",
+      "ingredients": ["bread", "avocado", "egg", "sour cream", "bacon", "cherry tomatoes"]
+    },
+    "SPO-01": {
+      "name": "Whole Pound Cake 8p",
+      "description": "Spongy cake with orange or lemon flavor, with a light sugar glaze. Also available in vanilla and chocolate in a colorful swirl.",
+      "ingredients": ["flour", "egg", "milk", "sugar", "glaze"]
+    },
+    "SPO-02": {
+      "name": "Red Velvet Cake (Whole)",
+      "description": "Our classic from American cuisine. Naked red velvet sponge cake, three layers of sweet cream cheese frosting, and fresh red berries.",
+      "ingredients": ["flour", "sugar", "cocoa", "cream cheese", "berries"]
+    },
+    "SPO-03": {
+      "name": "Carrot Cake (Whole)",
+      "description": "Moist, soft, and fluffy carrot cake; flavored with cinnamon and a hint of nutmeg. Two layers of sweet cream cheese frosting, candied nuts, salted caramel, and dehydrated carrots.",
+      "ingredients": ["flour", "carrot", "sugar", "cinnamon", "nuts"]
+    },
+    "SPO-04": {
+      "name": "Frozen Cheesecake 10p",
+      "description": "",
+      "ingredients": ["cream cheese", "graham crackers", "sugar", "cream"]
+    },
+    "SPO-05": {
+      "name": "NY Cheesecake 10p",
+      "description": "Traditional American cheesecake, graham cracker crust and creamy baked cream cheese filling, accompanied by a red berry reduction (optional).",
+      "ingredients": ["cream cheese", "graham crackers", "sugar"]
+    },
+    "SPO-06": {
+      "name": "Chocolate Cake 10p",
+      "description": "Moist and soft chocolate sponge cake, filled with homemade strawberry jam. Covered with smooth and velvety chocolate cream and chocolate ganache. A feast for the palate.",
+      "ingredients": ["flour", "chocolate", "sugar", "butter", "eggs"]
+    }
   }
 }

@@ -183,7 +183,7 @@ export default function MenuPage() {
                 .map(([subCategory, items]) => (
                   <div key={subCategory} className="mb-12">
                     <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{subCategory}</h2>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                       {Array.isArray(items) && items.map((item: any) => <ProductCard key={item.id} item={item} />)}
                     </div>
                   </div>
