@@ -10,6 +10,7 @@ import { PresentationSection } from './home/PresentationSection';
 import { IngredientesSection } from './home/IngredientesSection';
 import { PanoramicSection } from './home/PanoramicSection';
 import { MenuPreviewSection } from './home/MenuPreviewSection';
+import { Footer } from './Footer';
 
 export function HeroSection() {
   const [scrolled, setScrolled] = useState(false);
@@ -126,6 +127,7 @@ export function HeroSection() {
       <PanoramicSection />
       <MenuPreviewSection />
       <IngredientesSection />
+      <Footer/>
     </>
   );
 }
