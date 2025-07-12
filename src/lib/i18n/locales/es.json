@@ -5,7 +5,8 @@
     "slogan": "ESPACIO MEMORABLE"
   },
   "header": {
-    "menu": "Menú"
+    "menu": "Menú",
+    "home": "Inicio"
   },
   "home": {
     "whatsapp": "Reservas por WhatsApp",

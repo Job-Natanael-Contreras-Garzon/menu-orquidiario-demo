@@ -78,10 +78,25 @@ export default {
             height: '0',
           },
         },
+        'scroll-down': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(-50%)' }
+        },
+        'scroll-up': {
+          from: { transform: 'translateY(-50%)' },
+          to: { transform: 'translateY(0)' }
+        },
+        'fade-in': {
+          from: { opacity: '0' },
+          to: { opacity: '1' }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'scroll-down': 'scroll-down 30s linear infinite',
+        'scroll-up': 'scroll-up 30s linear infinite',
+        'fade-in': 'fade-in 0.5s ease-out',
       },
     },
   },

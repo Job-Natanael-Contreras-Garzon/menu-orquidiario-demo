@@ -218,6 +218,42 @@ html {
   }
 }
 
+/* Estilos específicos para móviles */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+  }
+
+  /* Ajustar el header en móviles */
+  .mobile-header {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Ajustar botones en móviles */
+  .mobile-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  /* Ajustar el contenido principal en móviles */
+  .mobile-content {
+    padding: 1rem;
+  }
+
+  /* Ajustar la imagen de fondo en móviles */
+  .mobile-bg-image {
+    width: 8rem;
+    height: 13rem;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-title {
     font-size: 2.5rem;
@@ -225,5 +261,40 @@ html {
 
   .hero-subtitle {
     font-size: 1.5rem;
+  }
+}
+
+/* Animaciones para carruseles laterales */
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 80s linear infinite;
+}
+
+.animate-scroll-up {
+  animation: scroll-up 80s linear infinite;
+}
+
+/* Ocultar carruseles en pantallas pequeñas */
+@media (max-width: 1024px) {
+  .animate-scroll-down,
+  .animate-scroll-up {
+    display: none;
   }
 }
