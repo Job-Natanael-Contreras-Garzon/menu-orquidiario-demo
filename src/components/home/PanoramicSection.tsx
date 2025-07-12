@@ -8,7 +8,7 @@ export function PanoramicSection() {
       {/* Background image with blur effect */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1505682499293-233fb141754c?q=80&w=2070&auto=format&fit=crop"
+          src="/images/panoramic/background.jpg"
           alt="Fondo Orquideario" 
           className="w-full h-full object-cover scale-105"
           style={{filter: 'blur(8px) brightness(0.4)'}}
@@ -56,8 +56,8 @@ export function PanoramicSection() {
               data-parallax-speed="0.15"
             >
               <img 
-                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?q=80&w=2070&auto=format&fit=crop"
-                alt="Vista panorámica del restaurante" 
+                src="/images/panoramic/card1.jpg"
+                alt="Vista panorámica de la cafetería" 
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -74,8 +74,8 @@ export function PanoramicSection() {
               data-parallax-speed="0.2"
             >
               <img 
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=2070&auto=format&fit=crop" 
-                alt="Plato gourmet" 
+                src="/images/panoramic/card2.jpg" 
+                alt="Café gourmet" 
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -94,8 +94,8 @@ export function PanoramicSection() {
               data-parallax-speed="0.25"
             >
               <img 
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070&auto=format&fit=crop" 
-                alt="Interior del restaurante" 
+                src="/images/panoramic/card3.jpg" 
+                alt="Interior de la cafetería" 
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
@@ -112,7 +112,7 @@ export function PanoramicSection() {
               data-parallax-speed="0.15"
             >
               <img 
-                src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/panoramic/card4.jpg" 
                 alt="Detalle culinario" 
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
@@ -132,7 +132,7 @@ export function PanoramicSection() {
               data-parallax-speed="0.18"
             >
               <img 
-                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=2070&auto=format&fit=crop" 
+                src="/images/panoramic/card5.jpg" 
                 alt="Chef en acción" 
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
@@ -148,7 +148,7 @@ export function PanoramicSection() {
               data-parallax-speed="0.2"
             >
               <img 
-                src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/panoramic/card6.jpg" 
                 alt="Ingredientes selectos" 
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
@@ -166,7 +166,7 @@ export function PanoramicSection() {
             data-parallax-speed="0.18"
           >
             <img 
-              src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=2070&auto=format&fit=crop" 
+              src="/images/panoramic/card5.jpg" 
               alt="Chef en acción" 
               className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
             />

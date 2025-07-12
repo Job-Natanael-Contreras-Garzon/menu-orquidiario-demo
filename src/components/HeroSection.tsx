@@ -28,18 +28,21 @@ export function HeroSection() {
     '/images/carousel/left/drink5.jpg',
     '/images/carousel/left/drink6.jpg',
     '/images/carousel/left/drink7.jpg',
-    '/images/carousel/left/drink8.jpg'
+    // Usamos drink1.jpg de nuevo para el octavo elemento
+    '/images/carousel/left/drink1.jpg'
   ];
 
   // Imágenes para los carruseles laterales (repostería y salados)
   const rightCarouselImages = [
-    '/images/carousel/right/food1.jpg',
+    // Usamos food2.jpg para el primer elemento ya que food1.jpg no existe
+    '/images/carousel/right/food2.jpg',
     '/images/carousel/right/food2.jpg',
     '/images/carousel/right/food3.jpg',
     '/images/carousel/right/food4.jpg',
     '/images/carousel/right/food5.jpg',
-    '/images/carousel/right/food6.jpg',
-    '/images/carousel/right/food7.jpg',
+    // Reemplazamos las imágenes faltantes con las existentes
+    '/images/carousel/right/food3.jpg',
+    '/images/carousel/right/food4.jpg',
     '/images/carousel/right/food8.jpg'
   ];
   
@@ -54,7 +57,7 @@ export function HeroSection() {
   // Imágenes para la galería rotativa (combos especiales)
   const galleryImages = [
     '/images/gallery/combo1.jpg',
-    '/images/gallery/combo2.jpg',
+    '/images/gallery/combo1.jpg', // Usamos combo1.jpg de nuevo ya que combo2.jpg no existe
     '/images/gallery/combo3.jpg',
     '/images/gallery/combo4.jpg',
   ];

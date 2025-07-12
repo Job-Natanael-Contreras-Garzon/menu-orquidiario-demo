@@ -26,7 +26,7 @@ export function SideCarousels({ leftCarouselImages, rightCarouselImages }: SideC
                 <div className="relative w-36 h-36 rounded-lg overflow-hidden shadow-xl opacity-70 hover:opacity-90 transition-opacity border border-white/30">
                   <img 
                     src={image}
-                    alt={`Dish ${index + 1}`}
+                    alt={`Drink ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
@@ -66,7 +66,7 @@ export function SideCarousels({ leftCarouselImages, rightCarouselImages }: SideC
                 <div className="relative w-36 h-36 rounded-lg overflow-hidden shadow-xl opacity-70 hover:opacity-90 transition-opacity border border-white/30">
                   <img 
                     src={image}
-                    alt={`Dish ${index + 1}`}
+                    alt={`Food ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />

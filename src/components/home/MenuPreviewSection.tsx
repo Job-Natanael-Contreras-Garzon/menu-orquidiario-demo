@@ -29,7 +29,7 @@ export function MenuPreviewSection() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img 
-                src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/menu/drinks.jpg" 
                 alt="Bebidas Background"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
@@ -72,7 +72,7 @@ export function MenuPreviewSection() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img 
-                src="https://images.unsplash.com/photo-1587314168485-3236d6710cb2?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/menu/desserts.jpg" 
                 alt="Repostería Background"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
@@ -115,7 +115,7 @@ export function MenuPreviewSection() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img 
-                src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/menu/savory.jpg" 
                 alt="Salados Background"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
