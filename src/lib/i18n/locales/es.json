@@ -10,7 +10,131 @@
   },
   "home": {
     "whatsapp": "Reservas por WhatsApp",
-    "viewMenu": "Ver Menú"
+    "viewMenu": "Ver Menú",
+    "hero": {
+      "mainTitle": {
+        "line1": "UN VIAJE",
+        "line2": "GASTRONÓMICO",
+        "line3": "ÚNICO"
+      },
+      "leftCarousel": {
+        "item1": "AGUACATE",
+        "item2": "ALCACHOFAS",
+        "item3": "DEL PRAT",
+        "item4": "ATÚN ROJO",
+        "item5": "SUPREMA",
+        "item6": "CALABAZAS",
+        "item7": "VIEIRAS",
+        "item8": "BOGAVANTE"
+      },
+      "rightCarousel": {
+        "item1": "BOGAVANTE",
+        "item2": "SALMÓN",
+        "item3": "TOMATE CHERRY",
+        "item4": "VERDE HUERTO",
+        "item5": "MASA PASTA",
+        "item6": "QUEBRADA",
+        "item7": "PULPO",
+        "item8": "MARISCOS"
+      },
+      "scrollIndicator": "Desplazar hacia abajo"
+    },
+    "presentation": {
+      "title": "PRESENTACIÓN",
+      "description": "Bienvenidos a El Orquideario, un destino culinario que deleitará sus sentidos. Somos un enclave gastronómico excepcional en la pintoresca costa del litoral barcelonés, donde la comida se convierte en una experiencia que va más allá del paladar. Cada aspecto, desde la estética hasta la textura y el aroma, ha sido meticulosamente atendido para sumergirlo en la esencia más pura de la gastronomía mediterránea."
+    },
+    "panoramic": {
+      "marqueeTitle": "ORQUIDEARIO",
+      "subtitle": "ESPACIO SINGULAR",
+      "title": "PANORÁMICAS QUE EXTASÍAN Y DELEITAN LOS SENTIDOS.",
+      "cards": {
+        "card1": {
+          "title": "Costa Mediterránea",
+          "subtitle": "Vistas al mar"
+        },
+        "card2": {
+          "title": "Atardecer Perfecto",
+          "subtitle": "Ambiente íntimo"
+        },
+        "card3": {
+          "title": "Ambiente Exclusivo",
+          "subtitle": "Diseño contemporáneo"
+        },
+        "card4": {
+          "title": "Cocina de Autor",
+          "subtitle": "Creatividad y tradición"
+        },
+        "card5": {
+          "title": "Experiencia Completa",
+          "subtitle": "Eventos especiales"
+        },
+        "card6": {
+          "title": "Productos del Mar",
+          "subtitle": "Frescura excepcional"
+        }
+      }
+    },
+    "menuPreview": {
+      "title": "NUESTRA CARTA",
+      "description": "Una selección exquisita de platos que reflejan nuestra pasión por la cocina mediterránea y la innovación culinaria.",
+      "categories": {
+        "drinks": {
+          "title": "Bebidas",
+          "items": {
+            "item1": {
+              "name": "Espresso",
+              "price": "2.50€"
+            },
+            "item2": {
+              "name": "Vino de la Casa",
+              "price": "4.50€"
+            },
+            "item3": {
+              "name": "Cóctel Signature",
+              "price": "12€"
+            }
+          },
+          "viewAll": "Ver todas las bebidas"
+        },
+        "desserts": {
+          "title": "Repostería",
+          "items": {
+            "item1": {
+              "name": "Tiramisú Casero",
+              "price": "9€"
+            },
+            "item2": {
+              "name": "Coulant de Chocolate",
+              "price": "10€"
+            },
+            "item3": {
+              "name": "Sorbete de Limón",
+              "price": "8€"
+            }
+          },
+          "viewAll": "Ver toda la repostería"
+        },
+        "savory": {
+          "title": "Salados",
+          "items": {
+            "item1": {
+              "name": "Croquetas Caseras",
+              "price": "12€"
+            },
+            "item2": {
+              "name": "Pulpo a la Gallega",
+              "price": "24€"
+            },
+            "item3": {
+              "name": "Patatas Bravas",
+              "price": "9€"
+            }
+          },
+          "viewAll": "Ver todos los salados"
+        }
+      },
+      "viewFullMenu": "VER CARTA COMPLETA"
+    }
   },
   "footer": {
     "copyright": "© {year} El Orquídeario. Todos los derechos reservados."

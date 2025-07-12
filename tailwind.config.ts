@@ -16,6 +16,15 @@ export default {
       },
     },
     extend: {
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-33.33%)' },
+        },
+      },
+      animation: {
+        'marquee': 'marquee 30s linear infinite',
+      },
       fontFamily: {
         body: ['PT Sans', 'sans-serif'],
         headline: ['Playfair Display', 'serif'],
@@ -90,6 +99,10 @@ export default {
           from: { opacity: '0' },
           to: { opacity: '1' }
         },
+        'marquee': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-33.33%)' }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -97,6 +110,7 @@ export default {
         'scroll-down': 'scroll-down 30s linear infinite',
         'scroll-up': 'scroll-up 30s linear infinite',
         'fade-in': 'fade-in 0.5s ease-out',
+        'marquee': 'marquee 30s linear infinite',
       },
     },
   },

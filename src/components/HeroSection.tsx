@@ -308,13 +308,13 @@ export function HeroSection() {
                 {/* Nombre del platillo en cuadro */}
                 <div className="mt-3 bg-black/80 backdrop-blur-sm rounded-md px-3 py-2 border border-white/20 w-36 h-36 flex items-center justify-center">
                   <div className="text-white text-xs font-light tracking-widest uppercase text-center">
-                    {index % 8 === 0 ? 'AGUACATE' : 
-                     index % 8 === 1 ? 'ALCACHOFAS' :
-                     index % 8 === 2 ? 'DEL PRAT' :
-                     index % 8 === 3 ? 'ATÚN ROJO' :
-                     index % 8 === 4 ? 'SUPREMA' :
-                     index % 8 === 5 ? 'CALABAZAS' :
-                     index % 8 === 6 ? 'VIEIRAS' : 'BOGAVANTE'}
+                    {index % 8 === 0 ? t('home.hero.leftCarousel.item1') : 
+                     index % 8 === 1 ? t('home.hero.leftCarousel.item2') :
+                     index % 8 === 2 ? t('home.hero.leftCarousel.item3') :
+                     index % 8 === 3 ? t('home.hero.leftCarousel.item4') :
+                     index % 8 === 4 ? t('home.hero.leftCarousel.item5') :
+                     index % 8 === 5 ? t('home.hero.leftCarousel.item6') :
+                     index % 8 === 6 ? t('home.hero.leftCarousel.item7') : t('home.hero.leftCarousel.item8')}
                   </div>
                 </div>
               </div>
@@ -348,13 +348,13 @@ export function HeroSection() {
                 {/* Nombre del platillo en cuadro */}
                 <div className="mt-3 bg-black/80 backdrop-blur-sm rounded-md px-3 py-2 border border-white/20 w-36 h-36 flex items-center justify-center">
                   <div className="text-white text-xs font-light tracking-widest uppercase text-center">
-                    {index % 8 === 0 ? 'BOGAVANTE' : 
-                     index % 8 === 1 ? 'SALMÓN' :
-                     index % 8 === 2 ? 'TOMATE CHERRY' :
-                     index % 8 === 3 ? 'VERDE HUERTO' :
-                     index % 8 === 4 ? 'MASA PASTA' :
-                     index % 8 === 5 ? 'QUEBRADA' :
-                     index % 8 === 6 ? 'PULPO' : 'MARISCOS'}
+                    {index % 8 === 0 ? t('home.hero.rightCarousel.item1') : 
+                     index % 8 === 1 ? t('home.hero.rightCarousel.item2') :
+                     index % 8 === 2 ? t('home.hero.rightCarousel.item3') :
+                     index % 8 === 3 ? t('home.hero.rightCarousel.item4') :
+                     index % 8 === 4 ? t('home.hero.rightCarousel.item5') :
+                     index % 8 === 5 ? t('home.hero.rightCarousel.item6') :
+                     index % 8 === 6 ? t('home.hero.rightCarousel.item7') : t('home.hero.rightCarousel.item8')}
                   </div>
                 </div>
               </div>
@@ -403,13 +403,13 @@ export function HeroSection() {
             }}
           >
             <h2 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-lg">
-              UN VIAJE
+              {t('home.hero.mainTitle.line1')}
             </h2>
             <h3 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-lg">
-              GASTRONÓMICO
+              {t('home.hero.mainTitle.line2')}
             </h3>
             <h4 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-serif font-light tracking-wide leading-none mb-4 md:mb-8 text-amber-100 drop-shadow-lg">
-              ÚNICO
+              {t('home.hero.mainTitle.line3')}
             </h4>
           </div>
         </div>
@@ -476,7 +476,7 @@ export function HeroSection() {
           <div className="text-left">
             <div className="inline-block relative">
               <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide text-primary dark:text-accent leading-tight transition-colors duration-300">
-                PRESENTACIÓN
+                {t('home.presentation.title')}
               </h2>
               <div className="absolute -bottom-3 left-0 right-0 h-1 bg-accent dark:bg-primary transform origin-left transition-transform duration-500"></div>
             </div>
@@ -485,12 +485,7 @@ export function HeroSection() {
           {/* Right side - Description */}
           <div className="text-left">
             <p className="text-base md:text-lg lg:text-xl text-foreground dark:text-foreground/90 leading-relaxed font-light transition-colors duration-300">
-              Bienvenidos a Tastavents, un destino culinario que deleitará sus sentidos.
-              Somos un enclave gastronómico excepcional en la pintoresca costa del
-              litoral barcelonés, donde la comida se convierte en una experiencia que
-              va más allá del paladar. Cada aspecto, desde la estética hasta la textura y
-              el aroma, ha sido meticulosamente atendido para sumergirlo en la
-              esencia más pura de la gastronomía mediterránea.
+              {t('home.presentation.description')}
             </p>
           </div>
         </div>
@@ -500,19 +495,45 @@ export function HeroSection() {
       </div>
     </section>
 
-    {/* Panoramic Experience Section - Always Dark */}
-    <section id="panoramic-section" className="relative w-full py-16 md:py-32 lg:py-40 bg-slate-900 text-white overflow-hidden">
+    {/* Panoramic Experience Section - Always Dark with blurred background image */}
+    <section id="panoramic-section" className="relative w-full py-16 md:py-32 lg:py-40 overflow-hidden">
+      {/* Background image with blur effect */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1505682499293-233fb141754c?q=80&w=2070&auto=format&fit=crop"
+          alt="Fondo Orquideario" 
+          className="w-full h-full object-cover scale-105"
+          style={{filter: 'blur(8px) brightness(0.4)'}}
+        />
+        <div className="absolute inset-0 bg-black/50 backdrop-filter"></div>
+      </div>
+      
       {/* Decorative elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(200,255,255,0.03),transparent_70%)]"></div>
+      <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_bottom_right,rgba(200,255,255,0.03),transparent_70%)]"></div>
+      
+      {/* Large title with carousel animation */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center overflow-hidden">
+        <div className="whitespace-nowrap animate-marquee">
+          <h1 className="font-serif text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
+            {t('home.panoramic.marqueeTitle')}
+          </h1>
+          <h1 className="font-serif text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
+            {t('home.panoramic.marqueeTitle')}
+          </h1>
+          <h1 className="font-serif text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
+            {t('home.panoramic.marqueeTitle')}
+          </h1>
+        </div>
+      </div>
       
       {/* Content */}
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-20">
         {/* Section header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20">
           <div>
-            <div className="text-sm uppercase tracking-widest text-white/70 mb-2">ESPACIO SINGULAR</div>
+            <div className="text-sm uppercase tracking-widest text-white/70 mb-2">{t('home.panoramic.subtitle')}</div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-wide text-white leading-tight max-w-3xl">
-              PANORÁMICAS QUE EXTASÍAN Y DELEITAN LOS SENTIDOS.
+              {t('home.panoramic.title')}
             </h2>
           </div>
         </div>
@@ -533,8 +554,8 @@ export function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">Costa Mediterránea</div>
-                <div className="text-sm text-white/90">Vistas al mar</div>
+                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card1.title')}</div>
+                <div className="text-sm text-white/90">{t('home.panoramic.cards.card1.subtitle')}</div>
               </div>
             </div>
             
@@ -551,8 +572,8 @@ export function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">Atardecer Perfecto</div>
-                <div className="text-sm text-white/90">Ambiente íntimo</div>
+                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card2.title')}</div>
+                <div className="text-sm text-white/90">{t('home.panoramic.cards.card2.subtitle')}</div>
               </div>
             </div>
           </div>
@@ -571,8 +592,8 @@ export function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">Ambiente Exclusivo</div>
-                <div className="text-sm text-white/90">Diseño contemporáneo</div>
+                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card3.title')}</div>
+                <div className="text-sm text-white/90">{t('home.panoramic.cards.card3.subtitle')}</div>
               </div>
             </div>
             
@@ -588,9 +609,8 @@ export function HeroSection() {
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">Cocina de Autor</div>
-                <div className="text-sm text-white/90">Creatividad y tradición</div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">              <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card4.title')}</div>
+              <div className="text-sm text-white/90">{t('home.panoramic.cards.card4.subtitle')}</div>
               </div>
             </div>
           </div>
@@ -609,8 +629,8 @@ export function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">Experiencia Completa</div>
-                <div className="text-sm text-white/90">Eventos especiales</div>
+                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card5.title')}</div>
+                <div className="text-sm text-white/90">{t('home.panoramic.cards.card5.subtitle')}</div>
               </div>
             </div>
             <div 
@@ -625,8 +645,8 @@ export function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">Productos del Mar</div>
-                <div className="text-sm text-white/90">Frescura excepcional</div>
+                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card6.title')}</div>
+                <div className="text-sm text-white/90">{t('home.panoramic.cards.card6.subtitle')}</div>
               </div>
             </div>
           </div>
@@ -643,8 +663,8 @@ export function HeroSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-              <div className="font-serif text-xl text-white font-medium drop-shadow-sm">Experiencia Completa</div>
-              <div className="text-sm text-white/90">Eventos especiales</div>
+              <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card5.title')}</div>
+              <div className="text-sm text-white/90">{t('home.panoramic.cards.card5.subtitle')}</div>
             </div>
           </div>
         </div>
@@ -661,10 +681,10 @@ export function HeroSection() {
         {/* Section header - cleaner design */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light tracking-wide text-primary dark:text-accent mb-4">
-            NUESTRA CARTA
+            {t('home.menuPreview.title')}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Una selección exquisita de platos que reflejan nuestra pasión por la cocina mediterránea y la innovación culinaria.
+            {t('home.menuPreview.description')}
           </p>
         </div>
 
@@ -689,23 +709,23 @@ export function HeroSection() {
                   1
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">Bebidas</h3>
+              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.drinks.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Espresso</span>
-                  <span className="text-white/80">2.50€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.drinks.items.item1.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.drinks.items.item1.price')}</span>
                 </li>
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Vino de la Casa</span>
-                  <span className="text-white/80">4.50€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.drinks.items.item2.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.drinks.items.item2.price')}</span>
                 </li>
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Cóctel Signature</span>
-                  <span className="text-white/80">12€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.drinks.items.item3.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.drinks.items.item3.price')}</span>
                 </li>
               </ul>
               <div className="mt-4 text-white/90 text-sm flex items-center justify-center">
-                <span>Ver todas las bebidas</span>
+                <span>{t('home.menuPreview.categories.drinks.viewAll')}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -732,23 +752,23 @@ export function HeroSection() {
                   2
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">Repostería</h3>
+              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.desserts.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Tiramisú Casero</span>
-                  <span className="text-white/80">9€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.desserts.items.item1.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.desserts.items.item1.price')}</span>
                 </li>
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Coulant de Chocolate</span>
-                  <span className="text-white/80">10€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.desserts.items.item2.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.desserts.items.item2.price')}</span>
                 </li>
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Sorbete de Limón</span>
-                  <span className="text-white/80">8€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.desserts.items.item3.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.desserts.items.item3.price')}</span>
                 </li>
               </ul>
               <div className="mt-4 text-white/90 text-sm flex items-center justify-center">
-                <span>Ver toda la repostería</span>
+                <span>{t('home.menuPreview.categories.desserts.viewAll')}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -775,23 +795,23 @@ export function HeroSection() {
                   3
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">Salados</h3>
+              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.savory.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Croquetas Caseras</span>
-                  <span className="text-white/80">12€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.savory.items.item1.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.savory.items.item1.price')}</span>
                 </li>
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Pulpo a la Gallega</span>
-                  <span className="text-white/80">24€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.savory.items.item2.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.savory.items.item2.price')}</span>
                 </li>
                 <li className="flex justify-between text-white">
-                  <span className="font-medium">Patatas Bravas</span>
-                  <span className="text-white/80">9€</span>
+                  <span className="font-medium">{t('home.menuPreview.categories.savory.items.item3.name')}</span>
+                  <span className="text-white/80">{t('home.menuPreview.categories.savory.items.item3.price')}</span>
                 </li>
               </ul>
               <div className="mt-4 text-white/90 text-sm flex items-center justify-center">
-                <span>Ver todos los salados</span>
+                <span>{t('home.menuPreview.categories.savory.viewAll')}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -809,7 +829,7 @@ export function HeroSection() {
             className="font-serif text-base tracking-wide border-primary dark:border-accent text-primary dark:text-accent hover:bg-primary/10 dark:hover:bg-accent/10 px-8 py-6 transition-all duration-300 hover:shadow-md"
           >
             <Link href="/menu">
-              VER CARTA COMPLETA
+              {t('home.menuPreview.viewFullMenu')}
             </Link>
           </Button>
         </div>
