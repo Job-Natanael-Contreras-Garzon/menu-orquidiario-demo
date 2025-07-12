@@ -31,8 +31,7 @@ export function ProductModal({ isOpen, onClose, item }: ProductModalProps) {
               className="absolute top-3 left-3 h-auto bg-black/50 hover:bg-black/70 text-white rounded-full z-10 px-3 py-1.5 flex items-center gap-1.5 text-sm"
               onClick={onClose}
             >
-              <ArrowLeft className="h-4 w-4" />
-              <span>&lt; back</span>
+              <span>&lt; {t('productModal.back')}</span>
             </Button>
             <img src={imageUrl} alt={t(item.name)} className="w-full h-56 object-cover" />
           </div>
@@ -44,7 +43,7 @@ export function ProductModal({ isOpen, onClose, item }: ProductModalProps) {
               </DialogTitle>
             </DialogHeader>
 
-            {!hasVariants && item.price > 0 && (
+            {item.price > 0 && (
               <p className="text-2xl font-bold text-primary mt-1">
                 Bs. {item.price.toFixed(2)}
               </p>
@@ -54,7 +53,7 @@ export function ProductModal({ isOpen, onClose, item }: ProductModalProps) {
 
             {hasVariants && (
               <div className="flex flex-col gap-2 mb-4">
-                <h3 className="font-semibold text-foreground">{t('menuPage.labels.options')}</h3>
+                <h3 className="font-semibold text-foreground text-lg">{t('menuPage.labels.options')}</h3>
                 {item.variants?.map((variant, index) => (
                   <div key={index} className="flex justify-between w-full text-sm">
                     <span>+ {t(variant.name)}</span>
@@ -68,8 +67,8 @@ export function ProductModal({ isOpen, onClose, item }: ProductModalProps) {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">{t('menuPage.labels.ingredients')}</h3>
                 <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
-                  {item.ingredients?.map((ingredient, index) => (
-                    <li key={index}>{t(ingredient)}</li>
+                  {(t(item.ingredients[0]) as unknown as string[]).map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
                   ))}
                 </ul>
               </div>

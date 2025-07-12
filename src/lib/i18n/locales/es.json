@@ -44,6 +44,11 @@
       "PASTRIES": "Nuestra Repostería",
       "SALTY_SNACKS": "Nuestros Salados",
       "SPECIAL_ORDERS": "Nuestros Pedidos Especiales"
+    },
+    "labels": {
+      "ingredients": "Ingredientes",
+      "seeOptions": "Ver opciones",
+      "options": "Opciones"
     }
   },
   "comboSuggestion": {
@@ -57,6 +62,9 @@
   },
   "productCard": {
       "withIceCream": "Con helado"
+  },
+  "productModal": {
+    "back": "Atras"
   },
   "menuData": {
     "COF-01": {
@@ -307,22 +315,22 @@
     "PAS-01": {
       "name": "Torta Apple Crumble",
       "description": "Bizcocho especiado con manzanas tiernas cubiertas de canela, envuelto en una colorida corteza dorada y crujiente con caramelo salado.",
-      "ingredients": ["harina", "manzana", "azúcar", "canela", "mantequilla"]
+      "ingredients": ["manzana", "azúcar", "canela", "mantequilla"]
     },
     "PAS-02": {
       "name": "Torta Red Velvet",
       "description": "Mini bizcocho de terciopelo rojo, relleno de dulce frosting de queso crema y bayas rojas frescas.",
-      "ingredients": ["harina", "azúcar", "cocoa", "queso crema", "bayas"]
+      "ingredients": ["azúcar", "cocoa", "queso crema", "bayas"]
     },
     "PAS-03": {
       "name": "Torta de Zanahoria",
       "description": "Bizcocho especiado de zanahoria con canela y nuez moscada, capas de dulce frosting de queso crema, queso caramelizado y nueces caramelizadas.",
-      "ingredients": ["harina", "zanahoria", "azúcar", "canela", "nueces"]
+      "ingredients": ["zanahoria", "azúcar", "canela", "nueces"]
     },
     "PAS-04": {
       "name": "Torta de Chocolate",
       "description": "Bizcocho de chocolate suave y esponjoso, relleno de mermelada de fresa casera, cubierto con crema de chocolate suave y aterciopelada y ganache de chocolate. Una fiesta para el paladar.",
-      "ingredients": ["harina", "chocolate", "azúcar", "mantequilla", "huevos"]
+      "ingredients": ["chocolate", "azúcar", "mantequilla", "huevos"]
     },
     "PAS-05": {
       "name": "Cheesecake",
@@ -352,7 +360,7 @@
     "PAS-10": {
       "name": "Queque de Naranja",
       "description": "Bizcocho dulce con sabor a naranja y vainilla, cubierto con una capa de buttercream de naranja.",
-      "ingredients": ["harina", "naranja", "azúcar", "huevos", "mantequilla"]
+      "ingredients": ["naranja", "azúcar", "huevos", "mantequilla"]
     },
     "SAL-01": {
       "name": "Bruschetta Capri",
@@ -412,7 +420,7 @@
     "SAL-12": {
       "name": "Classic Pancakes",
       "description": "Panqueques clásicos decadentes y esponjosos con crema batida, frutas de temporada y miel silvestre (contiene coco).",
-      "ingredients": ["harina", "leche", "huevo", "miel", "frutas", "coco"]
+      "ingredients": ["leche", "huevo", "miel", "frutas", "coco"]
     },
     "SAL-13": {
       "name": "Desayuno Americano",
@@ -437,17 +445,17 @@
     "SPO-01": {
       "name": "Queque Entero 8p",
       "description": "Bizcocho esponjoso con sabor a naranja o limón, con un ligero glaseado de azúcar. También disponible en vainilla y chocolate en un colorido remolino.",
-      "ingredients": ["harina", "huevo", "leche", "azúcar", "glaseado"]
+      "ingredients": ["huevo", "leche", "azúcar", "glaseado"]
     },
     "SPO-02": {
       "name": "Torta Red Velvet (Entera)",
       "description": "Nuestro clásico de la cocina americana. Bizcocho de terciopelo rojo desnudo, tres capas de dulce frosting de queso crema y bayas rojas frescas.",
-      "ingredients": ["harina", "azúcar", "cocoa", "queso crema", "bayas"]
+      "ingredients": ["azúcar", "cocoa", "queso crema", "bayas"]
     },
     "SPO-03": {
       "name": "Torta de Zanahoria (Entera)",
       "description": "Bizcocho de zanahoria húmedo, suave y esponjoso; aromatizado con canela y un toque de nuez moscada. Dos capas de dulce frosting de queso crema, nueces confitadas, caramelo salado y zanahorias deshidratadas.",
-      "ingredients": ["harina", "zanahoria", "azúcar", "canela", "nueces"]
+      "ingredients": ["zanahoria", "azúcar", "canela", "nueces"]
     },
     "SPO-04": {
       "name": "Cheesecake Helado 10p",
@@ -462,7 +470,7 @@
     "SPO-06": {
       "name": "Torta de Chocolate 10p",
       "description": "Bizcocho de chocolate húmedo y suave, relleno de mermelada de fresa casera. Cubierto con crema de chocolate suave y aterciopelada y ganache de chocolate. Una fiesta para el paladar.",
-      "ingredients": ["harina", "chocolate", "azúcar", "mantequilla", "huevos"]
+      "ingredients": ["chocolate", "azúcar", "mantequilla", "huevos"]
     }
   }
 

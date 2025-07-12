@@ -44,6 +44,11 @@
       "PASTRIES": "Our Pastries",
       "SALTY_SNACKS": "Our Salty Snacks",
       "SPECIAL_ORDERS": "Our Special Orders"
+    },
+    "labels": {
+      "ingredients": "Ingredients",
+      "seeOptions": "See options",
+      "options": "Options"
     }
   },
   "comboSuggestion": {
@@ -57,6 +62,9 @@
   },
   "productCard": {
       "withIceCream": "With ice cream"
+  },
+  "productModal": {
+    "back": "Back"
   },
  "menuData": {
     "COF-01": {
