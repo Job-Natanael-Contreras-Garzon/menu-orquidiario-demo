@@ -174,7 +174,13 @@
       "EXTRAS": "Extras",
       "PASTRIES": "Nuestra Repostería",
       "SALTY_SNACKS": "Nuestros Salados",
-      "SPECIAL_ORDERS": "Nuestros Pedidos Especiales"
+      "SPECIAL_ORDERS": "Nuestros Pedidos Especiales",
+      "MILKSHAKES": "Milkshakes",
+      "COFFEE_SPECIAL": "Cafés Especiales",
+      "FILTERED_COFFEE": "Café Filtrado",
+      "TRADITIONAL": "Tradicionales",
+      "INTEGRAL": "Integrales",
+      "SEASONAL": "Temporada"
     },
     "labels": {
       "ingredients": "Ingredientes",
@@ -602,6 +608,106 @@
       "name": "Torta de Chocolate 10p",
       "description": "Bizcocho de chocolate húmedo y suave, relleno de mermelada de fresa casera. Cubierto con crema de chocolate suave y aterciopelada y ganache de chocolate. Una fiesta para el paladar.",
       "ingredients": ["chocolate", "azúcar", "mantequilla", "huevos"]
+    },
+    "MINI-01": {
+      "name": "Cuñapé",
+      "description": "Cuñapé tradicional boliviano de queso",
+      "ingredients": ["harina de yuca", "queso", "huevo", "mantequilla"]
+    },
+    "MINI-02": {
+      "name": "Sonso",
+      "description": "Sonso de yuca al horno con queso derretido",
+      "ingredients": ["yuca", "queso", "mantequilla"]
+    },
+    "MINI-03": {
+      "name": "Empanada de Queso",
+      "description": "Empanada frita con queso derretido",
+      "ingredients": ["masa", "queso", "aceite"]
+    },
+    "MINI-04": {
+      "name": "Empanada de Arroz",
+      "description": "Empanada de arroz cocida al horno",
+      "ingredients": ["masa", "arroz", "condimentos"]
+    },
+    "MINI-05": {
+      "name": "Empanada de Charque",
+      "description": "Empanada de charque (carne seca boliviana)",
+      "ingredients": ["masa", "charque", "cebolla", "condimentos"]
+    },
+    "MINI-06": {
+      "name": "Empanada Integral",
+      "description": "Empanada integral con espinaca, ricota y tomate seco",
+      "ingredients": ["masa integral", "espinaca", "ricota", "tomate seco"]
+    },
+    "MINI-07": {
+      "name": "Empanada Chía y Avena",
+      "description": "Empanada de chía y avena, saludable y horneada",
+      "ingredients": ["masa de chía", "avena", "vegetales", "queso"]
+    },
+    "MINI-08": {
+      "name": "Quiche",
+      "description": "Quiche de panceta, cebolla y puerro",
+      "ingredients": ["masa", "panceta", "cebolla", "puerro", "huevo", "nata"]
+    },
+    "COF-14": {
+      "name": "Milkshake de Café",
+      "description": "Milkshake de café con helado cremoso",
+      "ingredients": ["café", "leche", "helado", "azúcar"]
+    },
+    "COF-15": {
+      "name": "Milkshake de Frutilla",
+      "description": "Milkshake de frutilla con leche y helado",
+      "ingredients": ["frutilla", "leche", "helado", "azúcar"]
+    },
+    "COF-16": {
+      "name": "Milkshake de Oreo",
+      "description": "Milkshake de Oreo, cremoso y dulce",
+      "ingredients": ["galletas Oreo", "leche", "helado", "azúcar"]
+    },
+    "COF-17": {
+      "name": "Affogato",
+      "description": "Affogato: espresso servido sobre helado",
+      "ingredients": ["espresso", "helado de vainilla"]
+    },
+    "COF-18": {
+      "name": "Chai Latte",
+      "description": "Chai Latte con especias y leche vaporizada",
+      "ingredients": ["té chai", "leche", "canela", "cardamomo", "jengibre"]
+    },
+    "COF-19": {
+      "name": "Submarino",
+      "description": "Chocolate derretido con leche caliente estilo submarino",
+      "ingredients": ["chocolate", "leche caliente"]
+    },
+    "COF-20": {
+      "name": "Matcha Latte",
+      "description": "Matcha Latte con té verde japonés",
+      "ingredients": ["matcha", "leche", "azúcar"]
+    },
+    "COF-21": {
+      "name": "Café Filtrado",
+      "description": "Café filtrado tradicional a elección",
+      "ingredients": ["café de origen", "agua"]
+    },
+    "COF-22": {
+      "name": "Métodos de Filtrado",
+      "description": "Método de preparación de café a elección (V60, prensa, etc.)",
+      "ingredients": ["café de especialidad", "agua", "método especial"]
+    },
+    "SEA-01": {
+      "name": "Sandwich Guayando",
+      "description": "Sandwich Guayando: guacamole, tocino, rúcula y mermelada",
+      "ingredients": ["pan", "guacamole", "tocino", "rúcula", "mermelada de guayaba"]
+    },
+    "SEA-02": {
+      "name": "Sweet Bacon Croissant",
+      "description": "Croissant con tocino crocante y mermelada de guayaba",
+      "ingredients": ["croissant", "tocino", "mermelada de guayaba"]
+    },
+    "SEA-03": {
+      "name": "Orange Coffee",
+      "description": "Orange Coffee: espresso con jugo de naranja y almíbar de frutos rojos",
+      "ingredients": ["espresso", "jugo de naranja", "almíbar de frutos rojos"]
     }
   }
 

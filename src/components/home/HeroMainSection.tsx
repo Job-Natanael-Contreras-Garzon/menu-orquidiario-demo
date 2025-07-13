@@ -1,21 +1,16 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '../ui/button';
 import { Menu, Instagram } from 'lucide-react';
 import { useI18n } from '../../lib/i18n';
 
 interface HeroMainSectionProps {
-  galleryImages: string[];
-  currentImageIndex: number;
-  progress: number;
   backgroundImages: string[];
   currentBgIndex: number;
   scrollY: number;
 }
 
 export function HeroMainSection({
-  galleryImages,
-  currentImageIndex,
-  progress,
   backgroundImages,
   currentBgIndex,
   scrollY
@@ -40,50 +35,41 @@ export function HeroMainSection({
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center text-white px-4">
 
-        {/* Main Title with Background Image */}
+        {/* Main Title - Centrado */}
         <div className="relative max-w-6xl mx-auto text-shadow-xl">
-          {/* Imagen de fondo detrás del título - posicionada arriba */}
+          {/* Logo detrás del título pero un poco por encima */}
           <div 
-            className="absolute top-10 md:top-20 left-1/2 transform -translate-x-1/2 -translate-y-10 md:-translate-y-20 z-0"
+            className="absolute inset-0 z-0 flex items-center justify-center"
             style={{
-              transform: `translateX(-50%) translateY(-40px) translateY(-${scrollY * 0.3}px)`,
+              transform: `translateY(-${scrollY * 0.15}px) translateY(-140px)`,
             }}
           >
-            <div className="w-32 h-52 md:w-48 md:h-80 relative overflow-hidden rounded-2xl opacity-70 shadow-2xl">
-              <img 
-                src={galleryImages[currentImageIndex]}
-                alt="Gourmet dish"
-                className="w-full h-full object-cover object-center transition-all duration-1000 ease-in-out scale-105 hover:scale-110"
-              />
-              
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-              
-              {/* Barra de progreso encima de la imagen */}
-              <div className="absolute top-0 left-2 right-2 md:left-4 md:right-4 z-20">
-                <div className="w-full bg-white/20 rounded-full h-1 md:h-1 overflow-hidden backdrop-blur-sm border border-white/10">
-                  <div 
-                    className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 h-1 md:h-1 rounded-full transition-all duration-200 ease-out shadow-lg"
-                    style={{ width: `${progress}%` }}
-                  />
-                </div>
-              </div>
-            </div>
+            <Image 
+              src="/images/logo/LogoOrqui4K.webp"
+              alt="El Orquideario Logo"
+              width={200}
+              height={200}
+              className="opacity-85 object-cover"
+              priority={true}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+            />
           </div>
           
-          {/* Títulos */}
+          {/* Títulos centrados */}
           <div 
-            className="relative z-10 drop-shadow-2xl mt-48 md:mt-60"
+            className="relative z-10 drop-shadow-2xl"
             style={{
-              transform: `translateY(-${scrollY * 0.2}px)`,
+              transform: `translateY(-${scrollY * 0.2}px) translateY(110px)`,
             }}
           >
-            <h2 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-lg">
+            <h2 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
               {t('home.hero.mainTitle.line1')}
             </h2>
-            <h3 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-lg">
+            <h3 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
               {t('home.hero.mainTitle.line2')}
             </h3>
-            <h4 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-serif font-light tracking-wide leading-none mb-4 md:mb-8 text-amber-100 drop-shadow-lg">
+            <h4 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide leading-none mb-4 md:mb-8 text-amber-100 drop-shadow-2xl">
               {t('home.hero.mainTitle.line3')}
             </h4>
           </div>

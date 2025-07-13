@@ -3,6 +3,7 @@ import { Button } from '../ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '../ui/sheet';
 import { Menu, MenuSquare, Home, Sun, Moon } from 'lucide-react';
 import { useI18n } from '../../lib/i18n';
+import { Logo } from '../Logo';
 import { useTheme } from 'next-themes';
 import { useState } from 'react';
 
@@ -26,23 +27,15 @@ export function Header({ scrolled }: HeaderProps) {
         }`}
       />
       <div className="relative container mx-auto px-4 md:px-6 py-3 md:py-4">
-        <div className="flex items-center justify-center text-white relative">
+        <div className="flex items-center justify-between text-white">
           
-          {/* Logo Centrado */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-headline text-lg md:text-2xl lg:text-3xl font-bold tracking-tight">
-              El orquideario
-            </span>
-          </Link>
+          {/* Logo a la izquierda */}
+          <div className="text-white">
+            <Logo />
+          </div>
 
           {/* Desktop Nav - Derecha */}
-          <div className="hidden md:flex items-center gap-2 md:gap-4 absolute right-0">
-            <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-              <Link href="/">
-                <Home className="mr-2 h-4 w-4" />
-                {t('header.home')}
-              </Link>
-            </Button>
+          <div className="hidden md:flex items-center gap-2 md:gap-4">
             <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
               <Link href="/menu">
                 <MenuSquare className="mr-2 h-4 w-4" />
@@ -84,7 +77,7 @@ export function Header({ scrolled }: HeaderProps) {
           </div>
 
           {/* Mobile Nav */}
-          <div className="md:hidden absolute right-0">
+          <div className="md:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-white">
@@ -95,11 +88,7 @@ export function Header({ scrolled }: HeaderProps) {
               <SheetContent side="left" className="flex flex-col p-4">
                 <SheetHeader className="text-left mb-4">
                   <SheetTitle>
-                    <Link href="/" className="flex items-center gap-2">
-                      <span className="font-headline text-2xl font-bold tracking-tight">
-                        El orquideario
-                      </span>
-                    </Link>
+                    <Logo />
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="grid gap-2">

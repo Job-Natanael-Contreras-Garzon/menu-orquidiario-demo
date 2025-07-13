@@ -174,7 +174,13 @@
       "EXTRAS": "Extras",
       "PASTRIES": "Our Pastries",
       "SALTY_SNACKS": "Our Salty Snacks",
-      "SPECIAL_ORDERS": "Our Special Orders"
+      "SPECIAL_ORDERS": "Our Special Orders",
+      "MILKSHAKES": "Milkshakes",
+      "COFFEE_SPECIAL": "Special Coffees",
+      "FILTERED_COFFEE": "Filter Coffee",
+      "TRADITIONAL": "Traditional",
+      "INTEGRAL": "Whole Grain",
+      "SEASONAL": "Seasonal"
     },
     "labels": {
       "ingredients": "Ingredients",
@@ -602,6 +608,106 @@
       "name": "Chocolate Cake 10p",
       "description": "Moist and soft chocolate sponge cake, filled with homemade strawberry jam. Covered with smooth and velvety chocolate cream and chocolate ganache. A feast for the palate.",
       "ingredients": ["flour", "chocolate", "sugar", "butter", "eggs"]
+    },
+    "MINI-01": {
+      "name": "Cuñapé",
+      "description": "Traditional Bolivian cheese cuñapé",
+      "ingredients": ["cassava flour", "cheese", "egg", "butter"]
+    },
+    "MINI-02": {
+      "name": "Sonso",
+      "description": "Baked cassava sonso with melted cheese",
+      "ingredients": ["cassava", "cheese", "butter"]
+    },
+    "MINI-03": {
+      "name": "Cheese Empanada",
+      "description": "Fried empanada with melted cheese",
+      "ingredients": ["dough", "cheese", "oil"]
+    },
+    "MINI-04": {
+      "name": "Rice Empanada",
+      "description": "Baked rice empanada",
+      "ingredients": ["dough", "rice", "seasonings"]
+    },
+    "MINI-05": {
+      "name": "Charque Empanada",
+      "description": "Charque empanada (Bolivian dried meat)",
+      "ingredients": ["dough", "charque", "onion", "seasonings"]
+    },
+    "MINI-06": {
+      "name": "Whole Wheat Empanada",
+      "description": "Whole wheat empanada with spinach, ricotta and sun-dried tomato",
+      "ingredients": ["whole wheat dough", "spinach", "ricotta", "sun-dried tomato"]
+    },
+    "MINI-07": {
+      "name": "Chia & Oat Empanada",
+      "description": "Healthy baked chia and oat empanada",
+      "ingredients": ["chia dough", "oats", "vegetables", "cheese"]
+    },
+    "MINI-08": {
+      "name": "Quiche",
+      "description": "Bacon, onion and leek quiche",
+      "ingredients": ["pastry", "bacon", "onion", "leek", "egg", "cream"]
+    },
+    "COF-14": {
+      "name": "Coffee Milkshake",
+      "description": "Coffee milkshake with creamy ice cream",
+      "ingredients": ["coffee", "milk", "ice cream", "sugar"]
+    },
+    "COF-15": {
+      "name": "Strawberry Milkshake",
+      "description": "Strawberry milkshake with milk and ice cream",
+      "ingredients": ["strawberry", "milk", "ice cream", "sugar"]
+    },
+    "COF-16": {
+      "name": "Oreo Milkshake",
+      "description": "Creamy and sweet Oreo milkshake",
+      "ingredients": ["Oreo cookies", "milk", "ice cream", "sugar"]
+    },
+    "COF-17": {
+      "name": "Affogato",
+      "description": "Affogato: espresso served over ice cream",
+      "ingredients": ["espresso", "vanilla ice cream"]
+    },
+    "COF-18": {
+      "name": "Chai Latte",
+      "description": "Chai Latte with spices and steamed milk",
+      "ingredients": ["chai tea", "milk", "cinnamon", "cardamom", "ginger"]
+    },
+    "COF-19": {
+      "name": "Submarino",
+      "description": "Melted chocolate with hot milk submarine style",
+      "ingredients": ["chocolate", "hot milk"]
+    },
+    "COF-20": {
+      "name": "Matcha Latte",
+      "description": "Matcha Latte with Japanese green tea",
+      "ingredients": ["matcha", "milk", "sugar"]
+    },
+    "COF-21": {
+      "name": "Filter Coffee",
+      "description": "Traditional filter coffee of choice",
+      "ingredients": ["origin coffee", "water"]
+    },
+    "COF-22": {
+      "name": "Brewing Methods",
+      "description": "Coffee brewing method of choice (V60, press, etc.)",
+      "ingredients": ["specialty coffee", "water", "special method"]
+    },
+    "SEA-01": {
+      "name": "Guayando Sandwich",
+      "description": "Guayando Sandwich: guacamole, bacon, arugula and jam",
+      "ingredients": ["bread", "guacamole", "bacon", "arugula", "guava jam"]
+    },
+    "SEA-02": {
+      "name": "Sweet Bacon Croissant",
+      "description": "Croissant with crispy bacon and guava jam",
+      "ingredients": ["croissant", "bacon", "guava jam"]
+    },
+    "SEA-03": {
+      "name": "Orange Coffee",
+      "description": "Orange Coffee: espresso with orange juice and red berry syrup",
+      "ingredients": ["espresso", "orange juice", "red berry syrup"]
     }
   }
 }

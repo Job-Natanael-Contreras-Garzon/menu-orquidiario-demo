@@ -14,8 +14,6 @@ import { Footer } from './Footer';
 
 export function HeroSection() {
   const [scrolled, setScrolled] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentBgIndex, setCurrentBgIndex] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const { t, locale, setLocale } = useI18n();
@@ -56,14 +54,6 @@ export function HeroSection() {
     '/images/background/bg4.jpg',
   ];
 
-  // Imágenes para la galería rotativa (combos especiales)
-  const galleryImages = [
-    '/images/gallery/combo1.jpg',
-    '/images/gallery/combo1.jpg', // Usamos combo1.jpg de nuevo ya que combo2.jpg no existe
-    '/images/gallery/combo3.jpg',
-    '/images/gallery/combo4.jpg',
-  ];
-
   // Efecto para detectar el scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -76,25 +66,8 @@ export function HeroSection() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  // Progreso de la barra de carga y cambio de imagen de galería (cada 8 segundos)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          // Cambiar la imagen directamente
-          setCurrentImageIndex((prevIndex) => (prevIndex + 1) % galleryImages.length);
-          return 0;
-        } else {
-          return prev + 0.625; // Incrementar el progreso para completar en 8 segundos (100/160 = 0.625)
-        }
-      });
-    }, 50); // Actualizar cada 50ms para una animación suave
-
-    return () => clearInterval(interval);
-  }, [galleryImages.length]);
   
-  // Cambio de fondo cada 15 segundos (diferente tiempo que la galería)
+  // Cambio de fondo cada 15 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBgIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
@@ -109,9 +82,6 @@ export function HeroSection() {
       
       <div className="relative">
         <HeroMainSection 
-          galleryImages={galleryImages}
-          currentImageIndex={currentImageIndex}
-          progress={progress}
           backgroundImages={backgroundImages}
           currentBgIndex={currentBgIndex}
           scrollY={scrollY}
@@ -123,7 +93,9 @@ export function HeroSection() {
         />
       </div>
       
-      <PresentationSection />
+      <div id="presentation-section">
+        <PresentationSection />
+      </div>
       <PanoramicSection />
       <MenuPreviewSection />
       <IngredientesSection />
