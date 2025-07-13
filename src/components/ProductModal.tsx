@@ -81,7 +81,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
           {/* Content Section */}
           <div className="p-6 pt-4 space-y-4 text-[#4A372D]">
             <div className="flex justify-between items-start gap-4">
-              <h2 className="text-3xl font-serif tracking-tight text-stone-800 pt-8">{t(item.name)}</h2>
+              <h2 className="text-3xl font-headline tracking-tight text-stone-800 pt-8">{t(item.name)}</h2>
               <p className="text-2xl font-bold text-amber-800 whitespace-nowrap pt-8">Bs. {item.price.toFixed(2)}</p>
             </div>
 

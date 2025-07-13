@@ -63,13 +63,13 @@ export function HeroMainSection({
               transform: `translateY(-${scrollY * 0.2}px) translateY(110px)`,
             }}
           >
-            <h2 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
+            <h2 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-headline font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
               {t('home.hero.mainTitle.line1')}
             </h2>
-            <h3 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
+            <h3 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-headline font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
               {t('home.hero.mainTitle.line2')}
             </h3>
-            <h4 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide leading-none mb-4 md:mb-8 text-amber-100 drop-shadow-2xl">
+            <h4 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-headline font-light tracking-wide leading-none mb-4 md:mb-8 text-amber-100 drop-shadow-2xl">
               {t('home.hero.mainTitle.line3')}
             </h4>
           </div>

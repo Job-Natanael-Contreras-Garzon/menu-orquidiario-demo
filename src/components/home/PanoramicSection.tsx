@@ -22,13 +22,13 @@ export function PanoramicSection() {
       {/* Large title with carousel animation */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center overflow-hidden">
         <div className="whitespace-nowrap animate-marquee">
-          <h1 className="font-serif text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
+          <h1 className="font-headline text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
             {t('home.panoramic.marqueeTitle')}
           </h1>
-          <h1 className="font-serif text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
+          <h1 className="font-headline text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
             {t('home.panoramic.marqueeTitle')}
           </h1>
-          <h1 className="font-serif text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
+          <h1 className="font-headline text-8xl md:text-[10rem] lg:text-[14rem] xl:text-[18rem] text-white font-light tracking-[0.2em] opacity-20 select-none inline-block mr-20 drop-shadow-lg">
             {t('home.panoramic.marqueeTitle')}
           </h1>
         </div>
@@ -40,7 +40,7 @@ export function PanoramicSection() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-20">
           <div>
             <div className="text-sm uppercase tracking-widest text-white/70 mb-2">{t('home.panoramic.subtitle')}</div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-wide text-white leading-tight max-w-3xl">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline font-light tracking-wide text-white leading-tight max-w-3xl">
               {t('home.panoramic.title')}
             </h2>
           </div>
@@ -62,7 +62,7 @@ export function PanoramicSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card1.title')}</div>
+                <div className="font-headline text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card1.title')}</div>
                 <div className="text-sm text-white/90">{t('home.panoramic.cards.card1.subtitle')}</div>
               </div>
             </div>
@@ -80,7 +80,7 @@ export function PanoramicSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card2.title')}</div>
+                <div className="font-headline text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card2.title')}</div>
                 <div className="text-sm text-white/90">{t('home.panoramic.cards.card2.subtitle')}</div>
               </div>
             </div>
@@ -100,7 +100,7 @@ export function PanoramicSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card3.title')}</div>
+                <div className="font-headline text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card3.title')}</div>
                 <div className="text-sm text-white/90">{t('home.panoramic.cards.card3.subtitle')}</div>
               </div>
             </div>
@@ -118,7 +118,7 @@ export function PanoramicSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">              
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card4.title')}</div>
+                <div className="font-headline text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card4.title')}</div>
                 <div className="text-sm text-white/90">{t('home.panoramic.cards.card4.subtitle')}</div>
               </div>
             </div>
@@ -138,7 +138,7 @@ export function PanoramicSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card5.title')}</div>
+                <div className="font-headline text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card5.title')}</div>
                 <div className="text-sm text-white/90">{t('home.panoramic.cards.card5.subtitle')}</div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export function PanoramicSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-                <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card6.title')}</div>
+                <div className="font-headline text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card6.title')}</div>
                 <div className="text-sm text-white/90">{t('home.panoramic.cards.card6.subtitle')}</div>
               </div>
             </div>
@@ -172,7 +172,7 @@ export function PanoramicSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-transform duration-700 translate-y-2 group-hover:translate-y-0">
-              <div className="font-serif text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card5.title')}</div>
+              <div className="font-headline text-xl text-white font-medium drop-shadow-sm">{t('home.panoramic.cards.card5.title')}</div>
               <div className="text-sm text-white/90">{t('home.panoramic.cards.card5.subtitle')}</div>
             </div>
           </div>

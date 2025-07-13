@@ -38,7 +38,7 @@ export function PresentationSection() {
           {/* Left side - Title */}
           <div className="text-left flex flex-col justify-center">
             <div className="inline-block relative">
-              <h2 className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide text-primary dark:text-accent leading-tight transition-colors duration-300">
+              <h2 className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-headline font-light tracking-wide text-primary dark:text-accent leading-tight transition-colors duration-300">
                 {t('home.presentation.title')}
               </h2>
               <div className="absolute -bottom-4 left-0 right-0 h-1.5 bg-accent dark:bg-primary transform origin-left transition-transform duration-500"></div>

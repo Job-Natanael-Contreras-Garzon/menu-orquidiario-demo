@@ -13,11 +13,11 @@ export function IngredientesSection() {
         <div className="flex flex-col items-center justify-center text-center mx-auto">
           {/* Título principal - separado en líneas */}
           <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-wide text-white mb-2">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-headline font-normal tracking-wide text-white mb-2">
               {t('home.ingredientes.title')}
             </h2>
             
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-wide text-white">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-headline font-normal tracking-wide text-white">
               {t('home.ingredientes.subtitle')}
             </h3>
           </div>
