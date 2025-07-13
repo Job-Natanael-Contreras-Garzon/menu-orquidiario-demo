@@ -295,6 +295,46 @@
       "description": "Una soda italiana artesanal con puré de frutos rojos, agua con gas y un toque de romero para un sabor complejo y refrescante.",
       "ingredients": ["bayas", "agua con gas", "azucar"]
     },
+    "JUI-01": {
+      "name": "Jugo de Piña",
+      "description": "Natural juice",
+      "ingredients": ["pineapple"]
+    },
+    "JUI-02": {
+      "name": "Jugo de Coco",
+      "description": "Natural juice",
+      "ingredients": ["coconut"]
+    },
+    "JUI-03": {
+      "name": "Jugo de Mango",
+      "description": "Natural juice",
+      "ingredients": ["mango"]
+    },
+    "JUI-04": {
+      "name": "Jugo de Plátano",
+      "description": "Natural juice",
+      "ingredients": ["banana"]
+    },
+    "JUI-05": {
+      "name": "Jugo de Fresa",
+      "description": "Natural juice",
+      "ingredients": ["strawberry"]
+    },
+    "JUI-06": {
+      "name": "Jugo de Melocotón",
+      "description": "Natural juice",
+      "ingredients": ["peach"]
+    },
+    "JUI-07": {
+      "name": "Jugo de Maracuyá",
+      "description": "Natural juice",
+      "ingredients": ["passion fruit"]
+    },
+    "JUI-08": {
+      "name": "Jugo de Achachairu",
+      "description": "Natural juice",
+      "ingredients": ["achachairu"]
+    },
     "WAT-01": {
       "name": "Agua sin gas",
       "description": "Agua mineral natural de manantial, pura y refrescante.",

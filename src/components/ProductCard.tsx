@@ -26,9 +26,10 @@ export function ProductCard({ item, onProductClick }: ProductCardProps) {
       >
         <Image
           src={imageUrl}
-          layout="fill"
-          objectFit="cover"
+          fill
           alt={t(item.name)}
+          className="object-cover"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all" />
         

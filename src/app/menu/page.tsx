@@ -231,7 +231,7 @@ export default function MenuPage() {
           )}
 
         </Tabs>
-        </div>
+      </div>
       </main>
       <Footer />
       <ScrollToTopButton />
