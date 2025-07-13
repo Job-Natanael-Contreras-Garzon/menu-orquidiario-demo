@@ -95,7 +95,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
             <span>&copy; {new Date().getFullYear()} Powered by ALV Software</span>
             <span className="hidden md:inline">•</span>
-            <span>By <a href="https://brand-brothers-gallery.vercel.app/" className="font-semibold hover:underline">Branding Brothers</a></span>
+            <span><a href="https://brand-brothers-gallery.vercel.app/" className="font-semibold hover:underline">Branding Brothers</a></span>
             <span className="hidden md:inline">•</span>
             <span>Todos los derechos reservados.</span>
           </div>
