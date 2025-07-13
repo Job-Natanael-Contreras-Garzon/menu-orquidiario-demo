@@ -17,8 +17,9 @@ export function ProductCard({ item }: ProductCardProps) {
 
   const hasVariants = item.variants && item.variants.length > 0;
 
-  // Fallback para imágenes si no se proporciona una
-  const imageUrl = item.image || '/placeholder.jpg';
+  // Determina la URL correcta de la imagen, ya sea un string o un objeto importado.
+  const imageUrl = typeof item.image === 'string' ? item.image : (item.image && item.image.src) || '/placeholder.jpg';
+
 
   return (
     <>
