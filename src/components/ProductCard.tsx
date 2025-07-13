@@ -4,31 +4,31 @@ import Image from 'next/image';
 import type { MenuItem } from '@/lib/menu-data';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { useI18n } from '@/lib/i18n';
-import { useState } from 'react';
-import { ProductModal } from './ProductModal';
 
 interface ProductCardProps {
   item: MenuItem;
+  onProductClick: (item: MenuItem) => void;
 }
 
-export function ProductCard({ item }: ProductCardProps) {
+export function ProductCard({ item, onProductClick }: ProductCardProps) {
   const { t } = useI18n();
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const hasVariants = item.variants && item.variants.length > 0;
 
   // Fallback para imágenes si no se proporciona una
-  const imageUrl = item.image || '/placeholder.jpg';
+  const imageUrl = (item.images && item.images.length > 0) ? item.images[0] : '/placeholder.jpg';
 
   return (
     <>
       <Card 
         className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg cursor-pointer group" 
-        onClick={() => setIsModalOpen(true)}
+        onClick={() => onProductClick(item)}
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-300 ease-in-out group-hover:scale-110"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+        <Image
+          src={imageUrl}
+          layout="fill"
+          objectFit="cover"
+          alt={t(item.name)}
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all" />
         
@@ -52,12 +52,6 @@ export function ProductCard({ item }: ProductCardProps) {
           )}
         </div>
       </Card>
-
-      <ProductModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        item={item} 
-      />
     </>
   );
 }

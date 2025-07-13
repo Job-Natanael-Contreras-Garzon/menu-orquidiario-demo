@@ -5,20 +5,18 @@ import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { menuData } from '@/lib/menu-data';
+import { menuData, type MenuItem } from '@/lib/menu-data';
 import { ProductCard } from '@/components/ProductCard';
 import { ScrollToTopButton } from '@/components/ScrollToTopButton';
-// Se eliminan las importaciones de ComboSuggestion y SuggestCombosInput que ya no se utilizan.
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useI18n } from '@/lib/i18n';
 import { useDebounce } from '@/hooks/use-debounce';
-import { X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import enTranslations from '@/lib/i18n/locales/en.json';
 import esTranslations from '@/lib/i18n/locales/es.json';
-
-// La constante subCategoriesByCategory ya no es necesaria y se ha eliminado.
+import { ProductModal } from '@/components/ProductModal';
 
 // Helper to access nested properties using a dot-separated string
 const getTranslation = (data: any, key: string): string => {
@@ -38,8 +36,9 @@ export default function MenuPage() {
   const { t } = useI18n();
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
-  // Se establece 'ALL' como la categoría activa por defecto.
   const [activeCategory, setActiveCategory] = useState('ALL');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
 
   // Se define la lista de categorías de productos.
   // Se añade 'ALL' para mostrar todos los productos y se elimina 'COMBOS'.
@@ -64,45 +63,60 @@ export default function MenuPage() {
     SALTY_SNACKS: t('menuPage.subCategories.SALTY_SNACKS'),
     SPECIAL_ORDERS: t('menuPage.subCategories.SPECIAL_ORDERS'),
   }), [t]);
-  
-  const filteredProducts = useMemo(() => {
-    const lowercasedSearchTerm = debouncedSearchTerm.toLowerCase().trim();
-    // menuData es una lista plana de productos, por lo que la asignamos directamente.
-    let products = menuData;
 
-    if (lowercasedSearchTerm) {
-      products = products.filter(product => {
-        const nameEn = getTranslation(enTranslations, product.name).toLowerCase();
-        const descriptionEn = getTranslation(enTranslations, product.description).toLowerCase();
-        const nameEs = getTranslation(esTranslations, product.name).toLowerCase();
-        const descriptionEs = getTranslation(esTranslations, product.description).toLowerCase();
-        return nameEn.includes(lowercasedSearchTerm) ||
-               descriptionEn.includes(lowercasedSearchTerm) ||
-               nameEs.includes(lowercasedSearchTerm) ||
-               descriptionEs.includes(lowercasedSearchTerm);
-      });
-    }
+  const filteredAndSortedItems = useMemo(() => {
+    const items = menuData.filter(item => {
+      const categoryMatch = activeCategory === 'ALL' || item.category === activeCategory;
+      const searchMatch = debouncedSearchTerm ? t(item.name).toLowerCase().includes(debouncedSearchTerm.toLowerCase()) : true;
+      return categoryMatch && searchMatch;
+    });
 
-    if (activeCategory !== 'ALL') {
-      return products.filter(p => p.category === activeCategory);
-    }
+    // Ordena los items por subcategoría
+    const subCategoryOrder = Object.keys(translatedSubCategoryNames);
+    items.sort((a, b) => {
+      const subCategoryAIndex = subCategoryOrder.indexOf(a.subCategory);
+      const subCategoryBIndex = subCategoryOrder.indexOf(b.subCategory);
+      return subCategoryAIndex - subCategoryBIndex;
+    });
 
-    return products;
-  }, [activeCategory, debouncedSearchTerm, t]);
+    return items;
+  }, [activeCategory, debouncedSearchTerm, t, translatedSubCategoryNames]);
 
-  const groupedProducts = useMemo(() => {
-    if (!filteredProducts) return {};
-    return filteredProducts.reduce((acc, product) => {
-      const subCategoryName = translatedSubCategoryNames[product.subCategory as keyof typeof translatedSubCategoryNames] || product.subCategory;
+  const handleProductClick = (item: MenuItem) => {
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
+
+  const handleNext = () => {
+    if (!selectedItem) return;
+    const currentIndex = filteredAndSortedItems.findIndex(item => item.id === selectedItem.id);
+    const nextIndex = (currentIndex + 1) % filteredAndSortedItems.length;
+    setSelectedItem(filteredAndSortedItems[nextIndex]);
+  };
+
+  const handlePrev = () => {
+    if (!selectedItem) return;
+    const currentIndex = filteredAndSortedItems.findIndex(item => item.id === selectedItem.id);
+    const prevIndex = (currentIndex - 1 + filteredAndSortedItems.length) % filteredAndSortedItems.length;
+    setSelectedItem(filteredAndSortedItems[prevIndex]);
+  };
+
+  // Agrupa los items por subcategoría para la renderización
+  const groupedItems = useMemo(() => {
+    return filteredAndSortedItems.reduce((acc, item) => {
+      const subCategoryName = translatedSubCategoryNames[item.subCategory as keyof typeof translatedSubCategoryNames] || item.subCategory;
       if (!acc[subCategoryName]) {
         acc[subCategoryName] = [];
       }
-      acc[subCategoryName].push(product);
+      acc[subCategoryName].push(item);
       return acc;
-    }, {} as Record<string, typeof filteredProducts>);
-  }, [filteredProducts, translatedSubCategoryNames]);
-
-
+    }, {} as Record<string, typeof filteredAndSortedItems>);
+  }, [filteredAndSortedItems, translatedSubCategoryNames]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -173,7 +187,7 @@ export default function MenuPage() {
           
           {categories.map((category) => (
             <TabsContent key={category} value={category}>
-              {Object.entries(groupedProducts)
+              {Object.entries(groupedItems)
                 .filter(([subCategory, items]) => {
                   // Si la pestaña es 'ALL', muestra todos los grupos.
                   if (category === 'ALL') return true;
@@ -184,13 +198,13 @@ export default function MenuPage() {
                   <div key={subCategory} className="mb-12">
                     <h2 className="font-headline text-3xl md:text-4xl mb-6 text-center text-primary">{subCategory}</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                      {Array.isArray(items) && items.map((item: any) => <ProductCard key={item.id} item={item} />)}
+                      {Array.isArray(items) && items.map((item: any) => <ProductCard key={item.id} item={item} onProductClick={handleProductClick} />)}
                     </div>
                   </div>
               ))}
             </TabsContent>
           ))}
-          {filteredProducts.length === 0 && debouncedSearchTerm && (
+          {filteredAndSortedItems.length === 0 && debouncedSearchTerm && (
             <div className="text-center py-12 text-muted-foreground">
               <p>{t('menuPage.noResults')}</p>
             </div>
@@ -200,6 +214,34 @@ export default function MenuPage() {
       </main>
       <Footer />
       <ScrollToTopButton />
+      
+      <ProductModal 
+        key={selectedItem?.id}
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+        item={selectedItem}
+      />
+
+      {isModalOpen && (
+        <>
+          <Button
+            variant="ghost"
+            aria-label={t('productModal.prev')}
+            className="fixed top-1/2 -translate-y-1/2 left-4 md:left-auto md:right-[calc(50%+13rem)] h-12 w-12 rounded-full bg-black/50 text-white z-[60] hover:bg-black/70 transition-colors"
+            onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+          >
+            <ChevronLeft size={32} />
+          </Button>
+          <Button
+            variant="ghost"
+            aria-label={t('productModal.next')}
+            className="fixed top-1/2 -translate-y-1/2 right-4 md:right-auto md:left-[calc(50%+13rem)] h-12 w-12 rounded-full bg-black/50 text-white z-[60] hover:bg-black/70 transition-colors"
+            onClick={(e) => { e.stopPropagation(); handleNext(); }}
+          >
+            <ChevronRight size={32} />
+          </Button>
+        </>
+      )}
     </div>
   );
 }
