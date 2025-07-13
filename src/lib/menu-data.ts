@@ -1,81 +1,61 @@
-// This file contains the hardcoded menu data for "El Orquídeario".
-// All user-facing strings are now translation keys.
-import type { StaticImageData } from 'next/image';
-import DoubleRistretto from "../assets/coffee/Double Ristretto Coffee.webp";
-import DoubleEspresso from "../assets/coffee/Double Espresso Coffe.webp";
-import Americano from "../assets/coffee/Americano coffee.webp";
-import Cortado from "../assets/coffee/Cortado coffee.webp";
-import macchiato from "../assets/coffee/Expresso-macchiato coffee.webp";
-import FlatWhite from "../assets/coffee/Flat White.webp";
-import Cappuccino from "../assets/coffee/capuchino coffee.webp";
-import Latte from "../assets/coffee/Latte coffee.webp";
-import MoccaLatte from "../assets/coffee/Mocha Latte coffee.webp";
-import Sultan from "../assets/coffee/Sultan coffee.webp";
-import Frappe from "../assets/coffee/Frappe coffee.webp";
-import BerryColdBrew from "../assets/coffee/Berry Cold Brew.webp";
-import EspressoTonic from "../assets/coffee/Espresso Tonic Coffee.webp";
-import GoldenMilk from "../assets/coffee/Golden Milk coffee.webp";
-import IceTea from "../assets/bebidas de autor/Iced Tea Autor.webp";
-import BlueCrush from "../assets/bebidas de autor/Blue Crush Autor.webp";
-import HibiscusLemonade from "../assets/bebidas de autor/Hibiscus Lemonade Autor.webp";
-import MatchaBanana from "../assets/bebidas de autor/Matcha Banana Autor.webp";
-import BerrySoda from "../assets/bebidas de autor/Berry Soda Autor.webp";
+  // This file contains the hardcoded menu data for "El Orquídeario".
+  // All user-facing strings are now translation keys.
 
-export type MenuItemVariant = {
-  name: string; // This will be a translation key, e.g., "productCard.withIceCream"
-  price: number;
-};
+  export type MenuItemVariant = {
+    name: string; // This will be a translation key, e.g., "productCard.withIceCream"
+    price: number;
+  };
 
-export type MenuItem = {
-  id: string;
-  name: string; // translation key e.g. "menuData.COF-01.name"
-  description: string; // translation key e.g. "menuData.COF-01.description"
-  price: number;
-  category: 'BEVERAGES' | 'PASTRIES' | 'SALTY_SNACKS' | 'SPECIAL_ORDERS';
-  subCategory: string; // e.g. "COFFEE"
-  image: string | StaticImageData;
-  dataAiHint: string;
-  tags?: string[];
-  variants?: MenuItemVariant[];
-  ingredients?: string[];
-};
+  export type MenuItem = {
+    id: string;
+    name: string; // translation key e.g. "menuData.COF-01.name"
+    description: string; // translation key e.g. "menuData.COF-01.description"
+    price: number;
+    category: 'BEVERAGES' | 'PASTRIES' | 'SALTY_SNACKS' | 'SPECIAL_ORDERS';
+    subCategory: string; // e.g. "COFFEE"
+    image: string ;
+    dataAiHint: string;
+    tags?: string[];
+    variants?: MenuItemVariant[];
+    ingredients?: string[];
+  };
 
-export const menuData: MenuItem[] = [
-  // BEVERAGES - COFFEE
-  { id: 'COF-01', name: 'menuData.COF-01.name', description: 'menuData.COF-01.description', price: 15, category: 'BEVERAGES', subCategory: 'COFFEE', image: DoubleRistretto, dataAiHint: 'espresso shot', ingredients:['menuData.COF-01.ingredients'] },
-  { id: 'COF-02', name: 'menuData.COF-02.name', description: 'menuData.COF-02.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', image: DoubleEspresso, dataAiHint: 'espresso shot', ingredients:['menuData.COF-02.ingredients'] },
-  { id: 'COF-03', name: 'menuData.COF-03.name', description: 'menuData.COF-03.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', image: Americano, dataAiHint: 'black coffee', ingredients:['menuData.COF-03.ingredients'] },
-  { id: 'COF-04', name: 'menuData.COF-04.name', description: 'menuData.COF-04.description', price: 15, category: 'BEVERAGES', subCategory: 'COFFEE', image: Cortado, dataAiHint: 'milk coffee', ingredients:['menuData.COF-04.ingredients'] },
-  { id: 'COF-05', name: 'menuData.COF-05.name', description: 'menuData.COF-05.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', image: macchiato, dataAiHint: 'milk coffee', ingredients:['menuData.COF-05.ingredients'] },
-  { id: 'COF-06', name: 'menuData.COF-06.name', description: 'menuData.COF-06.description', price: 20, category: 'BEVERAGES', subCategory: 'COFFEE', image: FlatWhite, dataAiHint: 'milk coffee', ingredients:['menuData.COF-06.ingredients'] },
-  { id: 'COF-07', name: 'menuData.COF-07.name', description: 'menuData.COF-07.description', price: 22, category: 'BEVERAGES', subCategory: 'COFFEE', image: Cappuccino, dataAiHint: 'cappuccino foam', ingredients:['menuData.COF-07.ingredients'] },
-  { id: 'COF-08', name: 'menuData.COF-08.name', description: 'menuData.COF-08.description', price: 23, category: 'BEVERAGES', subCategory: 'COFFEE', image: Latte, dataAiHint: 'latte art', ingredients:['menuData.COF-08.ingredients'] },
-  { id: 'COF-09', name: 'menuData.COF-09.name', description: 'menuData.COF-09.description', price: 25, category: 'BEVERAGES', subCategory: 'COFFEE', image: MoccaLatte, dataAiHint: 'chocolate coffee', ingredients:['menuData.COF-09.ingredients'] },
-  { id: 'COF-10', name: 'menuData.COF-10.name', description: 'menuData.COF-10.description', price: 25, category: 'BEVERAGES', subCategory: 'COFFEE', image: Sultan, dataAiHint: 'specialty coffee', ingredients:['menuData.COF-10.ingredients'] },
-  { id: 'COF-11', name: 'menuData.COF-11.name', description: 'menuData.COF-11.description', price: 30, category: 'BEVERAGES', subCategory: 'COFFEE', image: Frappe, dataAiHint: 'iced coffee', ingredients:['menuData.COF-11.ingredients'] },
-  { id: 'COF-12', name: 'menuData.COF-12.name', description: 'menuData.COF-12.description', price: 28, category: 'BEVERAGES', subCategory: 'COFFEE', image: BerryColdBrew, dataAiHint: 'cold brew', ingredients:['menuData.COF-12.ingredients'] },
-  { id: 'COF-13', name: 'menuData.COF-13.name', description: 'menuData.COF-13.description', price: 35, category: 'BEVERAGES', subCategory: 'COFFEE', image: 'https://placehold.co/100x100.png', dataAiHint: 'coffee cocktail', ingredients:['menuData.COF-13.ingredients'] },
+  export const menuData: MenuItem[] = [
+    // BEVERAGES - COFFEE
+    { id: 'COF-01', name: 'menuData.COF-01.name', description: 'menuData.COF-01.description', price: 15, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/double-ristretto-coffee.webp", dataAiHint: 'espresso shot', ingredients:['menuData.COF-01.ingredients'] },
+    { id: 'COF-02', name: 'menuData.COF-02.name', description: 'menuData.COF-02.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/double-espresso-coffe.webp", dataAiHint: 'espresso shot', ingredients:['menuData.COF-02.ingredients'] },
+    { id: 'COF-03', name: 'menuData.COF-03.name', description: 'menuData.COF-03.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/americano-coffee.webp", dataAiHint: 'black coffee', ingredients:['menuData.COF-03.ingredients'] },
+    { id: 'COF-04', name: 'menuData.COF-04.name', description: 'menuData.COF-04.description', price: 15, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/cortado-coffee.webp", dataAiHint: 'milk coffee', ingredients:['menuData.COF-04.ingredients'] },
+    { id: 'COF-05', name: 'menuData.COF-05.name', description: 'menuData.COF-05.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/expresso-macchiato-coffee.webp", dataAiHint: 'milk coffee', ingredients:['menuData.COF-05.ingredients'] },
+    { id: 'COF-06', name: 'menuData.COF-06.name', description: 'menuData.COF-06.description', price: 20, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/flat-white.webp", dataAiHint: 'milk coffee', ingredients:['menuData.COF-06.ingredients'] },
+    { id: 'COF-07', name: 'menuData.COF-07.name', description: 'menuData.COF-07.description', price: 22, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/capuchino-coffee.webp", dataAiHint: 'cappuccino foam', ingredients:['menuData.COF-07.ingredients'] },
+    { id: 'COF-08', name: 'menuData.COF-08.name', description: 'menuData.COF-08.description', price: 23, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/latte-coffee.webp", dataAiHint: 'latte art', ingredients:['menuData.COF-08.ingredients'] },
+    { id: 'COF-09', name: 'menuData.COF-09.name', description: 'menuData.COF-09.description', price: 25, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/mocha-latte-coffee.webp", dataAiHint: 'chocolate coffee', ingredients:['menuData.COF-09.ingredients'] },
+    { id: 'COF-10', name: 'menuData.COF-10.name', description: 'menuData.COF-10.description', price: 25, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/sultan-coffee.webp", dataAiHint: 'specialty coffee', ingredients:['menuData.COF-10.ingredients'] },
+    { id: 'COF-11', name: 'menuData.COF-11.name', description: 'menuData.COF-11.description', price: 30, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/frape.webp", dataAiHint: 'iced coffee', ingredients:['menuData.COF-11.ingredients'] },
+    { id: 'COF-12', name: 'menuData.COF-12.name', description: 'menuData.COF-12.description', price: 28, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/berry-cold-brew.webp", dataAiHint: 'cold brew', ingredients:['menuData.COF-12.ingredients'] },
+    { id: 'COF-13', name: 'menuData.COF-13.name', description: 'menuData.COF-13.description', price: 35, category: 'BEVERAGES', subCategory: 'COFFEE', image: "/assets/coffee/espresso-tonic-coffee.webp", dataAiHint: 'coffee cocktail', ingredients:['menuData.COF-13.ingredients'] },
 
   // BEVERAGES - SIGNATURE DRINKS
-  { id: 'SIG-01', name: 'menuData.SIG-01.name', description: 'menuData.SIG-01.description', price: 20, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: 'https://placehold.co/100x100.png', dataAiHint: 'turmeric latte', ingredients:['menuData.SIG-01.ingredients'] },
-  { id: 'SIG-02', name: 'menuData.SIG-02.name', description: 'menuData.SIG-02.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: 'https://placehold.co/100x100.png', dataAiHint: 'iced tea', ingredients:['menuData.SIG-02.ingredients'] },
-  { id: 'SIG-03', name: 'menuData.SIG-03.name', description: 'menuData.SIG-03.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: 'https://placehold.co/100x100.png', dataAiHint: 'blue lagoon', ingredients:['menuData.SIG-03.ingredients'] },
-  { id: 'SIG-04', name: 'menuData.SIG-04.name', description: 'menuData.SIG-04.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: 'https://placehold.co/100x100.png', dataAiHint: 'pink lemonade', ingredients:['menuData.SIG-04.ingredients'] },
-  { id: 'SIG-05', name: 'menuData.SIG-05.name', description: 'menuData.SIG-05.description', price: 28, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: 'https://placehold.co/100x100.png', dataAiHint: 'matcha smoothie', ingredients:['menuData.SIG-05.ingredients'] },
-  { id: 'SIG-06', name: 'menuData.SIG-06.name', description: 'menuData.SIG-06.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: 'https://placehold.co/100x100.png', dataAiHint: 'berry soda', ingredients:['menuData.SIG-06.ingredients'] },
+  { id: 'SIG-01', name: 'menuData.SIG-01.name', description: 'menuData.SIG-01.description', price: 20, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: '/assets/bebidas-de-autor/golden-milk.webp', dataAiHint: 'turmeric latte', ingredients:['menuData.SIG-01.ingredients'] },
+  { id: 'SIG-02', name: 'menuData.SIG-02.name', description: 'menuData.SIG-02.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: '/assets/bebidas-de-autor/iced-tea-autor.webp', dataAiHint: 'iced tea', ingredients:['menuData.SIG-02.ingredients'] },
+  { id: 'SIG-03', name: 'menuData.SIG-03.name', description: 'menuData.SIG-03.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: '/assets/bebidas-de-autor/blue-crush-autor.webp', dataAiHint: 'blue lagoon', ingredients:['menuData.SIG-03.ingredients'] },
+  { id: 'SIG-04', name: 'menuData.SIG-04.name', description: 'menuData.SIG-04.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: '/assets/bebidas-de-autor/hibiscus-lemonade-autor.webp', dataAiHint: 'pink lemonade', ingredients:['menuData.SIG-04.ingredients'] },
+  { id: 'SIG-05', name: 'menuData.SIG-05.name', description: 'menuData.SIG-05.description', price: 28, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: '/assets/bebidas-de-autor/matcha-banana-autor.webp', dataAiHint: 'matcha smoothie', ingredients:['menuData.SIG-05.ingredients'] },
+  { id: 'SIG-06', name: 'menuData.SIG-06.name', description: 'menuData.SIG-06.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', image: '/assets/bebidas-de-autor/red-berry-soda-autor.webp', dataAiHint: 'berry soda', ingredients:['menuData.SIG-06.ingredients'] },
   
   // BEVERAGES - JUICES, WATERS & SODAS
-  { id: 'JUI-01', name: 'menuData.JUI-01.name', description: 'menuData.JUI-01.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'pineapple juice', ingredients:['menuData.JUI-01.ingredients'] },
-  { id: 'JUI-02', name: 'menuData.JUI-02.name', description: 'menuData.JUI-02.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'coconut water', ingredients:['menuData.JUI-02.ingredients'] },
-  { id: 'JUI-03', name: 'menuData.JUI-03.name', description: 'menuData.JUI-03.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'mango juice', ingredients:['menuData.JUI-03.ingredients'] },
-  { id: 'JUI-04', name: 'menuData.JUI-04.name', description: 'menuData.JUI-04.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'banana smoothie', ingredients:['menuData.JUI-04.ingredients'] },
-  { id: 'JUI-05', name: 'menuData.JUI-05.name', description: 'menuData.JUI-05.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'strawberry juice', ingredients:['menuData.JUI-05.ingredients'] },
-  { id: 'JUI-06', name: 'menuData.JUI-06.name', description: 'menuData.JUI-06.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'peach juice', ingredients:['menuData.JUI-06.ingredients'] },
-  { id: 'JUI-07', name: 'menuData.JUI-07.name', description: 'menuData.JUI-07.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'passionfruit juice', ingredients:['menuData.JUI-07.ingredients'] },
-  { id: 'JUI-08', name: 'menuData.JUI-08.name', description: 'menuData.JUI-08.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'exotic fruit', ingredients:['menuData.JUI-08.ingredients'] },
-  { id: 'WAT-01', name: 'menuData.WAT-01.name', description: 'menuData.WAT-01.description', price: 10, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'water bottle', ingredients:['menuData.WAT-01.ingredients'] },
-  { id: 'WAT-02', name: 'menuData.WAT-02.name', description: 'menuData.WAT-02.description', price: 15, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'sparkling water', ingredients:['menuData.WAT-02.ingredients'] },
-  { id: 'SOD-01', name: 'menuData.SOD-01.name', description: 'menuData.SOD-01.description', price: 15, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: 'https://placehold.co/100x100.png', dataAiHint: 'soda can', ingredients:['menuData.SOD-01.ingredients'] },
+  { id: 'JUI-01', name: 'menuData.JUI-01.name', description: 'menuData.JUI-01.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-pina.webp', dataAiHint: 'pineapple juice', ingredients:['menuData.JUI-01.ingredients'] },
+  { id: 'JUI-02', name: 'menuData.JUI-02.name', description: 'menuData.JUI-02.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-coco.webp', dataAiHint: 'coconut water', ingredients:['menuData.JUI-02.ingredients'] },
+  { id: 'JUI-03', name: 'menuData.JUI-03.name', description: 'menuData.JUI-03.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-mango.webp', dataAiHint: 'mango juice', ingredients:['menuData.JUI-03.ingredients'] },
+  { id: 'JUI-04', name: 'menuData.JUI-04.name', description: 'menuData.JUI-04.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-guineo.webp', dataAiHint: 'banana smoothie', ingredients:['menuData.JUI-04.ingredients'] },
+  { id: 'JUI-05', name: 'menuData.JUI-05.name', description: 'menuData.JUI-05.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-frutilla.webp', dataAiHint: 'strawberry juice', ingredients:['menuData.JUI-05.ingredients'] },
+  { id: 'JUI-06', name: 'menuData.JUI-06.name', description: 'menuData.JUI-06.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-durazno.webp', dataAiHint: 'peach juice', ingredients:['menuData.JUI-06.ingredients'] },
+  { id: 'JUI-07', name: 'menuData.JUI-07.name', description: 'menuData.JUI-07.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-maracuya.webp', dataAiHint: 'passionfruit juice', ingredients:['menuData.JUI-07.ingredients'] },
+  { id: 'JUI-08', name: 'menuData.JUI-08.name', description: 'menuData.JUI-08.description', price: 20, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/jugo-de-achachairu.webp', dataAiHint: 'exotic fruit', ingredients:['menuData.JUI-08.ingredients'] },
+  { id: 'WAT-01', name: 'menuData.WAT-01.name', description: 'menuData.WAT-01.description', price: 10, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/agua-sin-gas.webp', dataAiHint: 'water bottle', ingredients:['menuData.WAT-01.ingredients'] },
+  { id: 'WAT-02', name: 'menuData.WAT-02.name', description: 'menuData.WAT-02.description', price: 15, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/agua-con-gas.webp', dataAiHint: 'sparkling water', ingredients:['menuData.WAT-02.ingredients'] },
+  { id: 'SOD-01', name: 'menuData.SOD-01.name', description: 'menuData.SOD-01.description', price: 15, category: 'BEVERAGES', subCategory: 'JUICES_WATERS_SODAS', image: '/assets/jugos-aguas-gaseosas/gaseosas.webp', dataAiHint: 'soda can', ingredients:['menuData.SOD-01.ingredients'] },
 
   // BEVERAGES - INFUSIONS
   { id: 'INF-01', name: 'menuData.INF-01.name', description: 'menuData.INF-01.description', price: 23, category: 'BEVERAGES', subCategory: 'INFUSIONS', image: 'https://placehold.co/100x100.png', dataAiHint: 'herbal tea', ingredients:['menuData.INF-01.ingredients'] },
