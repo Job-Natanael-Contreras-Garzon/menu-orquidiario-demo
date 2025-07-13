@@ -5,11 +5,142 @@
     "slogan": "ESPACIO MEMORABLE"
   },
   "header": {
-    "menu": "Menú"
+    "menu": "Menú",
+    "home": "Inicio"
   },
   "home": {
     "whatsapp": "Reservas por WhatsApp",
-    "viewMenu": "Ver Menú"
+    "viewMenu": "Ver Menú",
+    "hero": {
+      "mainTitle": {
+        "line1": "SABORES",
+        "line2": "IRRESISTIBLES",
+        "line3": "CADA DÍA"
+      },
+      "leftCarousel": {
+        "item1": "EXPRESSO",
+        "item2": "CAPUCHINO",
+        "item3": "LATTE",
+        "item4": "SMOOTHIE",
+        "item5": "JUGO NATURAL",
+        "item6": "TÉ HELADO",
+        "item7": "CHOCOLATE",
+        "item8": "MATCHA LATTE"
+      },
+      "rightCarousel": {
+        "item1": "CROISSANT",
+        "item2": "MACARONS",
+        "item3": "MUFFINS",
+        "item4": "SANDWICH",
+        "item5": "BAGEL",
+        "item6": "PASTELES",
+        "item7": "TORTA",
+        "item8": "PANINI"
+      },
+      "scrollIndicator": "Desplazar hacia abajo"
+    },
+    "presentation": {
+      "title": "PRESENTACIÓN",
+      "description": "Bienvenidos a El Orquideario Café, un oasis de sabor en el corazón de la ciudad. Nuestra pasión es ofrecer una selección exquisita de bebidas artesanales, repostería hecha con amor y deliciosos bocados salados que harán de su visita una experiencia inolvidable. Con ingredientes cuidadosamente seleccionados y un ambiente acogedor, nos esforzamos por crear momentos especiales para nuestros visitantes, ya sea para un desayuno revitalizante, una merienda relajante o una reunión con amigos."
+    },
+    "ingredientes": {
+      "title": "INGREDIENTES",
+      "subtitle": "EXQUISITOS, PLATOS MEMORABLES.",
+      "description": "Exquisitos manjares imbuidos de una herencia única. Nuestra cocina fusiona los dones efímeros de nuestra finca en Cabrera de Mar, donde florecen ingredientes de estación con la riqueza que otorga el Mar Mediterráneo, junto a la excelencia de granjas locales. Cada creación se erige en una sinfonía que venera, magnifica y ennoblecer los matices de los sabores más auténticos de la naturaleza.",
+      "imageAlt": "Ingredientes frescos preparándose"
+    },
+    "panoramic": {
+      "marqueeTitle": "ORQUIDEARIO",
+      "subtitle": "ESPACIO SINGULAR",
+      "title": "PANORÁMICAS QUE EXTASÍAN Y DELEITAN LOS SENTIDOS.",
+      "cards": {
+        "card1": {
+          "title": "Costa Mediterránea",
+          "subtitle": "Vistas al mar"
+        },
+        "card2": {
+          "title": "Atardecer Perfecto",
+          "subtitle": "Ambiente íntimo"
+        },
+        "card3": {
+          "title": "Ambiente Exclusivo",
+          "subtitle": "Diseño contemporáneo"
+        },
+        "card4": {
+          "title": "Cocina de Autor",
+          "subtitle": "Creatividad y tradición"
+        },
+        "card5": {
+          "title": "Experiencia Completa",
+          "subtitle": "Eventos especiales"
+        },
+        "card6": {
+          "title": "Productos del Mar",
+          "subtitle": "Frescura excepcional"
+        }
+      }
+    },
+    "menuPreview": {
+      "title": "NUESTRA CARTA",
+      "description": "Una selección exquisita de platos que reflejan nuestra pasión por la cocina mediterránea y la innovación culinaria.",
+      "categories": {
+        "drinks": {
+          "title": "Bebidas",
+          "items": {
+            "item1": {
+              "name": "Espresso",
+              "price": "2.50€"
+            },
+            "item2": {
+              "name": "Vino de la Casa",
+              "price": "4.50€"
+            },
+            "item3": {
+              "name": "Cóctel Signature",
+              "price": "12€"
+            }
+          },
+          "viewAll": "Ver todas las bebidas"
+        },
+        "desserts": {
+          "title": "Repostería",
+          "items": {
+            "item1": {
+              "name": "Tiramisú Casero",
+              "price": "9€"
+            },
+            "item2": {
+              "name": "Coulant de Chocolate",
+              "price": "10€"
+            },
+            "item3": {
+              "name": "Sorbete de Limón",
+              "price": "8€"
+            }
+          },
+          "viewAll": "Ver toda la repostería"
+        },
+        "savory": {
+          "title": "Salados",
+          "items": {
+            "item1": {
+              "name": "Croquetas Caseras",
+              "price": "12€"
+            },
+            "item2": {
+              "name": "Pulpo a la Gallega",
+              "price": "24€"
+            },
+            "item3": {
+              "name": "Patatas Bravas",
+              "price": "9€"
+            }
+          },
+          "viewAll": "Ver todos los salados"
+        }
+      },
+      "viewFullMenu": "VER CARTA COMPLETA"
+    }
   },
   "footer": {
     "copyright": "© {year} El Orquídeario. Todos los derechos reservados."

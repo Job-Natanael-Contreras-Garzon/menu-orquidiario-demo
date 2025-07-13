@@ -5,11 +5,142 @@
     "slogan": "A MEMORABLE SPACE"
   },
   "header": {
-    "menu": "Menu"
+    "menu": "Menu",
+    "home": "Home"
   },
   "home": {
     "whatsapp": "Reservations via WhatsApp",
-    "viewMenu": "View Menu"
+    "viewMenu": "View Menu",
+    "hero": {
+      "mainTitle": {
+        "line1": "IRRESISTIBLE",
+        "line2": "FLAVORS",
+        "line3": "EVERY DAY"
+      },
+      "leftCarousel": {
+        "item1": "ESPRESSO",
+        "item2": "CAPPUCCINO",
+        "item3": "LATTE",
+        "item4": "SMOOTHIE",
+        "item5": "FRESH JUICE",
+        "item6": "ICED TEA",
+        "item7": "HOT CHOCOLATE",
+        "item8": "MATCHA LATTE"
+      },
+      "rightCarousel": {
+        "item1": "CROISSANT",
+        "item2": "MACARONS",
+        "item3": "MUFFINS",
+        "item4": "SANDWICH",
+        "item5": "BAGEL",
+        "item6": "PASTRIES",
+        "item7": "CAKE",
+        "item8": "PANINI"
+      },
+      "scrollIndicator": "Scroll down"
+    },
+    "presentation": {
+      "title": "PRESENTATION",
+      "description": "Welcome to The Orchidarium Café, an oasis of flavor in the heart of the city. Our passion is to offer an exquisite selection of artisanal beverages, homemade pastries, and delicious savory bites that will make your visit an unforgettable experience. With carefully selected ingredients and a cozy atmosphere, we strive to create special moments for our visitors, whether for a revitalizing breakfast, a relaxing afternoon snack, or a meeting with friends."
+    },
+    "ingredientes": {
+      "title": "INGREDIENTS",
+      "subtitle": "EXQUISITE, MEMORABLE DISHES.",
+      "description": "Exquisite delicacies imbued with a unique heritage. Our cuisine blends the ephemeral gifts from our farm in Cabrera de Mar, where seasonal ingredients flourish, with the richness provided by the Mediterranean Sea, alongside the excellence from local farms. Each creation stands as a symphony that venerates, magnifies, and ennobles the nuances of the most authentic flavors from nature.",
+      "imageAlt": "Fresh ingredients being prepared"
+    },
+    "panoramic": {
+      "marqueeTitle": "ORCHIDARIUM",
+      "subtitle": "SINGULAR SPACE",
+      "title": "PANORAMIC VIEWS THAT DELIGHT AND EXCITE THE SENSES.",
+      "cards": {
+        "card1": {
+          "title": "Mediterranean Coast",
+          "subtitle": "Sea views"
+        },
+        "card2": {
+          "title": "Perfect Sunset",
+          "subtitle": "Intimate atmosphere"
+        },
+        "card3": {
+          "title": "Exclusive Ambience",
+          "subtitle": "Contemporary design"
+        },
+        "card4": {
+          "title": "Signature Cuisine",
+          "subtitle": "Creativity and tradition"
+        },
+        "card5": {
+          "title": "Complete Experience",
+          "subtitle": "Special events"
+        },
+        "card6": {
+          "title": "Seafood Products",
+          "subtitle": "Exceptional freshness"
+        }
+      }
+    },
+    "menuPreview": {
+      "title": "OUR MENU",
+      "description": "An exquisite selection of dishes that reflect our passion for Mediterranean cuisine and culinary innovation.",
+      "categories": {
+        "drinks": {
+          "title": "Beverages",
+          "items": {
+            "item1": {
+              "name": "Espresso",
+              "price": "2.50€"
+            },
+            "item2": {
+              "name": "House Wine",
+              "price": "4.50€"
+            },
+            "item3": {
+              "name": "Signature Cocktail",
+              "price": "12€"
+            }
+          },
+          "viewAll": "View all beverages"
+        },
+        "desserts": {
+          "title": "Pastries",
+          "items": {
+            "item1": {
+              "name": "Homemade Tiramisu",
+              "price": "9€"
+            },
+            "item2": {
+              "name": "Chocolate Coulant",
+              "price": "10€"
+            },
+            "item3": {
+              "name": "Lemon Sorbet",
+              "price": "8€"
+            }
+          },
+          "viewAll": "View all pastries"
+        },
+        "savory": {
+          "title": "Savory",
+          "items": {
+            "item1": {
+              "name": "Homemade Croquettes",
+              "price": "12€"
+            },
+            "item2": {
+              "name": "Galician Octopus",
+              "price": "24€"
+            },
+            "item3": {
+              "name": "Patatas Bravas",
+              "price": "9€"
+            }
+          },
+          "viewAll": "View all savory dishes"
+        }
+      },
+      "viewFullMenu": "VIEW FULL MENU"
+    }
   },
   "footer": {
     "copyright": "© {year} The Orchidarium. All rights reserved."

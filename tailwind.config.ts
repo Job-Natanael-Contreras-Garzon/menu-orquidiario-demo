@@ -16,6 +16,15 @@ export default {
       },
     },
     extend: {
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-33.33%)' },
+        },
+      },
+      animation: {
+        'marquee': 'marquee 30s linear infinite',
+      },
       fontFamily: {
         body: ['PT Sans', 'sans-serif'],
         headline: ['Playfair Display', 'serif'],
@@ -55,6 +64,7 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        'navbar-bg': 'hsl(var(--navbar-bg))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -78,10 +88,30 @@ export default {
             height: '0',
           },
         },
+        'scroll-down': {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(-50%)' }
+        },
+        'scroll-up': {
+          from: { transform: 'translateY(-50%)' },
+          to: { transform: 'translateY(0)' }
+        },
+        'fade-in': {
+          from: { opacity: '0' },
+          to: { opacity: '1' }
+        },
+        'marquee': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-33.33%)' }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'scroll-down': 'scroll-down 30s linear infinite',
+        'scroll-up': 'scroll-up 30s linear infinite',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'marquee': 'marquee 30s linear infinite',
       },
     },
   },
