@@ -1,4 +1,3 @@
-
 {
   "general": {
     "appName": "el Orquídeario",
@@ -143,7 +142,7 @@
     }
   },
   "footer": {
-    "copyright": "© {year} El Orquídeario. Todos los derechos reservados."
+    "copyright": " El Orquídeario. Todos los derechos reservados."
   },
   "menuPage": {
     "title": "Nuestro Menú",
@@ -201,253 +200,181 @@
       "withIceCream": "Con helado"
   },
   "productModal": {
-    "back": "Atras"
+    "back": "Atras",
+    "titleDescription": "Descripción",
+    "titleIngredients": "Ingredientes",
+    "titleVariants": "Variantes"
   },
   "menuData": {
     "COF-01": {
       "name": "Ristretto Doble",
-      "description": "",
+      "description": "Un shot intenso y concentrado de nuestro mejor café de origen, extrayendo solo el corazón del grano para un sabor puro y potente.",
       "ingredients": ["ristretto", "cafe", "azucar", "leche", "agua"]
     },
     "COF-02": {
       "name": "Espresso Doble",
-      "description": "",
+      "description": "La base de todo gran café. Dos shots de espresso perfectamente extraídos, con una crema rica y un sabor que despierta los sentidos.",
       "ingredients": ["ristretto", "cafe", "azucar", "leche", "agua"]
     },
     "COF-03": {
       "name": "Americano",
-      "description": "",
+      "description": "Un espresso doble diluido con agua caliente para una experiencia de café suave pero con todo el carácter de nuestros granos.",
       "ingredients": ["cafe", "agua"]
     },
     "COF-04": {
       "name": "Cortado",
-      "description": "",
+      "description": "El equilibrio perfecto. Un shot de espresso 'cortado' con una pequeña cantidad de leche vaporizada para suavizar su intensidad.",
       "ingredients": ["cafe", "leche"]
     },
     "COF-05": {
       "name": "Macchiato",
-      "description": "",
+      "description": "Un espresso 'manchado' con una delicada capa de espuma de leche, ideal para quienes buscan un toque sutil de cremosidad.",
       "ingredients": ["cafe", "leche", "espuma de leche"]
     },
     "COF-06": {
       "name": "Flat White",
-      "description": "",
+      "description": "Dos shots de ristretto cubiertos con una fina capa de leche vaporizada, creando una textura aterciopelada y un sabor robusto.",
       "ingredients": ["cafe", "leche"]
     },
     "COF-07": {
       "name": "Cappuccino",
-      "description": "",
+      "description": "El clásico italiano. Partes iguales de espresso, leche vaporizada y una generosa corona de espuma de leche, espolvoreado con cacao.",
       "ingredients": ["cafe", "leche", "espuma de leche"]
     },
     "COF-08": {
       "name": "Latte",
-      "description": "",
+      "description": "Suave y cremoso. Un shot de espresso mezclado con abundante leche vaporizada y un toque de arte latte para alegrar tu día.",
       "ingredients": ["cafe", "leche"]
     },
     "COF-09": {
       "name": "Mocca Latte",
-      "description": "",
+      "description": "La combinación perfecta para los amantes del dulce. Espresso, leche vaporizada y un rico sirope de chocolate belga.",
       "ingredients": ["cafe", "leche", "chocolate"]
     },
     "COF-10": {
       "name": "Sultan",
-      "description": "",
+      "description": "Nuestro café de la casa. Una mezcla secreta de especias exóticas y café de especialidad que te transportará a tierras lejanas.",
       "ingredients": ["cafe", "leche", "especias"]
     },
     "COF-11": {
       "name": "Frappe",
-      "description": "",
+      "description": "Refrescante y energizante. Café batido con hielo, leche y un toque de dulce, coronado con crema batida.",
       "ingredients": ["cafe", "leche", "hielo", "azucar"]
     },
     "COF-12": {
       "name": "Berry Cold Brew",
-      "description": "",
+      "description": "Café infusionado en frío durante 12 horas para una bebida suave y sin acidez, con un toque refrescante de frutos rojos.",
       "ingredients": ["cafe frio", "bayas", "agua"]
     },
     "COF-13": {
       "name": "Espresso Tonic",
-      "description": "",
+      "description": "Una combinación audaz y chispeante. Un shot de espresso sobre agua tónica con hielo y una rodaja de cítrico para un trago inolvidable.",
       "ingredients": ["espresso", "agua tónica"]
     },
     "SIG-01": {
       "name": "Golden Milk",
-      "description": "",
+      "description": "Una bebida reconfortante y saludable con leche de almendras, cúrcuma, jengibre y canela. Perfecta para cualquier momento del día.",
       "ingredients": ["leche", "cúrcuma", "especias"]
     },
     "SIG-02": {
       "name": "Iced Tea",
-      "description": "",
+      "description": "Nuestro té helado de la casa, infusionado con frutas de temporada y un toque de menta fresca. El remedio perfecto para el calor.",
       "ingredients": ["té", "agua", "hielo"]
     },
     "SIG-03": {
       "name": "Blue Crush",
-      "description": "",
+      "description": "Una bebida vibrante y exótica con té de flor de guisante de mariposa, limonada y un toque de magia que cambia de color.",
       "ingredients": ["té verde", "arándanos", "limón", "agua"]
     },
     "SIG-04": {
       "name": "Hibiscus Lemonade",
-      "description": "",
+      "description": "Una limonada artesanal con infusión de flor de hibisco, que le da un color rojo intenso y un sabor floral y ligeramente ácido.",
       "ingredients": ["hibiscus", "limón", "agua", "azucar"]
     },
     "SIG-05": {
       "name": "Matcha Banana",
-      "description": "",
+      "description": "Un batido cremoso y lleno de energía con matcha ceremonial, plátano maduro y leche de avena. Un impulso saludable y delicioso.",
       "ingredients": ["matcha", "banana", "leche"]
     },
     "SIG-06": {
       "name": "Red Berry Soda",
-      "description": "",
+      "description": "Una soda italiana artesanal con puré de frutos rojos, agua con gas y un toque de romero para un sabor complejo y refrescante.",
       "ingredients": ["bayas", "agua con gas", "azucar"]
     },
     "JUI-01": {
       "name": "Jugo de Piña",
-      "description": "Jugo natural",
-      "ingredients": ["piña"]
+      "description": "Natural juice",
+      "ingredients": ["pineapple"]
     },
     "JUI-02": {
       "name": "Jugo de Coco",
-      "description": "Jugo natural",
-      "ingredients": ["coco"]
+      "description": "Natural juice",
+      "ingredients": ["coconut"]
     },
     "JUI-03": {
       "name": "Jugo de Mango",
-      "description": "Jugo natural",
+      "description": "Natural juice",
       "ingredients": ["mango"]
     },
     "JUI-04": {
-      "name": "Jugo de Guineo",
-      "description": "Jugo natural",
-      "ingredients": ["guineo"]
+      "name": "Jugo de Plátano",
+      "description": "Natural juice",
+      "ingredients": ["banana"]
     },
     "JUI-05": {
-      "name": "Jugo de Frutilla",
-      "description": "Jugo natural",
-      "ingredients": ["frutilla"]
+      "name": "Jugo de Fresa",
+      "description": "Natural juice",
+      "ingredients": ["strawberry"]
     },
     "JUI-06": {
-      "name": "Jugo de Durazno",
-      "description": "Jugo natural",
-      "ingredients": ["durazno"]
+      "name": "Jugo de Melocotón",
+      "description": "Natural juice",
+      "ingredients": ["peach"]
     },
     "JUI-07": {
       "name": "Jugo de Maracuyá",
-      "description": "Jugo natural",
-      "ingredients": ["maracuyá"]
+      "description": "Natural juice",
+      "ingredients": ["passion fruit"]
     },
     "JUI-08": {
       "name": "Jugo de Achachairu",
-      "description": "Jugo natural",
+      "description": "Natural juice",
       "ingredients": ["achachairu"]
     },
     "WAT-01": {
       "name": "Agua sin gas",
-      "description": "",
+      "description": "Agua mineral natural de manantial, pura y refrescante.",
       "ingredients": ["agua"]
     },
     "WAT-02": {
       "name": "Agua con gas",
-      "description": "",
+      "description": "Agua mineral con una carbonatación fina y persistente. Ideal para acompañar cualquier comida.",
       "ingredients": ["agua", "gas"]
-    },
-    "SOD-01": {
-      "name": "Gaseosas",
-      "description": "Sprite, Sprite Zero, Coca-Cola, Coca-Cola Zero",
-      "ingredients": ["Sprite", "Sprite Zero", "Coca-Cola", "Coca-Cola Zero"]
-    },
-    "INF-01": {
-      "name": "Chocolate Sunshine",
-      "description": "Infusión con notas a naranja y sensación achocolatada con un toque de canela.",
-      "ingredients": ["té", "naranja", "canela", "cacao"]
-    },
-    "INF-02": {
-      "name": "Cha Cha Chai",
-      "description": "Hojas de té negro de Sri Lanka, con rooibos y un toque de canela tostada.",
-      "ingredients": ["té negro", "rooibos", "canela"]
-    },
-    "INF-03": {
-      "name": "Pineapple Blues",
-      "description": "Flores del sur de Asia infusionadas con té negro, canela tostada y piña.",
-      "ingredients": ["té negro", "canela", "piña"]
-    },
-    "INF-04": {
-      "name": "Dolce Vita",
-      "description": "Té de hierbas ligero y refrescante de menta con regaliz y anís.",
-      "ingredients": ["menta", "regaliz", "anís"]
-    },
-    "INF-05": {
-      "name": "Jazmin",
-      "description": "Mezcla de té verde de corte imperial japonés con delicados pétalos de jazmín.",
-      "ingredients": ["té verde", "jazmín"]
     },
     "DRK-01": {
       "name": "Mimosa",
-      "description": "",
+      "description": "El clásico del brunch. Jugo de naranja recién exprimido con un espumante brut bien frío. Simple, elegante y delicioso.",
       "ingredients": ["champagne", "jugo de naranja"]
     },
     "DRK-02": {
       "name": "Sangrani",
-      "description": "",
+      "description": "Nuestra versión del clásico. Vino tinto robusto macerado con frutas de temporada, un toque de brandy y especias secretas.",
       "ingredients": ["vino tinto", "frutas", "licor"]
     },
     "DRK-03": {
       "name": "Piña Colada",
-      "description": "",
+      "description": "Un escape al Caribe en cada sorbo. Ron blanco, crema de coco y jugo de piña, mezclado hasta la perfección.",
       "ingredients": ["ron", "crema de coco", "jugo de piña"]
     },
     "DRK-04": {
       "name": "Mango Margarita",
-      "description": "",
+      "description": "Un giro tropical al clásico mexicano. Tequila, licor de naranja, puré de mango fresco y jugo de lima, con borde de tajín.",
       "ingredients": ["tequila", "mango", "jugo de lima", "triple sec"]
     },
     "DRK-05": {
       "name": "Gin Tonic",
-      "description": "",
+      "description": "Preparado a la perfección con gin premium, agua tónica de alta calidad y botánicos que realzan su sabor.",
       "ingredients": ["gin", "agua tónica"]
-    },
-    "DRK-06": {
-      "name": "Frozen Sangria",
-      "description": "",
-      "ingredients": ["vino tinto", "frutas", "hielo"]
-    },
-    "DRK-07": {
-      "name": "Aperol Spritz",
-      "description": "",
-      "ingredients": ["Aperol", "prosecco", "agua con gas"]
-    },
-    "DRK-08": {
-      "name": "Whiskey Sour de Achachairu",
-      "description": "",
-      "ingredients": ["whiskey", "achachairu", "jugo de limon", "azucar"]
-    },
-    "DRK-09": {
-      "name": "Uyuni Lager",
-      "description": "Cerveza",
-      "ingredients": ["agua", "lúpulo", "malta", "levadura"]
-    },
-    "DRK-10": {
-      "name": "Uyuni Salt",
-      "description": "Cerveza",
-      "ingredients": ["agua", "lúpulo", "malta", "levadura", "sal"]
-    },
-    "EXT-01": {
-      "name": "Extra Leche",
-      "description": "",
-      "ingredients": ["leche"]
-    },
-    "EXT-02": {
-      "name": "Extra Crema",
-      "description": "",
-      "ingredients": ["crema"]
-    },
-    "EXT-03": {
-      "name": "Leche Vegetal",
-      "description": "",
-      "ingredients": ["leche vegetal"]
-    },
-    "EXT-04": {
-      "name": "Saborizantes",
-      "description": "Caramelo, Vainilla",
-      "ingredients": ["caramelo", "vainilla"]
     },
     "PAS-01": {
       "name": "Torta Apple Crumble",
