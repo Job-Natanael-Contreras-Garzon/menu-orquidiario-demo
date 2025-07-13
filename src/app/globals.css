@@ -27,8 +27,8 @@
     --radius: 0.5rem;
     
     /* Hero section spacing */
-    --logo-offset: -50px; /* Ajuste mínimo para móvil */
-    --title-offset: 5px; /* Separación muy pequeña en móvil */
+    --logo-offset: -110px; /* Mucha más separación para móvil */
+    --title-offset: 80px; /* Más separación del logo en móvil */
   }
   .dark {
     --background: 0 0% 11%; /* Very Dark Gray (#1C1C1C) */
@@ -56,15 +56,15 @@
   /* Media queries para ajustar el espaciado del hero según el tamaño de pantalla */
   @media (min-width: 768px) {
     :root {
-      --logo-offset: -50px; /* Separación moderada en tablets */
-      --title-offset: 30px;
+      --logo-offset: -170px; /* Mayor separación en tablets */
+      --title-offset: 100px;
     }
   }
   
   @media (min-width: 1024px) {
     :root {
-      --logo-offset: -90px; /* Separación amplia en desktop */
-      --title-offset: 80px;
+      --logo-offset: -120px; /* Mucha más separación en desktop */
+      --title-offset: 150px;
     }
   }
 }
@@ -101,10 +101,10 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.6), 0 0 40px rgba(249, 115, 22, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(245, 158, 11, 0.8);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.8), 0 0 60px rgba(249, 115, 22, 0.5);
   }
 }
 
@@ -202,6 +202,52 @@ html {
 .btn-glow:hover {
   box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
   transform: translateY(-2px);
+}
+
+/* Enhanced button styles for El Orquideario */
+.btn-menu-enhanced {
+  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
+  border: 2px solid #22c55e;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-menu-enhanced:hover {
+  background: linear-gradient(135deg, #134e4a 0%, #0f766e 100%);
+  border-color: #34d399;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+}
+
+.btn-reservation-enhanced {
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  border: 2px solid #fb923c;
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+.btn-reservation-enhanced:hover {
+  background: linear-gradient(135deg, #c2410c 0%, #b91c1c 100%);
+  border-color: #fdba74;
+  transform: translateY(-3px) scale(1.1);
+  animation: none;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
+  }
+}
+
+/* Consistent typography for buttons */
+.btn-text-enhanced {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Loading bar animation */
@@ -318,4 +364,73 @@ html {
   .animate-scroll-up {
     display: none;
   }
+}
+
+/* Floating buttons coordination */
+.floating-buttons-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.scroll-up-button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-up-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.reservation-button-adaptive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reservation-button-adaptive.with-scroll {
+  transform: translateX(-0.5rem);
+}
+
+/* Button visual hierarchy and differentiation */
+.btn-primary-outline {
+  background: rgba(255, 255, 255, 0.9);
+  color: #15803d;
+  border: 2px solid #16a34a;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary-outline:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #166534;
+  border-color: #15803d;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(22, 163, 74, 0.2);
+}
+
+.btn-secondary-solid {
+  background: #16a34a;
+  color: white;
+  border: 2px solid #15803d;
+  border-radius: 1rem; /* More rounded than primary */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary-solid:hover {
+  background: #15803d;
+  border-color: #166534;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(22, 163, 74, 0.3);
+}
+
+/* WhatsApp icon specific styling */
+.whatsapp-icon {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }

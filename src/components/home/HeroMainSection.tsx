@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/button';
-import { Menu, Instagram } from 'lucide-react';
+import { Menu, Instagram, ChevronUp } from 'lucide-react';
 import { useI18n } from '../../lib/i18n';
+import { ScrollToTopButton } from '../ScrollToTopButton';
 
 interface HeroMainSectionProps {
   backgroundImages: string[];
@@ -41,7 +42,7 @@ export function HeroMainSection({
           <div 
             className="absolute inset-0 z-0 flex items-center justify-center"
             style={{
-              transform: `translateY(-${scrollY * 0.15}px) translateY(-40px) translateY(var(--logo-offset))`,
+              transform: `translateY(-${scrollY * 0.15}px) translateY(var(--logo-offset))`,
             }}
           >
             <Image 
@@ -49,7 +50,7 @@ export function HeroMainSection({
               alt="El Orquideario Logo"
               width={200}
               height={200}
-              className="opacity-85 object-cover w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48"
+              className="opacity-85 object-cover"
               priority={true}
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
@@ -60,7 +61,7 @@ export function HeroMainSection({
           <div 
             className="relative z-10 drop-shadow-2xl"
             style={{
-              transform: `translateY(-${scrollY * 0.2}px) translateY(25px) translateY(var(--title-offset))`,
+              transform: `translateY(-${scrollY * 0.2}px) translateY(var(--title-offset))`,
             }}
           >
             <h2 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-headline font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
@@ -72,6 +73,19 @@ export function HeroMainSection({
             <h4 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-headline font-light tracking-wide leading-none mb-4 md:mb-8 text-amber-100 drop-shadow-2xl">
               {t('home.hero.mainTitle.line3')}
             </h4>
+            
+            {/* Botón Ver Menú */}
+            <div className="mt-6 md:mt-8">
+              <Link href="/menu">
+                <Button 
+                  size="lg"
+                  className="bg-white/90 hover:bg-white text-green-700 hover:text-green-800 px-10 py-4 text-xl font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 border-2 border-green-600 hover:border-green-700 backdrop-blur-sm"
+                >
+                  <Menu className="h-6 w-6 mr-3" />
+                  Ver Menú
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -113,6 +127,24 @@ export function HeroMainSection({
           <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mx-auto animate-pulse" />
         </div>
       </div>
+
+      {/* Scroll Up Button - appears after scrolling */}
+      {scrollY > 300 && (
+        <div className="fixed bottom-4 right-4 z-40">
+          {/* <Button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            size="sm"
+            className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30 hover:border-white/50 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+            aria-label="Scroll to top"
+          >
+            <ChevronUp className="h-5 w-5" />
+            
+          </Button> */}
+            <ScrollToTopButton/>
+        </div>
+      )}
     </section>
   );
 }
