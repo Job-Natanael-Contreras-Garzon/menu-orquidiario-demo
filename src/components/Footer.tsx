@@ -17,7 +17,7 @@ export const Footer = () => {
       name: 'TikTok',
     },
     {
-      href: 'https://wa.me/59174962427',
+      href: 'https://wa.me/59162014808',
       icon: <WhatsAppIcon className="h-6 w-6" />,
       name: 'WhatsApp',
     },
@@ -35,9 +35,9 @@ export const Footer = () => {
       text: 'elorquideario@cafeteria.com',
     },
     {
-      href: 'tel:+59133333200',
+      href: 'tel:+59162014808',
       icon: <Phone className="h-5 w-5 flex-shrink-0" />,
-      text: '(3) 333-3200',
+      text: '(+591) 6201-4808',
     },
   ];
 
