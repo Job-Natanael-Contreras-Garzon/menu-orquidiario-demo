@@ -203,7 +203,9 @@
     "back": "Atras",
     "titleDescription": "Descripción",
     "titleIngredients": "Ingredientes",
-    "titleVariants": "Variantes"
+    "titleVariants": "Variantes",
+    "prev": "Anterior",
+    "next": "Siguiente"
   },
   "menuData": {
     "COF-01": {

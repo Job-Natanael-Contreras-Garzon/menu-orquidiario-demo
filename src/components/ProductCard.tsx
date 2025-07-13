@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import type { MenuItem } from '@/lib/menu-data';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
+import { Card, CardHeader, CardTitle } from './ui/card';
 import { useI18n } from '@/lib/i18n';
 
 interface ProductCardProps {
@@ -15,7 +15,6 @@ export function ProductCard({ item, onProductClick }: ProductCardProps) {
 
   const hasVariants = item.variants && item.variants.length > 0;
 
-  // Fallback para imágenes si no se proporciona una
   const imageUrl = (item.images && item.images.length > 0) ? item.images[0] : '/placeholder.jpg';
 
   return (
@@ -27,14 +26,15 @@ export function ProductCard({ item, onProductClick }: ProductCardProps) {
         <Image
           src={imageUrl}
           fill
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
           alt={t(item.name)}
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all" />
         
         <div className="relative h-full flex flex-col justify-between p-4">
-          <CardHeader className="p-0 " >
+          <CardHeader className="p-0">
             <CardTitle className="text-white text-lg font-bold drop-shadow-md bg-black bg-opacity-50 px-3 py-1 rounded-md self-start">
               {t(item.name)}
             </CardTitle>

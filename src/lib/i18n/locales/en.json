@@ -204,7 +204,9 @@
     "back": "Back",
     "titleDescription": "Description",
     "titleIngredients": "Ingredients",
-    "titleVariants": "Variants"
+    "titleVariants": "Variants",
+    "prev": "Previous",
+    "next": "Next"
   },
  "menuData": {
     "COF-01": {
