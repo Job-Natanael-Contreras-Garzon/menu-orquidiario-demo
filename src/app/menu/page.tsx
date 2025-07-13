@@ -106,7 +106,7 @@ export default function MenuPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-       <div className="relative w-full h-80">
+       <div className="relative w-full h-96 md:h-[28rem]">
         <div className="absolute inset-0 z-0">
           <img
             src="https://placehold.co/1200x400.png"
@@ -117,7 +117,7 @@ export default function MenuPage() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
          <Header/>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-5 pt-28 md:pt-24">
            <h1 className="font-headline text-7xl font-bold">{t('menuPage.title')}</h1>
            <p className="mt-2 text-xl max-w-2xl">{t('menuPage.subtitle')}</p>
         </div>
