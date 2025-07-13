@@ -33,7 +33,7 @@ export function ProductCard({ item }: ProductCardProps) {
         <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all" />
         
         <div className="relative h-full flex flex-col justify-between p-4">
-          <CardHeader className="p-0">
+          <CardHeader className="p-0 " >
             <CardTitle className="text-white text-lg font-bold drop-shadow-md bg-black bg-opacity-50 px-3 py-1 rounded-md self-start">
               {t(item.name)}
             </CardTitle>
