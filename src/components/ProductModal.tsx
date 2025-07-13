@@ -103,7 +103,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
 
             {item.ingredients && item.ingredients.length > 0 && (
               <div>
-                <h3 className="font-semibold mb-2 text-lg text-stone-800">{t('productModal.titleDescription')}</h3>
+                <h3 className="font-semibold mb-2 text-lg text-stone-800">{t('productModal.titleIngredients')}</h3>
                 <ul className="list-disc list-inside font-body text-stone-600  space-y-1.5">
                   {(t(item.ingredients[0]) as unknown as string[]).map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
