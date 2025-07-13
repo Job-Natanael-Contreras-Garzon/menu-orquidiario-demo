@@ -25,6 +25,10 @@
     --input: 37 25% 85%;
     --ring: 180 25% 25%;
     --radius: 0.5rem;
+    
+    /* Hero section spacing */
+    --logo-offset: -50px; /* Ajuste mínimo para móvil */
+    --title-offset: 5px; /* Separación muy pequeña en móvil */
   }
   .dark {
     --background: 0 0% 11%; /* Very Dark Gray (#1C1C1C) */
@@ -47,6 +51,21 @@
     --border: 37 25% 35%;
     --input: 37 25% 35%;
     --ring: 37 25% 65%;
+  }
+  
+  /* Media queries para ajustar el espaciado del hero según el tamaño de pantalla */
+  @media (min-width: 768px) {
+    :root {
+      --logo-offset: -50px; /* Separación moderada en tablets */
+      --title-offset: 30px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    :root {
+      --logo-offset: -90px; /* Separación amplia en desktop */
+      --title-offset: 80px;
+    }
   }
 }
 
