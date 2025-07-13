@@ -20,7 +20,7 @@ export function MenuPreviewSection() {
       <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
         {/* Section header - cleaner design */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-light tracking-wide text-primary dark:text-accent mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-light tracking-wide text-primary dark:text-accent mb-4">
             {t('home.menuPreview.title')}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -49,7 +49,7 @@ export function MenuPreviewSection() {
                   1
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.drinks.title')}</h3>
+              <h3 className="text-2xl font-headline text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.drinks.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
                 {beverages.map((item, index) => (
                   <li key={item.id} className="flex justify-between text-white">
@@ -86,7 +86,7 @@ export function MenuPreviewSection() {
                   2
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.desserts.title')}</h3>
+              <h3 className="text-2xl font-headline text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.desserts.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
                 {pastries.map((item, index) => (
                   <li key={item.id} className="flex justify-between text-white">
@@ -123,7 +123,7 @@ export function MenuPreviewSection() {
                   3
                 </div>
               </div>
-              <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.savory.title')}</h3>
+              <h3 className="text-2xl font-headline text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.savory.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
                 {saltySnacks.map((item, index) => (
                   <li key={item.id} className="flex justify-between text-white">
@@ -148,7 +148,7 @@ export function MenuPreviewSection() {
             variant="outline" 
             size="lg" 
             asChild
-            className="font-serif text-base tracking-wide border-primary dark:border-accent text-primary dark:text-accent hover:bg-primary/10 dark:hover:bg-accent/10 px-8 py-6 transition-all duration-300 hover:shadow-md"
+            className="font-headline text-base tracking-wide border-primary dark:border-accent text-primary dark:text-accent hover:bg-primary/10 dark:hover:bg-accent/10 px-8 py-6 transition-all duration-300 hover:shadow-md"
           >
             <Link href="/menu">
               {t('home.menuPreview.viewFullMenu')}
