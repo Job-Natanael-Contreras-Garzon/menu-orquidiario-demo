@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { useI18n } from '../../lib/i18n';
+import { menuData } from '../../lib/menu-data';
 
 export function MenuPreviewSection() {
   const { t } = useI18n();
+  
+  // Seleccionar algunos productos representativos de cada categoría
+  const beverages = menuData.filter(item => item.category === 'BEVERAGES').slice(0, 3);
+  const pastries = menuData.filter(item => item.category === 'PASTRIES').slice(0, 3);
+  const saltySnacks = menuData.filter(item => item.category === 'SALTY_SNACKS').slice(0, 3);
   
   return (
     <section id="menu-preview-section" className="relative w-full py-16 md:py-24 bg-background text-foreground overflow-hidden transition-colors duration-300">
@@ -25,7 +31,7 @@ export function MenuPreviewSection() {
         {/* Menu Categories */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Bebidas */}
-          <Link href="/menu?category=bebidas" className="block relative rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl">
+          <Link href="/menu?category=BEVERAGES" className="block relative rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img 
@@ -45,18 +51,12 @@ export function MenuPreviewSection() {
               </div>
               <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.drinks.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.drinks.items.item1.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.drinks.items.item1.price')}</span>
-                </li>
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.drinks.items.item2.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.drinks.items.item2.price')}</span>
-                </li>
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.drinks.items.item3.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.drinks.items.item3.price')}</span>
-                </li>
+                {beverages.map((item, index) => (
+                  <li key={item.id} className="flex justify-between text-white">
+                    <span className="font-medium">{t(item.name)}</span>
+                    <span className="text-white/80">Bs. {item.price}</span>
+                  </li>
+                ))}
               </ul>
               <div className="mt-4 text-white/90 text-sm flex items-center justify-center">
                 <span>{t('home.menuPreview.categories.drinks.viewAll')}</span>
@@ -68,7 +68,7 @@ export function MenuPreviewSection() {
           </Link>
           
           {/* Repostería */}
-          <Link href="/menu?category=reposteria" className="block relative rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl">
+          <Link href="/menu?category=PASTRIES" className="block relative rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img 
@@ -88,18 +88,12 @@ export function MenuPreviewSection() {
               </div>
               <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.desserts.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.desserts.items.item1.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.desserts.items.item1.price')}</span>
-                </li>
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.desserts.items.item2.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.desserts.items.item2.price')}</span>
-                </li>
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.desserts.items.item3.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.desserts.items.item3.price')}</span>
-                </li>
+                {pastries.map((item, index) => (
+                  <li key={item.id} className="flex justify-between text-white">
+                    <span className="font-medium">{t(item.name)}</span>
+                    <span className="text-white/80">Bs. {item.price}</span>
+                  </li>
+                ))}
               </ul>
               <div className="mt-4 text-white/90 text-sm flex items-center justify-center">
                 <span>{t('home.menuPreview.categories.desserts.viewAll')}</span>
@@ -111,7 +105,7 @@ export function MenuPreviewSection() {
           </Link>
           
           {/* Salados */}
-          <Link href="/menu?category=salados" className="block relative rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl">
+          <Link href="/menu?category=SALTY_SNACKS" className="block relative rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-xl">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
               <img 
@@ -131,18 +125,12 @@ export function MenuPreviewSection() {
               </div>
               <h3 className="text-2xl font-serif text-white mb-4 drop-shadow-md">{t('home.menuPreview.categories.savory.title')}</h3>
               <ul className="space-y-4 bg-black/30 dark:bg-black/40 backdrop-blur-md rounded-lg p-4 border border-white/10 flex-grow">
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.savory.items.item1.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.savory.items.item1.price')}</span>
-                </li>
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.savory.items.item2.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.savory.items.item2.price')}</span>
-                </li>
-                <li className="flex justify-between text-white">
-                  <span className="font-medium">{t('home.menuPreview.categories.savory.items.item3.name')}</span>
-                  <span className="text-white/80">{t('home.menuPreview.categories.savory.items.item3.price')}</span>
-                </li>
+                {saltySnacks.map((item, index) => (
+                  <li key={item.id} className="flex justify-between text-white">
+                    <span className="font-medium">{t(item.name)}</span>
+                    <span className="text-white/80">Bs. {item.price}</span>
+                  </li>
+                ))}
               </ul>
               <div className="mt-4 text-white/90 text-sm flex items-center justify-center">
                 <span>{t('home.menuPreview.categories.savory.viewAll')}</span>

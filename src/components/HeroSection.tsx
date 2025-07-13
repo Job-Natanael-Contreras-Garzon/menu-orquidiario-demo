@@ -77,16 +77,16 @@ export function HeroSection() {
     };
   }, []);
 
-  // Progreso de la barra de carga y cambio de imagen de galería
+  // Progreso de la barra de carga y cambio de imagen de galería (cada 8 segundos)
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          // Cambiar la imagen cuando la barra llegue al 100%
+          // Cambiar la imagen directamente
           setCurrentImageIndex((prevIndex) => (prevIndex + 1) % galleryImages.length);
           return 0;
         } else {
-          return prev + 0.5; // Incrementar el progreso gradualmente
+          return prev + 0.625; // Incrementar el progreso para completar en 8 segundos (100/160 = 0.625)
         }
       });
     }, 50); // Actualizar cada 50ms para una animación suave
@@ -94,11 +94,11 @@ export function HeroSection() {
     return () => clearInterval(interval);
   }, [galleryImages.length]);
   
-  // Cambio de fondo cada 10 segundos
+  // Cambio de fondo cada 15 segundos (diferente tiempo que la galería)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBgIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
-    }, 10000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, [backgroundImages.length]);

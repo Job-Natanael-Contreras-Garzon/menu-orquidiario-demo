@@ -8,7 +8,7 @@ export function PresentationSection() {
   const { setTheme, theme } = useTheme();
   
   return (
-    <section id="presentation-section" className="relative w-full py-16 md:py-24 lg:py-32 text-foreground transition-colors duration-300">
+    <section id="presentation-section" className="relative min-h-screen w-full flex items-center justify-center text-foreground transition-colors duration-300">
       {/* Imagen de fondo con overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -16,12 +16,12 @@ export function PresentationSection() {
           alt="Fondo de presentación" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/90 dark:bg-background/99"></div>
+        <div className="absolute inset-0 bg-background/80 dark:bg-background/95"></div>
       </div>
       
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 py-20">
         {/* Theme toggle for easy access within this section */}
-        <div className="absolute right-6 md:right-12 top-6 md:top-10">
+        {/* <div className="absolute right-6 md:right-12 top-6 md:top-10">
           <Button 
             variant="outline" 
             size="icon" 
@@ -32,22 +32,22 @@ export function PresentationSection() {
             <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center animate-fade-in">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center animate-fade-in min-h-[60vh] lg:min-h-[70vh]">
           {/* Left side - Title */}
-          <div className="text-left">
+          <div className="text-left flex flex-col justify-center">
             <div className="inline-block relative">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide text-primary dark:text-accent leading-tight transition-colors duration-300">
+              <h2 className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-light tracking-wide text-primary dark:text-accent leading-tight transition-colors duration-300">
                 {t('home.presentation.title')}
               </h2>
-              <div className="absolute -bottom-3 left-0 right-0 h-1 bg-accent dark:bg-primary transform origin-left transition-transform duration-500"></div>
+              <div className="absolute -bottom-4 left-0 right-0 h-1.5 bg-accent dark:bg-primary transform origin-left transition-transform duration-500"></div>
             </div>
           </div>
           
           {/* Right side - Description */}
-          <div className="text-left">
-            <p className="text-base md:text-lg lg:text-xl text-foreground dark:text-foreground/90 leading-relaxed font-light transition-colors duration-300">
+          <div className="text-left flex flex-col justify-center">
+            <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-foreground dark:text-foreground/90 leading-relaxed font-light transition-colors duration-300">
               {t('home.presentation.description')}
             </p>
           </div>

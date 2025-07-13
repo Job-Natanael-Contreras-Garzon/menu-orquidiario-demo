@@ -27,12 +27,13 @@ export function HeroMainSection({
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
           style={{
             backgroundImage: `url("${backgroundImages[currentBgIndex]}")`,
             transform: `scale(${1 + scrollY * 0.0005})`,
           }}
         />
+        
         <div className="absolute inset-0 bg-black/70" />
       </div>
 
@@ -52,15 +53,16 @@ export function HeroMainSection({
               <img 
                 src={galleryImages[currentImageIndex]}
                 alt="Gourmet dish"
-                className="w-full h-full object-cover object-center transition-all duration-500 ease-in-out scale-105"
+                className="w-full h-full object-cover object-center transition-all duration-1000 ease-in-out scale-105 hover:scale-110"
               />
+              
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
               
               {/* Barra de progreso encima de la imagen */}
               <div className="absolute top-0 left-2 right-2 md:left-4 md:right-4 z-20">
-                <div className="w-full bg-white/20 rounded-full h-1 md:h-1.5 overflow-hidden backdrop-blur-sm border border-white/10">
+                <div className="w-full bg-white/20 rounded-full h-1 md:h-1 overflow-hidden backdrop-blur-sm border border-white/10">
                   <div 
-                    className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 h-1 md:h-1.5 rounded-full transition-all duration-200 ease-out shadow-lg"
+                    className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 h-1 md:h-1 rounded-full transition-all duration-200 ease-out shadow-lg"
                     style={{ width: `${progress}%` }}
                   />
                 </div>
@@ -88,7 +90,7 @@ export function HeroMainSection({
         </div>
 
         {/* Instagram Icon */}
-        <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8">
+        {/* <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8">
           <Button
             variant="ghost"
             size="lg"
@@ -96,10 +98,10 @@ export function HeroMainSection({
           >
             <Instagram className="h-5 w-5 md:h-6 md:w-6" />
           </Button>
-        </div>
+        </div> */}
 
         {/* Hamburger Menu Icon */}
-        <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8">
+        {/* <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8">
           <Button
             variant="ghost"
             size="lg"
@@ -107,7 +109,7 @@ export function HeroMainSection({
           >
             <Menu className="h-5 w-5 md:h-6 md:w-6" />
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Scroll indicator */}

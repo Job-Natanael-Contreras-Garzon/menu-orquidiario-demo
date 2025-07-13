@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Header } from '@/components/Header';
@@ -36,6 +37,7 @@ const getTranslation = (data: any, key: string): string => {
 
 export default function MenuPage() {
   const { t } = useI18n();
+  const searchParams = useSearchParams();
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
   // Se establece 'ALL' como la categoría activa por defecto.
@@ -44,6 +46,14 @@ export default function MenuPage() {
   // Se define la lista de categorías de productos.
   // Se añade 'ALL' para mostrar todos los productos y se elimina 'COMBOS'.
   const categories = useMemo(() => ['ALL', 'BEVERAGES', 'PASTRIES', 'SALTY_SNACKS', 'SPECIAL_ORDERS'], []);
+
+  // Efecto para leer el parámetro de categoría de la URL
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam && categories.includes(categoryParam)) {
+      setActiveCategory(categoryParam);
+    }
+  }, [searchParams, categories]);
 
   const translatedCategoryNames = useMemo(() => ({
     BEVERAGES: t('menuPage.categories.BEVERAGES'),
@@ -109,8 +119,7 @@ export default function MenuPage() {
        <div className="relative w-full h-96 md:h-[28rem]">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://placehold.co/1200x400.png"
-            data-ai-hint="elegant cafe"
+            src="/images/background/bg3.jpg"
             alt="El Orquideario Interior"
             className="w-full h-full object-cover"
           />
@@ -123,7 +132,18 @@ export default function MenuPage() {
         </div>
       </div>
       
-      <main className="flex-grow container mx-auto p-4 md:p-8">
+      <main className="flex-grow container mx-auto p-4 md:p-8 relative">
+        {/* Background pattern sutil */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div className="w-full h-full" style={{
+            backgroundImage: `url('/images/background/bg1.jpg')`,
+            backgroundSize: '100px 100px',
+            backgroundRepeat: 'repeat',
+            filter: 'blur(1px)'
+          }} />
+        </div>
+        
+        <div className="relative z-10">
         <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
           <div className="sticky top-0 z-20 bg-background/80 backdrop-blur-md py-4 mb-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -197,6 +217,7 @@ export default function MenuPage() {
           )}
 
         </Tabs>
+        </div>
       </main>
       <Footer />
       <ScrollToTopButton />
