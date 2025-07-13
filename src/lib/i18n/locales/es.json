@@ -194,7 +194,10 @@
       "withIceCream": "Con helado"
   },
   "productModal": {
-    "back": "Atras"
+    "back": "Atras",
+    "titleDescription": "Descripción",
+    "titleIngredients": "Ingredientes",
+    "titleVariants": "Variantes"
   },
   "menuData": {
     "COF-01": {

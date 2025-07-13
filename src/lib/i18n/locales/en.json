@@ -195,7 +195,10 @@
       "withIceCream": "With ice cream"
   },
   "productModal": {
-    "back": "Back"
+    "back": "Back",
+    "titleDescription": "Description",
+    "titleIngredients": "Ingredients",
+    "titleVariants": "Variants"
   },
  "menuData": {
     "COF-01": {

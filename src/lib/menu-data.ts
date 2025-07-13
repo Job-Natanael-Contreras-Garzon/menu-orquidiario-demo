@@ -23,9 +23,9 @@ export type MenuItem = {
 export const menuData: MenuItem[] = [
   // BEVERAGES - COFFEE
   { id: 'COF-01', name: 'menuData.COF-01.name', description: 'menuData.COF-01.description', price: 15, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/double-ristretto-coffee.webp", "/assets/coffee/flat-white.webp", "/assets/coffee/sultan-coffee.webp"], dataAiHint: 'espresso shot', ingredients:['menuData.COF-01.ingredients'] },
-  { id: 'COF-02', name: 'menuData.COF-02.name', description: 'menuData.COF-02.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/double-espresso-coffe.webp"], dataAiHint: 'espresso shot', ingredients:['menuData.COF-02.ingredients'] },
+  { id: 'COF-02', name: 'menuData.COF-02.name', description: 'menuData.COF-02.description', price: 15, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/double-espresso-coffe.webp"], dataAiHint: 'espresso shot', ingredients:['menuData.COF-02.ingredients'] },
   { id: 'COF-03', name: 'menuData.COF-03.name', description: 'menuData.COF-03.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/americano-coffee.webp"], dataAiHint: 'black coffee', ingredients:['menuData.COF-03.ingredients'] },
-  { id: 'COF-04', name: 'menuData.COF-04.name', description: 'menuData.COF-04.description', price: 15, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/cortado-coffee.webp"], dataAiHint: 'milk coffee', ingredients:['menuData.COF-04.ingredients'] },
+  { id: 'COF-04', name: 'menuData.COF-04.name', description: 'menuData.COF-04.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/cortado-coffee.webp"], dataAiHint: 'milk coffee', ingredients:['menuData.COF-04.ingredients'] },
   { id: 'COF-05', name: 'menuData.COF-05.name', description: 'menuData.COF-05.description', price: 18, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/expresso-macchiato-coffee.webp"], dataAiHint: 'milk coffee', ingredients:['menuData.COF-05.ingredients'] },
   { id: 'COF-06', name: 'menuData.COF-06.name', description: 'menuData.COF-06.description', price: 20, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/flat-white.webp"], dataAiHint: 'milk coffee', ingredients:['menuData.COF-06.ingredients'] },
   { id: 'COF-07', name: 'menuData.COF-07.name', description: 'menuData.COF-07.description', price: 22, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/capuchino-coffee.webp"], dataAiHint: 'cappuccino foam', ingredients:['menuData.COF-07.ingredients'] },
@@ -35,7 +35,7 @@ export const menuData: MenuItem[] = [
   { id: 'COF-11', name: 'menuData.COF-11.name', description: 'menuData.COF-11.description', price: 30, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/frape.webp"], dataAiHint: 'iced coffee', ingredients:['menuData.COF-11.ingredients'] },
   { id: 'COF-12', name: 'menuData.COF-12.name', description: 'menuData.COF-12.description', price: 28, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/berry-cold-brew.webp"], dataAiHint: 'cold brew', ingredients:['menuData.COF-12.ingredients'] },
   { id: 'COF-13', name: 'menuData.COF-13.name', description: 'menuData.COF-13.description', price: 35, category: 'BEVERAGES', subCategory: 'COFFEE', images: ["/assets/coffee/espresso-tonic-coffee.webp"], dataAiHint: 'coffee cocktail', ingredients:['menuData.COF-13.ingredients'] },
-
+  //
   // BEVERAGES - SIGNATURE DRINKS
   { id: 'SIG-01', name: 'menuData.SIG-01.name', description: 'menuData.SIG-01.description', price: 20, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', images: ['/assets/bebidas-de-autor/golden-milk.webp'], dataAiHint: 'turmeric latte', ingredients:['menuData.SIG-01.ingredients'] },
   { id: 'SIG-02', name: 'menuData.SIG-02.name', description: 'menuData.SIG-02.description', price: 25, category: 'BEVERAGES', subCategory: 'SIGNATURE_DRINKS', images: ['/assets/bebidas-de-autor/iced-tea-autor.webp'], dataAiHint: 'iced tea', ingredients:['menuData.SIG-02.ingredients'] },

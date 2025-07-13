@@ -220,28 +220,10 @@ export default function MenuPage() {
         isOpen={isModalOpen} 
         onClose={handleCloseModal} 
         item={selectedItem}
+        onNext={handleNext}
+        onPrev={handlePrev}
       />
 
-      {isModalOpen && (
-        <>
-          <Button
-            variant="ghost"
-            aria-label={t('productModal.prev')}
-            className="fixed top-1/2 -translate-y-1/2 left-4 md:left-auto md:right-[calc(50%+13rem)] h-12 w-12 rounded-full bg-black/50 text-white z-[60] hover:bg-black/70 transition-colors"
-            onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-          >
-            <ChevronLeft size={32} />
-          </Button>
-          <Button
-            variant="ghost"
-            aria-label={t('productModal.next')}
-            className="fixed top-1/2 -translate-y-1/2 right-4 md:right-auto md:left-[calc(50%+13rem)] h-12 w-12 rounded-full bg-black/50 text-white z-[60] hover:bg-black/70 transition-colors"
-            onClick={(e) => { e.stopPropagation(); handleNext(); }}
-          >
-            <ChevronRight size={32} />
-          </Button>
-        </>
-      )}
     </div>
   );
 }
