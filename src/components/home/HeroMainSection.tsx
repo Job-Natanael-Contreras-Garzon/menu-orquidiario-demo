@@ -74,59 +74,25 @@ export function HeroMainSection({
               {t('home.hero.mainTitle.line3')}
             </h4>
             
-            {/* Botón Ver Menú */}
-            <div className="mt-6 md:mt-8">
+            {/* Botón Ver Menú - Más centrado y prominente */}
+            <div className="mt-8 md:mt-12 flex justify-center">
               <Link href="/menu">
                 <Button 
                   size="lg"
-                  className="bg-white/90 hover:bg-white text-green-700 hover:text-green-800 px-10 py-4 text-xl font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105 border-2 border-green-600 hover:border-green-700 backdrop-blur-sm"
+                  className="btn-menu-orquideario rounded-full px-8 py-4 md:px-12 md:py-5 text-lg md:text-xl font-medium shadow-lg hover:shadow-xl"
                 >
-                  <Menu className="h-6 w-6 mr-3" />
-                  Ver Menú
+                  <Menu className="h-5 w-5 md:h-6 md:w-6 mr-3 orquideario-icon" />
+                  Ver Nuestro Menú
                 </Button>
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Instagram Icon */}
-        {/* <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8">
-          <Button
-            variant="ghost"
-            size="lg"
-            className="text-white hover:bg-white/20 p-3 md:p-4 rounded-full transition-all duration-300 hover:scale-110"
-          >
-            <Instagram className="h-5 w-5 md:h-6 md:w-6" />
-          </Button>
-        </div> */}
-
-        {/* Hamburger Menu Icon */}
-        {/* <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8">
-          <Button
-            variant="ghost"
-            size="lg"
-            className="text-white hover:bg-white/20 p-3 md:p-4 rounded-full transition-all duration-300 hover:scale-110"
-          >
-            <Menu className="h-5 w-5 md:h-6 md:w-6" />
-          </Button>
-        </div> */}
+        
       </div>
 
-      {/* Scroll indicator */}
-      <div 
-        className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer z-30"
-        onClick={() => {
-          // Smooth scroll to presentation section
-          const presentationSection = document.getElementById('presentation-section');
-          if (presentationSection) {
-            presentationSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        }}
-      >
-        <div className="w-5 h-8 md:w-6 md:h-10 border-2 border-white/50 rounded-full p-1">
-          <div className="w-1 h-2 md:h-3 bg-white/50 rounded-full mx-auto animate-pulse" />
-        </div>
-      </div>
+      
 
       {/* Scroll Up Button - appears after scrolling */}
       {scrollY > 300 && (

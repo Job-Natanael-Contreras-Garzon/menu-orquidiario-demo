@@ -1,9 +1,8 @@
 'use client';
 
-import { Calendar, MessageCircle } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
-import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 export const FloatingReservationButton = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -22,25 +21,33 @@ export const FloatingReservationButton = () => {
     window.open(whatsappUrl, '_blank');
   };
 
-  // Adjust positioning when scroll up button is visible
+  // Adjust positioning when scroll up button is visible - more integrated position
   const isScrollUpVisible = scrollY > 300;
 
   return (
     <div 
-      className={`fixed z-50 transition-all duration-300 ${
+      className={`fixed z-50 transition-all duration-700 ease-in-out ${
         isScrollUpVisible 
-          ? 'bottom-4 right-20' // Position next to scroll up button
-          : 'bottom-6 right-6'   // Default centered position
+          ? 'bottom-4 right-20 transform' // Al lado del botón de scroll up
+          : 'bottom-4 right-4'            // Posición original
       }`}
     >
       <Button
         onClick={handleReservation}
-        size="lg"
-        className="bg-green-600 hover:bg-green-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 rounded-2xl px-5 py-3 border-2 border-green-500 hover:border-green-400"
+        size={isScrollUpVisible ? "default" : "lg"} // Tamaño ajustado cuando está al lado del scroll up
+        className={`btn-reservation-orquideario rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-700 ease-in-out ${
+          isScrollUpVisible 
+            ? 'px-3 py-2 md:px-4 md:py-3' // Tamaño más compacto
+            : 'px-4 py-3 md:px-6 md:py-4' // Tamaño original
+        }`}
         aria-label="Hacer reserva por WhatsApp"
       >
-        <WhatsAppIcon className="h-5 w-5 mr-2" />
-        <span className="text-base font-semibold">Reservar</span>
+        <Phone className={`mr-2 orquideario-icon transition-all duration-700 ${
+          isScrollUpVisible 
+            ? 'h-4 w-4' // Icono más pequeño
+            : 'h-4 w-4 md:h-5 md:w-5' // Icono original
+        }`} />
+        <span className="font-medium">Reservar</span>
       </Button>
     </div>
   );

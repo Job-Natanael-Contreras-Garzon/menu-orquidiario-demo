@@ -20,7 +20,7 @@ export function MenuPreviewSection() {
           alt="Menu Preview Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/85 dark:bg-background/95 transition-colors duration-700"></div>
+        <div className="absolute inset-0 bg-background/70 dark:bg-background/90 transition-colors duration-700"></div>
       </div>
       
       {/* Decorative top wave - more subtle */}
@@ -158,7 +158,7 @@ export function MenuPreviewSection() {
             variant="outline" 
             size="lg" 
             asChild
-            className="font-headline text-base tracking-wide border-primary dark:border-slate-400 text-primary dark:text-slate-300 hover:bg-primary/10 dark:hover:bg-slate-700/50 px-8 py-6 transition-all duration-300 hover:shadow-md"
+            className="font-headline text-base tracking-wide border-primary text-primary hover:bg-primary hover:text-primary-foreground dark:border-slate-200 dark:text-slate-200 dark:hover:bg-slate-200 dark:hover:text-slate-900 px-8 py-6 transition-all duration-300 hover:shadow-md"
           >
             <Link href="/menu">
               {t('home.menuPreview.viewFullMenu')}
