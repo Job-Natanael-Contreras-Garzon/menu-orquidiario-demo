@@ -180,7 +180,8 @@
       "FILTERED_COFFEE": "Filter Coffee",
       "TRADITIONAL": "Traditional",
       "INTEGRAL": "Whole Grain",
-      "SEASONAL": "Seasonal"
+      "SEASONAL": "Seasonal",
+      "MINI_SNACKS": "Mini Snacks"
     },
     "labels": {
       "ingredients": "Ingredients",

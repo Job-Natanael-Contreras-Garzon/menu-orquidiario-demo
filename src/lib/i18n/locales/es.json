@@ -179,7 +179,8 @@
       "FILTERED_COFFEE": "Café Filtrado",
       "TRADITIONAL": "Tradicionales",
       "INTEGRAL": "Integrales",
-      "SEASONAL": "Temporada"
+      "SEASONAL": "Temporada",
+      "MINI_SNACKS": "Mini Snacks"
     },
     "labels": {
       "ingredients": "Ingredientes",
