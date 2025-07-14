@@ -72,6 +72,13 @@ export default function MenuPage() {
     PASTRIES: t('menuPage.subCategories.PASTRIES'),
     SALTY_SNACKS: t('menuPage.subCategories.SALTY_SNACKS'),
     SPECIAL_ORDERS: t('menuPage.subCategories.SPECIAL_ORDERS'),
+    // Estas subcategorías aparecerán al final
+    TRADITIONAL: t('menuPage.subCategories.TRADITIONAL'),
+    INTEGRAL: t('menuPage.subCategories.INTEGRAL'),
+    MILKSHAKES: t('menuPage.subCategories.MILKSHAKES'),
+    COFFEE_SPECIAL: t('menuPage.subCategories.COFFEE_SPECIAL'),
+    FILTERED_COFFEE: t('menuPage.subCategories.FILTERED_COFFEE'),
+    SEASONAL: t('menuPage.subCategories.SEASONAL'),
   }), [t]);
 
   const filteredItems = useMemo(() => menuData.filter(item => {

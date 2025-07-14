@@ -3,8 +3,10 @@
 import { Phone } from 'lucide-react';
 import { Button } from './ui/button';
 import { useEffect, useState } from 'react';
+import { useI18n } from '../lib/i18n';
 
 export const FloatingReservationButton = () => {
+  const { t } = useI18n();
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -15,7 +17,7 @@ export const FloatingReservationButton = () => {
 
   const handleReservation = () => {
     const whatsappNumber = '59162014808';
-    const message = encodeURIComponent('¡Hola! Me gustaría hacer una reserva en El Orquideario. ¿Podrían ayudarme con la disponibilidad?');
+    const message = encodeURIComponent(t('reservation.whatsappMessage'));
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
     
     window.open(whatsappUrl, '_blank');
@@ -40,14 +42,14 @@ export const FloatingReservationButton = () => {
             ? 'px-3 py-2 md:px-4 md:py-3' // Tamaño más compacto
             : 'px-4 py-3 md:px-6 md:py-4' // Tamaño original
         }`}
-        aria-label="Hacer reserva por WhatsApp"
+        aria-label={t('reservation.ariaLabel')}
       >
         <Phone className={`mr-2 orquideario-icon transition-all duration-700 ${
           isScrollUpVisible 
             ? 'h-4 w-4' // Icono más pequeño
             : 'h-4 w-4 md:h-5 md:w-5' // Icono original
         }`} />
-        <span className="font-medium">Reservar</span>
+        <span className="font-medium">{t('reservation.buttonText')}</span>
       </Button>
     </div>
   );
