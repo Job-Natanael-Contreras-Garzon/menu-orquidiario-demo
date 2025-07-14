@@ -51,7 +51,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-md p-0 gap-0 overflow-visible border-none shadow-2xl rounded-lg bg-[#FDF9F4]">
+      <DialogContent className="w-[90vw] sm:max-w-md p-0 gap-0 overflow-visible border-none shadow-2xl rounded-lg bg-[#FDF9F4]">
         {/* Visually hidden header for accessibility */}
         <DialogHeader className="sr-only">
           <DialogTitle>{t(item.name)}</DialogTitle>
@@ -68,7 +68,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
         <Button
           variant="ghost"
           aria-label={t('productModal.prev')}
-          className="absolute top-1/2 -translate-y-1/2 -left-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 transition-colors flex items-center justify-center"
+          className="absolute top-1/2 -translate-y-1/2 -left-4 sm:-left-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 transition-colors flex items-center justify-center"
           onClick={(e) => { e.stopPropagation(); onPrev(); }}
         >
           <ChevronLeft size={28} />
@@ -76,7 +76,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
         <Button
           variant="ghost"
           aria-label={t('productModal.next')}
-          className="absolute top-1/2 -translate-y-1/2 -right-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 transition-colors flex items-center justify-center"
+          className="absolute top-1/2 -translate-y-1/2 -right-4 sm:-right-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 transition-colors flex items-center justify-center"
           onClick={(e) => { e.stopPropagation(); onNext(); }}
         >
           <ChevronRight size={28} />
