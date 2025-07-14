@@ -142,6 +142,14 @@
       "viewFullMenu": "VER CARTA COMPLETA"
     }
   },
+  "productModal": {
+    "back": "Volver",
+    "next": "Siguiente producto",
+    "prev": "Producto anterior",
+    "goToSlide": "Ir a la imagen",
+    "titleVariants": "Opciones",
+    "titleIngredients": "Ingredientes"
+  },
   "reservation": {
     "buttonText": "Reservar",
     "ariaLabel": "Hacer reserva por WhatsApp",
@@ -205,14 +213,6 @@
   },
   "productCard": {
       "withIceCream": "Con helado"
-  },
-  "productModal": {
-    "back": "Atras",
-    "titleDescription": "Descripción",
-    "titleIngredients": "Ingredientes",
-    "titleVariants": "Variantes",
-    "prev": "Anterior",
-    "next": "Siguiente"
   },
   "menuData": {
     "COF-01": {

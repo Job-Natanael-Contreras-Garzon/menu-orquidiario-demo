@@ -143,6 +143,14 @@
       "viewFullMenu": "VIEW FULL MENU"
     }
   },
+  "productModal": {
+    "back": "Back",
+    "next": "Next product",
+    "prev": "Previous product",
+    "goToSlide": "Go to slide",
+    "titleVariants": "Options",
+    "titleIngredients": "Ingredients"
+  },
   "reservation": {
     "buttonText": "Reserve",
     "ariaLabel": "Make reservation via WhatsApp",
@@ -206,14 +214,6 @@
   },
   "productCard": {
       "withIceCream": "With ice cream"
-  },
-  "productModal": {
-    "back": "Back",
-    "titleDescription": "Description",
-    "titleIngredients": "Ingredients",
-    "titleVariants": "Variants",
-    "prev": "Previous",
-    "next": "Next"
   },
  "menuData": {
     "COF-01": {
