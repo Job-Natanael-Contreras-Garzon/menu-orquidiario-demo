@@ -36,12 +36,6 @@ export function Header({ scrolled }: HeaderProps) {
 
           {/* Desktop Nav - Derecha */}
           <div className="hidden md:flex items-center gap-2 md:gap-4">
-            <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-              <Link href="/menu">
-                <MenuSquare className="mr-2 h-4 w-4" />
-                {t('header.menu')}
-              </Link>
-            </Button>
             <div className="[&>div]:border-white/20 [&_button]:text-white [&_button[data-active=true]]:bg-white/20 [&_button:not([data-active=true])]:hover:bg-white/10">
               <div className="flex items-center rounded-md border border-white/20">
                 <Button

@@ -45,14 +45,7 @@ export function Header() {
 
           {/* Desktop Nav - Derecha */}
           <div className="hidden md:flex items-center gap-2 md:gap-4">
-            {isMenuPage && (
-              <Button variant="ghost" asChild className="text-white hover:bg-white/10 hover:text-white">
-                <Link href="/">
-                  <Home className="mr-2 h-4 w-4" />
-                  {t('header.home')}
-                </Link>
-              </Button>
-            )}
+            
             <div className="[&>div]:border-white/20 [&_button]:text-white [&_button[data-active=true]]:bg-white/20 [&_button:not([data-active=true])]:hover:bg-white/10">
               <LanguageToggle />
             </div>
