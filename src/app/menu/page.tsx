@@ -253,7 +253,6 @@ export default function MenuPage() {
       <ScrollToTopButton />
       
       <ProductModal 
-        key={selectedItem?.id}
         isOpen={isModalOpen} 
         onClose={handleCloseModal} 
         item={selectedItem}

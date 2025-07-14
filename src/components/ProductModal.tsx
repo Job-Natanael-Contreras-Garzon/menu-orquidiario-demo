@@ -20,6 +20,18 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
   const { t } = useI18n();
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [currentItem, setCurrentItem] = useState<MenuItem | null>(null);
+
+  // Reset carousel when item changes
+  useEffect(() => {
+    if (item && item !== currentItem) {
+      setCurrentItem(item);
+      setSelectedIndex(0);
+      if (emblaApi) {
+        emblaApi.scrollTo(0, false); // scroll to first image without animation
+      }
+    }
+  }, [item, currentItem, emblaApi]);
 
   const updateSelectedIndex = useCallback((api: any) => {
     if (!api) return;
@@ -42,7 +54,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
     if (isOpen && emblaApi) {
       emblaApi.reInit();
     } 
-  }, [isOpen, item, emblaApi]);
+  }, [isOpen, emblaApi]);
 
   if (!item) return null;
 
@@ -51,7 +63,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-[90vw] sm:max-w-md p-0 gap-0 overflow-visible border-none shadow-2xl rounded-lg bg-card">
+      <DialogContent className="w-[90vw] sm:max-w-md p-0 gap-0 overflow-visible border-none shadow-2xl rounded-lg bg-card fixed left-[50%] top-[50%] z-50 translate-x-[-50%] translate-y-[-50%] duration-0 data-[state=open]:animate-none data-[state=closed]:animate-none">
         {/* Visually hidden header for accessibility */}
         <DialogHeader className="sr-only">
           <DialogTitle>{t(item.name)}</DialogTitle>
@@ -59,7 +71,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
         </DialogHeader>
 
         {/* Sticky Back Button */}
-        <Button variant="ghost" className="absolute top-4 left-4 h-auto bg-black/60 text-white rounded-full z-30 px-3 py-1.5 flex items-center gap-1.5 text-sm shadow-md transition-colors hover:bg-black/80" onClick={onClose}>
+        <Button variant="ghost" className="absolute top-4 left-4 h-auto bg-black/60 text-white rounded-full z-30 px-3 py-1.5 flex items-center gap-1.5 text-sm shadow-md hover:bg-black/80" onClick={onClose}>
           <ArrowLeft size={16} />
           <span>{t('productModal.back')}</span>
         </Button>
@@ -68,7 +80,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
         <Button
           variant="ghost"
           aria-label={t('productModal.prev')}
-          className="absolute top-1/2 -translate-y-1/2 -left-4 sm:-left-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 transition-colors flex items-center justify-center"
+          className="absolute top-1/2 -translate-y-1/2 -left-4 sm:-left-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 flex items-center justify-center"
           onClick={(e) => { e.stopPropagation(); onPrev(); }}
         >
           <ChevronLeft size={28} />
@@ -76,14 +88,14 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
         <Button
           variant="ghost"
           aria-label={t('productModal.next')}
-          className="absolute top-1/2 -translate-y-1/2 -right-4 sm:-right-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 transition-colors flex items-center justify-center"
+          className="absolute top-1/2 -translate-y-1/2 -right-4 sm:-right-14 h-12 w-12 rounded-full bg-black/50 text-white z-30 hover:bg-black/70 flex items-center justify-center"
           onClick={(e) => { e.stopPropagation(); onNext(); }}
         >
           <ChevronRight size={28} />
         </Button>
 
         <ScrollArea className="max-h-[90vh] rounded-lg">
-          <div className="relative">
+          <div key={item.id} className="relative">
             {/* Carousel Section */}
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
@@ -103,7 +115,7 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
                     key={index}
                     onClick={() => images.length > 1 && emblaApi?.scrollTo(index)}
                     className={cn(
-                      "h-1.5 rounded-full transition-all duration-300",
+                      "h-1.5 rounded-full",
                       index === selectedIndex ? "w-6 bg-white" : "w-4 bg-white/50",
                       images.length <= 1 && "cursor-default"
                     )}
