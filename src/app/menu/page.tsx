@@ -72,25 +72,40 @@ export default function MenuPage() {
     PASTRIES: t('menuPage.subCategories.PASTRIES'),
     SALTY_SNACKS: t('menuPage.subCategories.SALTY_SNACKS'),
     SPECIAL_ORDERS: t('menuPage.subCategories.SPECIAL_ORDERS'),
+    MILKSHAKES: t('menuPage.subCategories.MILKSHAKES'),
+    COFFEE_SPECIAL: t('menuPage.subCategories.COFFEE_SPECIAL'),
+    FILTERED_COFFEE: t('menuPage.subCategories.FILTERED_COFFEE'),
+    TRADITIONAL: t('menuPage.subCategories.TRADITIONAL'),
+    INTEGRAL: t('menuPage.subCategories.INTEGRAL'),
+    SEASONAL: t('menuPage.subCategories.SEASONAL'),
   }), [t]);
 
-  const filteredAndSortedItems = useMemo(() => {
-    const items = menuData.filter(item => {
-      const categoryMatch = activeCategory === 'ALL' || item.category === activeCategory;
-      const searchMatch = debouncedSearchTerm ? t(item.name).toLowerCase().includes(debouncedSearchTerm.toLowerCase()) : true;
-      return categoryMatch && searchMatch;
-    });
+  const filteredItems = useMemo(() => menuData.filter(item => {
+    const categoryMatch = activeCategory === 'ALL' || item.category === activeCategory || (activeCategory === 'TRADITIONAL' && item.subCategory === 'TRADITIONAL') || (activeCategory === 'INTEGRAL' && item.subCategory === 'INTEGRAL') || (activeCategory === 'SEASONAL' && item.subCategory === 'SEASONAL') || (activeCategory === 'MILKSHAKES' && item.subCategory === 'MILKSHAKES') || (activeCategory === 'COFFEE_SPECIAL' && item.subCategory === 'COFFEE_SPECIAL') || (activeCategory === 'FILTERED_COFFEE' && item.subCategory === 'FILTERED_COFFEE');
 
-    // Ordena los items por subcategoría
+    const searchTermLower = searchTerm.toLowerCase();
+    
+    // Combine all ingredients into a single searchable string
+    const ingredientsText = item.ingredients ? item.ingredients.map(key => t(key)).join(' ') : '';
+    const ingredientsMatch = ingredientsText.toLowerCase().includes(searchTermLower);
+
+    const searchMatch = searchTerm === '' ||
+      t(item.name).toLowerCase().includes(searchTermLower) ||
+      t(item.description).toLowerCase().includes(searchTermLower) ||
+      item.dataAiHint.toLowerCase().includes(searchTermLower) ||
+      ingredientsMatch;
+
+    return categoryMatch && searchMatch;
+  }), [activeCategory, searchTerm, t]);
+
+  const sortedItems = useMemo(() => {
     const subCategoryOrder = Object.keys(translatedSubCategoryNames);
-    items.sort((a, b) => {
+    return filteredItems.sort((a, b) => {
       const subCategoryAIndex = subCategoryOrder.indexOf(a.subCategory);
       const subCategoryBIndex = subCategoryOrder.indexOf(b.subCategory);
       return subCategoryAIndex - subCategoryBIndex;
     });
-
-    return items;
-  }, [activeCategory, debouncedSearchTerm, t, translatedSubCategoryNames]);
+  }, [filteredItems, translatedSubCategoryNames]);
 
   const handleProductClick = (item: MenuItem) => {
     setSelectedItem(item);
@@ -104,29 +119,29 @@ export default function MenuPage() {
 
   const handleNext = () => {
     if (!selectedItem) return;
-    const currentIndex = filteredAndSortedItems.findIndex(item => item.id === selectedItem.id);
-    const nextIndex = (currentIndex + 1) % filteredAndSortedItems.length;
-    setSelectedItem(filteredAndSortedItems[nextIndex]);
+    const currentIndex = sortedItems.findIndex(item => item.id === selectedItem.id);
+    const nextIndex = (currentIndex + 1) % sortedItems.length;
+    setSelectedItem(sortedItems[nextIndex]);
   };
 
   const handlePrev = () => {
     if (!selectedItem) return;
-    const currentIndex = filteredAndSortedItems.findIndex(item => item.id === selectedItem.id);
-    const prevIndex = (currentIndex - 1 + filteredAndSortedItems.length) % filteredAndSortedItems.length;
-    setSelectedItem(filteredAndSortedItems[prevIndex]);
+    const currentIndex = sortedItems.findIndex(item => item.id === selectedItem.id);
+    const prevIndex = (currentIndex - 1 + sortedItems.length) % sortedItems.length;
+    setSelectedItem(sortedItems[prevIndex]);
   };
 
   // Agrupa los items por subcategoría para la renderización
   const groupedItems = useMemo(() => {
-    return filteredAndSortedItems.reduce((acc, item) => {
+    return sortedItems.reduce((acc, item) => {
       const subCategoryName = translatedSubCategoryNames[item.subCategory as keyof typeof translatedSubCategoryNames] || item.subCategory;
       if (!acc[subCategoryName]) {
         acc[subCategoryName] = [];
       }
       acc[subCategoryName].push(item);
       return acc;
-    }, {} as Record<string, typeof filteredAndSortedItems>);
-  }, [filteredAndSortedItems, translatedSubCategoryNames]);
+    }, {} as Record<string, typeof sortedItems>);
+  }, [sortedItems, translatedSubCategoryNames]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -224,7 +239,7 @@ export default function MenuPage() {
               ))}
             </TabsContent>
           ))}
-          {filteredAndSortedItems.length === 0 && debouncedSearchTerm && (
+          {sortedItems.length === 0 && debouncedSearchTerm && (
             <div className="text-center py-12 text-muted-foreground">
               <p>{t('menuPage.noResults')}</p>
             </div>

@@ -41,7 +41,7 @@ export function HeroMainSection({
           <div 
             className="absolute inset-0 z-0 flex items-center justify-center"
             style={{
-              transform: `translateY(-${scrollY * 0.15}px) translateY(-140px)`,
+              transform: `translateY(-${scrollY * 0.15}px) translateY(-40px) translateY(var(--logo-offset))`,
             }}
           >
             <Image 
@@ -49,7 +49,7 @@ export function HeroMainSection({
               alt="El Orquideario Logo"
               width={200}
               height={200}
-              className="opacity-85 object-cover"
+              className="opacity-85 object-cover w-28 h-28 md:w-40 md:h-40 lg:w-48 lg:h-48"
               priority={true}
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
@@ -60,7 +60,7 @@ export function HeroMainSection({
           <div 
             className="relative z-10 drop-shadow-2xl"
             style={{
-              transform: `translateY(-${scrollY * 0.2}px) translateY(110px)`,
+              transform: `translateY(-${scrollY * 0.2}px) translateY(25px) translateY(var(--title-offset))`,
             }}
           >
             <h2 className="text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-headline font-light tracking-wide leading-none mb-2 md:mb-4 text-amber-100 drop-shadow-2xl">
