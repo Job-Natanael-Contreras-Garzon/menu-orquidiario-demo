@@ -27,8 +27,8 @@
     --radius: 0.5rem;
     
     /* Hero section spacing */
-    --logo-offset: -50px; /* Ajuste mínimo para móvil */
-    --title-offset: 5px; /* Separación muy pequeña en móvil */
+    --logo-offset: -110px; /* Mucha más separación para móvil */
+    --title-offset: 80px; /* Más separación del logo en móvil */
   }
   .dark {
     --background: 0 0% 11%; /* Very Dark Gray (#1C1C1C) */
@@ -56,15 +56,15 @@
   /* Media queries para ajustar el espaciado del hero según el tamaño de pantalla */
   @media (min-width: 768px) {
     :root {
-      --logo-offset: -50px; /* Separación moderada en tablets */
-      --title-offset: 30px;
+      --logo-offset: -170px; /* Mayor separación en tablets */
+      --title-offset: 100px;
     }
   }
   
   @media (min-width: 1024px) {
     :root {
-      --logo-offset: -90px; /* Separación amplia en desktop */
-      --title-offset: 80px;
+      --logo-offset: -130px; /* Mucha más separación en desktop */
+      --title-offset: 150px;
     }
   }
 }
@@ -101,10 +101,10 @@
 @keyframes pulse-glow {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.6), 0 0 40px rgba(249, 115, 22, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(245, 158, 11, 0.8);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.8), 0 0 60px rgba(249, 115, 22, 0.5);
   }
 }
 
@@ -202,6 +202,118 @@ html {
 .btn-glow:hover {
   box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
   transform: translateY(-2px);
+}
+
+/* El Orquideario - Adaptive Button Styles for Light/Dark Mode */
+.btn-menu-orquideario {
+  position: relative;
+  background: hsl(var(--background));
+  color: hsl(var(--primary));
+  border: 2px solid hsl(var(--primary));
+  backdrop-filter: blur(8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 
+    0 4px 12px hsla(var(--primary), 0.15),
+    0 2px 4px hsla(var(--foreground), 0.1);
+}
+
+.btn-menu-orquideario:hover {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-color: hsl(var(--primary));
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 8px 24px hsla(var(--primary), 0.25),
+    0 4px 8px hsla(var(--foreground), 0.15);
+}
+
+.btn-reservation-orquideario {
+  position: relative;
+  background: #25D366; /* WhatsApp green sólido */
+  color: #FFFFFF; /* Pure white */
+  border: 2px solid #22C55E; /* Slightly darker green border */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: font-headline;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  box-shadow: 
+    0 4px 12px rgba(37, 211, 102, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-reservation-orquideario:hover {
+  background: #22C55E; /* Darker green on hover */
+  border-color: #16A34A; /* Even darker border */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 
+    0 6px 20px rgba(34, 197, 94, 0.4),
+    0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Theme - Reservar Button */
+.dark .btn-reservation-orquideario {
+  background: #D2691E; /* Warm terracotta/orange */
+  color: #FFFFFF; /* Pure white */
+  border: 2px solid #CD853F; /* Peru/sandy brown border */
+  box-shadow: 
+    0 4px 12px rgba(210, 105, 30, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.dark .btn-reservation-orquideario:hover {
+  background: #B8860B; /* Darker warm gold */
+  border-color: #DAA520; /* Golden rod border */
+  box-shadow: 
+    0 6px 20px rgba(218, 165, 32, 0.35),
+    0 3px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Icon styling for better contrast */
+.orquideario-icon {
+  filter: drop-shadow(0 1px 2px hsla(var(--foreground), 0.2));
+  transition: filter 0.3s ease;
+}
+
+.btn-menu-orquideario:hover .orquideario-icon,
+.btn-reservation-orquideario:hover .orquideario-icon {
+  filter: drop-shadow(0 2px 4px hsla(var(--foreground), 0.3));
+}
+
+/* Responsive positioning */
+@media (min-width: 768px) {
+  .btn-menu-orquideario {
+    font-size: 1.125rem;
+    padding: 0.875rem 2rem;
+  }
+  
+  .btn-reservation-orquideario {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-menu-orquideario {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .btn-reservation-orquideario {
+    font-size: 0.875rem;
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+/* Consistent typography for buttons */
+.btn-text-enhanced {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Loading bar animation */
@@ -318,4 +430,197 @@ html {
   .animate-scroll-up {
     display: none;
   }
+}
+
+/* Floating buttons coordination - Enhanced */
+.floating-buttons-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.scroll-up-button {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: hsl(var(--foreground));
+}
+
+.scroll-up-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Dark theme scroll up button */
+.dark .scroll-up-button {
+  background: rgba(75, 75, 75, 0.8);
+  border: 1px solid rgba(184, 134, 11, 0.5);
+  color: #F5F5DC;
+}
+
+.dark .scroll-up-button:hover {
+  background: rgba(90, 90, 90, 0.9);
+  border-color: rgba(218, 165, 32, 0.7);
+  transform: translateY(-2px);
+}
+
+.reservation-button-adaptive {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reservation-button-adaptive.with-scroll {
+  transform: translateX(-0.5rem);
+}
+
+/* Button visual hierarchy and differentiation */
+.btn-primary-outline {
+  background: rgba(255, 255, 255, 0.9);
+  color: #15803d;
+  border: 2px solid #16a34a;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary-outline:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #166534;
+  border-color: #15803d;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(22, 163, 74, 0.2);
+}
+
+.btn-secondary-solid {
+  background: #16a34a;
+  color: white;
+  border: 2px solid #15803d;
+  border-radius: 1rem; /* More rounded than primary */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary-solid:hover {
+  background: #15803d;
+  border-color: #166534;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(22, 163, 74, 0.3);
+}
+
+/* WhatsApp icon specific styling */
+.whatsapp-icon {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+/* Enhanced icon alignment and clarity */
+.menu-icon-enhanced {
+  filter: drop-shadow(0 1px 2px rgba(22, 163, 74, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.btn-menu-refined:hover .menu-icon-enhanced {
+  filter: drop-shadow(0 1px 3px rgba(22, 163, 74, 0.4));
+}
+
+/* Refined button text styling */
+.btn-text-refined {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+/* El Orquideario - Product Cards Adaptive Styling */
+.product-card-orquideario {
+  background: hsla(var(--card), 0.95);
+  border: 1px solid hsla(var(--border), 0.5);
+  color: hsl(var(--card-foreground));
+  backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 16px hsla(var(--foreground), 0.08),
+    0 2px 8px hsla(var(--foreground), 0.04);
+}
+
+.product-card-orquideario:hover {
+  background: hsl(var(--card));
+  border-color: hsl(var(--accent));
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 12px 32px hsla(var(--foreground), 0.12),
+    0 6px 16px hsla(var(--accent), 0.15);
+}
+
+.product-card-orquideario .product-title {
+  color: hsl(var(--foreground));
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.product-card-orquideario:hover .product-title {
+  color: hsl(var(--primary));
+}
+
+/* Carousel container styling */
+.side-carousel-orquideario {
+  position: fixed;
+  width: 100px;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.side-carousel-orquideario.left {
+  left: 0;
+  background: linear-gradient(
+    90deg, 
+    hsla(var(--background), 0.9) 0%, 
+    hsla(var(--background), 0.7) 50%,
+    transparent 100%
+  );
+}
+
+.side-carousel-orquideario.right {
+  right: 0;
+  background: linear-gradient(
+    270deg, 
+    hsla(var(--background), 0.9) 0%, 
+    hsla(var(--background), 0.7) 50%,
+    transparent 100%
+  );
+}
+
+/* Responsive behavior for carousels */
+@media (max-width: 1024px) {
+  .side-carousel-orquideario {
+    display: none;
+  }
+}
+
+/* Enhanced scroll indicator */
+.scroll-indicator-orquideario {
+  border: 2px solid hsla(var(--foreground), 0.4);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator-orquideario:hover {
+  border-color: hsl(var(--accent));
+  background: hsla(var(--accent), 0.1);
+}
+
+.scroll-indicator-orquideario .dot {
+  background: hsla(var(--foreground), 0.4);
+  transition: all 0.3s ease;
+}
+
+.scroll-indicator-orquideario:hover .dot {
+  background: hsl(var(--accent));
 }

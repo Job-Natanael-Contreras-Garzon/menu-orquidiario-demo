@@ -3,6 +3,7 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import { Toaster } from "@/components/ui/toaster"
 import { Providers } from '@/components/providers';
+import { FloatingReservationButton } from '@/components/FloatingReservationButton';
 
 export const metadata: Metadata = {
   title: 'El Orquídeario',
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={cn('font-body antialiased min-h-screen bg-background text-foreground')} suppressHydrationWarning={true}>
         <Providers attribute="class" defaultTheme="system" enableSystem>
             {children}
+            <FloatingReservationButton />
             <Toaster />
         </Providers>
       </body>
