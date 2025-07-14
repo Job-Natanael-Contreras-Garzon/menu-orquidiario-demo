@@ -16,6 +16,7 @@
         "line2": "IRRESISTIBLES",
         "line3": "CADA DÍA"
       },
+      "viewMenuButton": "Ver Nuestro Menú",
       "leftCarousel": {
         "item1": "EXPRESSO",
         "item2": "CAPUCHINO",
@@ -140,6 +141,11 @@
       },
       "viewFullMenu": "VER CARTA COMPLETA"
     }
+  },
+  "reservation": {
+    "buttonText": "Reservar",
+    "ariaLabel": "Hacer reserva por WhatsApp",
+    "whatsappMessage": "¡Hola! Me gustaría hacer una reserva en El Orquideario. ¿Podrían ayudarme con la disponibilidad?"
   },
   "footer": {
     "copyright": " El Orquídeario. Todos los derechos reservados."

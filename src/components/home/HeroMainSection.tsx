@@ -82,7 +82,7 @@ export function HeroMainSection({
                   className="btn-menu-orquideario rounded-full px-8 py-4 md:px-12 md:py-5 text-lg md:text-xl font-medium shadow-lg hover:shadow-xl"
                 >
                   <Menu className="h-5 w-5 md:h-6 md:w-6 mr-3 orquideario-icon" />
-                  Ver Nuestro Menú
+                  {t('home.hero.viewMenuButton')}
                 </Button>
               </Link>
             </div>

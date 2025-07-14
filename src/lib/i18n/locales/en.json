@@ -17,6 +17,7 @@
         "line2": "FLAVORS",
         "line3": "EVERY DAY"
       },
+      "viewMenuButton": "View Our Menu",
       "leftCarousel": {
         "item1": "ESPRESSO",
         "item2": "CAPPUCCINO",
@@ -141,6 +142,11 @@
       },
       "viewFullMenu": "VIEW FULL MENU"
     }
+  },
+  "reservation": {
+    "buttonText": "Reserve",
+    "ariaLabel": "Make reservation via WhatsApp",
+    "whatsappMessage": "Hello! I would like to make a reservation at The Orchidarium. Could you help me with availability?"
   },
   "footer": {
     "copyright": "© {year} The Orchidarium. All rights reserved."
