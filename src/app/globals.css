@@ -443,17 +443,37 @@ html {
   align-items: center;
 }
 
+/* 👇 Pega este código actualizado en tu archivo CSS */
+
 .scroll-up-button {
-  background: rgba(255, 255, 255, 0.15);
+  /* Usamos un color de fondo sólido del tema claro */
+  background: hsl(var(--secondary)); 
+  /* Mantenemos el desenfoque para un efecto moderno */
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Usamos el color de borde definido en el tema */
+  border: 1px solid hsl(var(--border));
+  /* El color del ícono (la flecha) ya es correcto */
   color: hsl(var(--foreground));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll-up-button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.4);
+  /* Al pasar el mouse, usamos un color más notorio del tema */
+  background: hsl(var(--muted));
+  border-color: hsl(var(--accent));
+  transform: translateY(-2px);
+}
+
+/* El estilo para el modo oscuro ya está bien, no necesitas cambiarlo */
+.dark .scroll-up-button {
+  background: rgba(75, 75, 75, 0.8);
+  border: 1px solid rgba(184, 134, 11, 0.5);
+  color: #F5F5DC;
+}
+
+.dark .scroll-up-button:hover {
+  background: rgba(90, 90, 90, 0.9);
+  border-color: rgba(218, 165, 32, 0.7);
   transform: translateY(-2px);
 }
 
