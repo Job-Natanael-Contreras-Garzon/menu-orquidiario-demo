@@ -443,51 +443,15 @@ html {
   align-items: center;
 }
 
-/* 👇 Pega este código actualizado en tu archivo CSS */
 
-.scroll-up-button {
-  /* Usamos un color de fondo sólido del tema claro */
-  background: hsl(var(--secondary)); 
-  /* Mantenemos el desenfoque para un efecto moderno */
-  backdrop-filter: blur(8px);
-  /* Usamos el color de borde definido en el tema */
-  border: 1px solid hsl(var(--border));
-  /* El color del ícono (la flecha) ya es correcto */
-  color: hsl(var(--foreground));
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+/* El resto de las reglas para .reservation-button-adaptive, etc. siguen igual */
+.reservation-button-adaptive {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.scroll-up-button:hover {
-  /* Al pasar el mouse, usamos un color más notorio del tema */
-  background: hsl(var(--muted));
-  border-color: hsl(var(--accent));
-  transform: translateY(-2px);
-}
-
-/* El estilo para el modo oscuro ya está bien, no necesitas cambiarlo */
-.dark .scroll-up-button {
-  background: rgba(75, 75, 75, 0.8);
-  border: 1px solid rgba(184, 134, 11, 0.5);
-  color: #F5F5DC;
-}
-
-.dark .scroll-up-button:hover {
-  background: rgba(90, 90, 90, 0.9);
-  border-color: rgba(218, 165, 32, 0.7);
-  transform: translateY(-2px);
-}
-
-/* Dark theme scroll up button */
-.dark .scroll-up-button {
-  background: rgba(75, 75, 75, 0.8);
-  border: 1px solid rgba(184, 134, 11, 0.5);
-  color: #F5F5DC;
-}
-
-.dark .scroll-up-button:hover {
-  background: rgba(90, 90, 90, 0.9);
-  border-color: rgba(218, 165, 32, 0.7);
-  transform: translateY(-2px);
+.reservation-button-adaptive.with-scroll {
+  transform: translateX(-0.5rem);
 }
 
 .reservation-button-adaptive {

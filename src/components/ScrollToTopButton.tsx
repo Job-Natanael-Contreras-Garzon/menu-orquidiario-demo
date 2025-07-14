@@ -33,11 +33,25 @@ export const ScrollToTopButton = () => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {isVisible && (
+        // En tu archivo ScrollToTopButton.tsx
+
         <Button
           onClick={scrollToTop}
           size="icon"
-          className="scroll-up-button h-12 w-12 rounded-full shadow-lg transition-all duration-700 ease-in-out"
           aria-label="Scroll to top"
+          // 👇 LA MAGIA ESTÁ AQUÍ. Reemplaza tu className con esto:
+          className="
+    h-12 w-12 rounded-full shadow-lg transition-all duration-300 ease-in-out
+
+    // --- Estilos para Modo Claro ---
+    bg-secondary border border-border text-foreground
+    hover:bg-secondary hover:translate-y-[-2px]
+
+    // --- Estilos para Modo Oscuro (con el prefijo 'dark:') ---
+    dark:bg-[rgba(75,75,75,0.8)] dark:border-[rgba(184,134,11,0.5)] dark:text-[#F5F5DC]
+    dark:hover:bg-[rgba(90,90,90,0.9)] dark:hover:border-[rgba(218,165,32,0.7)]
+    dark:hover:translate-y-[-2px]
+  "
         >
           <ArrowUp className="h-5 w-5" />
         </Button>
