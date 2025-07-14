@@ -6,6 +6,7 @@ import type { MenuItem, MenuItemVariant } from '@/lib/menu-data';
 import { ArrowLeft, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { cn } from '@/lib/utils';
 
 interface ProductModalProps {
   isOpen: boolean;
@@ -18,6 +19,23 @@ interface ProductModalProps {
 export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductModalProps) {
   const { t } = useI18n();
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const updateSelectedIndex = useCallback((api: any) => {
+    if (!api) return;
+    setSelectedIndex(api.selectedScrollSnap());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    updateSelectedIndex(emblaApi);
+    emblaApi.on('select', updateSelectedIndex);
+    emblaApi.on('reInit', updateSelectedIndex);
+    return () => {
+      emblaApi.off('select', updateSelectedIndex);
+      emblaApi.off('reInit', updateSelectedIndex);
+    };
+  }, [emblaApi, updateSelectedIndex]);
 
   // Re-initialize carousel on item change to avoid stale state
   useEffect(() => {
@@ -76,6 +94,24 @@ export function ProductModal({ isOpen, onClose, item, onNext, onPrev }: ProductM
                 ))}
               </div>
             </div>
+
+            {/* Carousel Progress Bars */}
+            {images.length > 0 && (
+              <div className="absolute bottom-4 left-0 right-0 z-10 flex justify-center items-center gap-2">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => images.length > 1 && emblaApi?.scrollTo(index)}
+                    className={cn(
+                      "h-1.5 rounded-full transition-all duration-300",
+                      index === selectedIndex ? "w-6 bg-white" : "w-4 bg-white/50",
+                      images.length <= 1 && "cursor-default"
+                    )}
+                    aria-label={`${t('productModal.goToSlide')} ${index + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Content Section */}
