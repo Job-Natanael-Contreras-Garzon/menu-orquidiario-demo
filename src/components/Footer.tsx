@@ -50,7 +50,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <Logo/>
             {/* <h2 className="font-headline text-2xl font-bold text-primary">El Orquideario</h2> */}
-            <p className="mt-2 text-sm text-muted-foreground">Café de especialidad</p>
+            <p className="mt-2 text-sm text-muted-foreground">Espacio Memorable</p>
           </div>
 
           {/* Columna 2: Contacto */}
