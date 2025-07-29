@@ -52,8 +52,14 @@ export function Header() {
             <ThemeToggle className="text-white hover:bg-white/10 hover:text-white" />
           </div>
 
-          {/* Mobile Nav - Derecha (restaurado) */}
-          <div className="md:hidden">
+          {/* Mobile Nav - Derecha */}
+          <div className="md:hidden flex items-center gap-2">
+            {/* Language Toggle Buttons - Visible on mobile */}
+            <div className="[&>div]:border-white/20 [&_button]:text-white [&_button[data-active=true]]:bg-white/20 [&_button:not([data-active=true])]:hover:bg-white/10">
+              <LanguageToggle />
+            </div>
+            
+            {/* Menu Button */}
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-white">
@@ -81,8 +87,7 @@ export function Header() {
                     </Link>
                   </Button>
                 </nav>
-                <div className="mt-auto flex items-center justify-between">
-                  <LanguageToggle />
+                <div className="mt-auto flex items-center justify-center">
                   <ThemeToggle />
                 </div>
               </SheetContent>
