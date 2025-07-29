@@ -139,7 +139,7 @@ export const menuData: MenuItem[] = [
   { id: 'COF-19', name: 'menuData.COF-19.name', description: 'menuData.COF-19.description', price: 28, category: 'BEVERAGES', subCategory: 'COFFEE_SPECIAL', images: ['/assets/coffee/submarino.webp'], dataAiHint: 'submarino chocolate', ingredients: ['menuData.COF-19.ingredients'] },
   { id: 'COF-20', name: 'menuData.COF-20.name', description: 'menuData.COF-20.description', price: 33, category: 'BEVERAGES', subCategory: 'COFFEE_SPECIAL', images: ['/assets/coffee/matcha-latte.webp'], dataAiHint: 'matcha latte', ingredients: ['menuData.COF-20.ingredients'] },
   { id: 'COF-21', name: 'menuData.COF-21.name', description: 'menuData.COF-21.description', price: 25, category: 'BEVERAGES', subCategory: 'FILTERED_COFFEE', images: ['/assets/coffee/cafe-filtrado.webp'], dataAiHint: 'filtered coffee', ingredients: ['menuData.COF-21.ingredients'] },
-  { id: 'COF-22', name: 'menuData.COF-22.name', description: 'menuData.COF-22.description', price: 25, category: 'BEVERAGES', subCategory: 'FILTERED_COFFEE', images: ['/assets/coffee/metodos-filtrado.webp'], dataAiHint: 'brew methods', ingredients: ['menuData.COF-22.ingredients'] },
+  //{ id: 'COF-22', name: 'menuData.COF-22.name', description: 'menuData.COF-22.description', price: 25, category: 'BEVERAGES', subCategory: 'FILTERED_COFFEE', images: ['/assets/coffee/metodos-filtrado.webp'], dataAiHint: 'brew methods', ingredients: ['menuData.COF-22.ingredients'] },
 
   // SEASONAL
   { id: 'SEA-01', name: 'menuData.SEA-01.name', description: 'menuData.SEA-01.description', price: 40, category: 'SPECIAL_ORDERS', subCategory: 'SEASONAL', images: ['/assets/seasonal/sandwich-guayando.webp'], dataAiHint: 'sandwich guacamole', ingredients: ['menuData.SEA-01.ingredients'] },
