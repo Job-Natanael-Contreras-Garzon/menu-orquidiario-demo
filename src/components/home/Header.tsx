@@ -71,7 +71,20 @@ export function Header({ scrolled }: HeaderProps) {
           </div>
 
           {/* Mobile Nav */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            {/* Theme Toggle Button - Visible on mobile */}
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              className="text-white hover:bg-white/10 hover:text-white"
+            >
+              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+            
+            {/* Menu Button */}
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-white hover:bg-white/10 hover:text-white">
@@ -99,7 +112,7 @@ export function Header({ scrolled }: HeaderProps) {
                     </Link>
                   </Button>
                 </nav>
-                <div className="mt-auto flex items-center justify-between">
+                <div className="mt-auto flex items-center justify-center">
                   <div className="flex items-center rounded-md border">
                     <Button
                       variant="ghost"
@@ -120,15 +133,6 @@ export function Header({ scrolled }: HeaderProps) {
                       EN
                     </Button>
                   </div>
-                  <Button 
-                    variant="ghost" 
-                    size="icon" 
-                    onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                  >
-                    <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                    <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                    <span className="sr-only">Toggle theme</span>
-                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
