@@ -87,7 +87,7 @@ export function Header() {
                     </Link>
                   </Button>
                 </nav>
-                <div className="mt-auto flex items-center justify-center">
+                <div className="mt-auto flex items-center justify-end">
                   <ThemeToggle />
                 </div>
               </SheetContent>

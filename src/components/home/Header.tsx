@@ -124,7 +124,7 @@ export function Header({ scrolled }: HeaderProps) {
                     </Link>
                   </Button>
                 </nav>
-                <div className="mt-auto flex items-center justify-center">
+                <div className="mt-auto flex items-center justify-end">
                   <Button 
                     variant="ghost" 
                     size="icon" 
